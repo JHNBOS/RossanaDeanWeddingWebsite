@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../src/assets/styles/variables.scss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-image: url("../src/assets/img/flowers_top-left--transparent.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-image: url("../src/assets/img/flowers_bottom-right--transparent.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content {
+  height: 100vh;
+  background-color: $background-light-color;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

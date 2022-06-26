@@ -1,0 +1,39 @@
+@import "../../../../assets/styles/variables.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  .logo {
+    margin: 4rem 0;
+    text-align: center;
+    font-family: "hjirnotes", sans-serif;
+    font-size: 72px;
+    height: auto;
+  }
+
+  .navbar {
+    margin-top: 1rem;
+    border-top: 1px solid #282828;
+    border-bottom: 1px solid #282828;
+
+    .navbar-nav {
+      gap: 0.5rem;
+    }
+
+    .nav-item {
+      .nav-link {
+        font-family: "Avant-Garde Medium", sans-serif;
+        color: $primary-text;
+
+        &.active {
+          color: $dark-text;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
