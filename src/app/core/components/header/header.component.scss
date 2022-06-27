@@ -6,6 +6,7 @@
   align-items: center;
   width: 100%;
   height: auto;
+  overflow: hidden;
 
   .logo {
     margin: 4rem 0;
@@ -50,17 +51,18 @@
     padding-bottom: 15px;
     background: $background-color;
 
-    &::after {
+    &::before {
       content: "";
-      position: absolute;
-      top: -35px;
-      left: -30px;
-      right: -30px;
-      width: auto;
-      height: 17vh;
-      background-image: url("../../../../assets/img/flowers_top--transparent.png");
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 20vh;
+      background-image: url("../../../../assets/img/flowers_top--transparent2.png");
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center -4vh;
     }
 
     .navbar {
@@ -80,12 +82,21 @@
       .nav-item {
         .nav-link {
           font-size: 14px;
+          color: $dark-text;
+
+          &.active {
+            color: #000;
+          }
         }
       }
     }
+
+    .logo {
+      margin: 4rem 0 1.5rem 0;
+      font-size: 36px;
+    }
   }
 }
-
 
 @media (min-width: 576px) and (max-width: 768px) {
   .header {
@@ -96,17 +107,18 @@
     padding-bottom: 15px;
     background: $background-color;
 
-    &::after {
+    &::before {
       content: "";
-      position: absolute;
-      top: -35px;
-      left: -30px;
-      right: -30px;
-      width: auto;
-      height: 17vh;
-      background-image: url("../../../../assets/img/flowers_top--transparent.png");
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 10vh;
+      background-image: url("../../../../assets/img/flowers_top--transparent2.png");
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center -4vh;
     }
 
     .navbar {
@@ -126,12 +138,21 @@
       .nav-item {
         .nav-link {
           font-size: 14px;
+          color: $dark-text;
+
+          &.active {
+            color: #000;
+          }
         }
       }
     }
+
+    .logo {
+      margin: 4rem 0 1.5rem 0;
+      font-size: 40px;
+    }
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 992px) {
   .header {
@@ -142,17 +163,19 @@
     padding-bottom: 15px;
     background: $background-color;
 
-    &::after {
+    &::before {
       content: "";
-      position: absolute;
-      top: -35px;
-      left: -30px;
-      right: -30px;
-      width: auto;
-      height: 17vh;
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 15%;
       background-image: url("../../../../assets/img/flowers_top--transparent.png");
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center -6vh;
     }
 
     .navbar {
@@ -172,8 +195,18 @@
       .nav-item {
         .nav-link {
           font-size: 14px;
+          color: $dark-text;
+
+          &.active {
+            color: #000;
+          }
         }
       }
+    }
+
+    .logo {
+      margin: 5rem 0 2rem;
+      font-size: 55px;
     }
   }
 }
@@ -283,7 +316,6 @@
 //   }
 // }
 
-
 // @media (min-width: 992px) and (max-width: 1400px) {
 //   .header {
 //     .navbar {
@@ -313,13 +345,13 @@
 //       font-size: 2.3rem;
 //     }
 
-    // .navbar {
-    //   width: 90%;
+// .navbar {
+//   width: 90%;
 
-    //   .navbar-toggler {
-    //     margin: 0 auto;
-    //     font-size: 1rem;
-    //   }
-    // }
+//   .navbar-toggler {
+//     margin: 0 auto;
+//     font-size: 1rem;
+//   }
+// }
 //   }
 // }
