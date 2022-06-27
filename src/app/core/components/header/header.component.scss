@@ -51,19 +51,24 @@
     padding-bottom: 15px;
     background: $background-color;
 
-    &::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100vw;
-      height: 20vh;
-      background-image: url("../../../../assets/img/flowers_top--transparent2.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center -4vh;
-    }
+    background-image: url("../../../../assets/img/flowers_top--transparent2.png");
+    background-size: calc(100% + 8vw) auto;
+    background-position: -8vw 0;
+    background-repeat: no-repeat;
+
+    // &::before {
+    //   content: "";
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   width: 100vw;
+    //   height: 20vh;
+    //   background-image: url("../../../../assets/img/flowers_top--transparent2.png");
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   background-position: center -4vh;
+    // }
 
     .navbar {
       width: 90%;
@@ -92,8 +97,22 @@
     }
 
     .logo {
-      margin: 4rem 0 1.5rem 0;
-      font-size: 36px;
+      margin: 4rem 0 .5rem 0;
+      font-size: 38px;
+      background-color: $background-color;
+      display: flex;
+      width: auto;
+      height: 55px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      > span {
+        display: flex;
+        width: auto;
+        height: 100%;
+        align-items: center;
+      }
     }
   }
 }
@@ -107,19 +126,24 @@
     padding-bottom: 15px;
     background: $background-color;
 
-    &::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100vw;
-      height: 10vh;
-      background-image: url("../../../../assets/img/flowers_top--transparent2.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center -4vh;
-    }
+    background-image: url("../../../../assets/img/flowers_top--transparent2.png");
+    background-size: calc(100% + 8vw) auto;
+    background-position: -8vw 0;
+    background-repeat: no-repeat;
+
+    // &::before {
+    //   content: "";
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   width: 100vw;
+    //   height: 10vh;
+    //   background-image: url("../../../../assets/img/flowers_top--transparent2.png");
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   background-position: center -4vh;
+    // }
 
     .navbar {
       width: 90%;
@@ -150,6 +174,21 @@
     .logo {
       margin: 4rem 0 1.5rem 0;
       font-size: 40px;
+
+      background-color: $background-color;
+      display: flex;
+      width: auto;
+      height: 55px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      > span {
+        display: flex;
+        width: auto;
+        height: 100%;
+        align-items: center;
+      }
     }
   }
 }
@@ -163,20 +202,24 @@
     padding-bottom: 15px;
     background: $background-color;
 
-    &::before {
-      content: "";
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100vw;
-      height: 15%;
-      background-image: url("../../../../assets/img/flowers_top--transparent.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center -6vh;
-    }
+    background-image: url("../../../../assets/img/flowers_top--transparent2.png");
+    background-size: contain;
+    background-position: center -5vh;
+    background-repeat: no-repeat;
+
+    // &::before {
+    //   content: "";
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   width: 100vw;
+    //   height: 15%;
+    //   background-image: url("../../../../assets/img/flowers_top--transparent.png");
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   background-position: center -6vh;
+    // }
 
     .navbar {
       width: 90%;
@@ -207,6 +250,21 @@
     .logo {
       margin: 5rem 0 2rem;
       font-size: 55px;
+
+      background-color: $background-color;
+      display: flex;
+      width: auto;
+      height: 55px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      > span {
+        display: flex;
+        width: auto;
+        height: 100%;
+        align-items: center;
+      }
     }
   }
 }
