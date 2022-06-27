@@ -52,8 +52,7 @@
     background: $background-color;
 
     background-image: url("../../../../assets/img/flowers_top--transparent2.png");
-    background-size: calc(100% + 8vw) auto;
-    background-position: -8vw 0;
+    background-size: contain;
     background-repeat: no-repeat;
 
     // &::before {
@@ -97,7 +96,7 @@
     }
 
     .logo {
-      margin: 4rem 0 .5rem 0;
+      margin: 4rem 0 0.5rem 0;
       font-size: 38px;
       background-color: $background-color;
       display: flex;
@@ -127,8 +126,7 @@
     background: $background-color;
 
     background-image: url("../../../../assets/img/flowers_top--transparent2.png");
-    background-size: calc(100% + 8vw) auto;
-    background-position: -8vw 0;
+    background-size: contain;
     background-repeat: no-repeat;
 
     // &::before {
@@ -203,10 +201,10 @@
     background: $background-color;
 
     background-image: url("../../../../assets/img/flowers_top--transparent2.png");
-    background-size: contain;
-    background-position: center -5vh;
+    //background-size: contain;
+    //background-position: center -5vh;
     background-repeat: no-repeat;
-
+    background-size: 100% 70%;
     // &::before {
     //   content: "";
     //   position: fixed;
