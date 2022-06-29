@@ -54,6 +54,10 @@ body {
   height: 100vh;
   z-index: 1;
   background-color: $background-light-color;
+
+  &.bg--primary {
+    background-color: $background-color;
+  }
 }
 
 /* Importing Bootstrap SCSS file. */
