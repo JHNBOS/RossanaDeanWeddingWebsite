@@ -52,7 +52,8 @@
     background: $background-color;
 
     background-image: url("../img/flowers_top--transparent2.png");
-    background-size: cover;
+    background-size: 100% auto;
+    //background-size: contain;
     background-repeat: no-repeat;
 
     .navbar {
@@ -112,7 +113,8 @@
     background: $background-color;
 
     background-image: url("../img/flowers_top--transparent2.png");
-    background-size: cover;
+    background-size: 100% auto;
+    //background-size: contain;
     background-repeat: no-repeat;
 
     .navbar {
@@ -169,13 +171,15 @@
     flex-direction: column;
     height: auto;
     padding-top: 5vh;
-    padding-bottom: 15px;
+    padding-bottom: 5rem;
+    //padding-bottom: 15px;
     background: $background-color;
 
     background-image: url("../img/flowers_top--transparent2.png");
     background-repeat: no-repeat;
-    // background-size: 100% 70%;
-    background-size: cover;
+    background-size: 100% auto;
+    //background-size: 100% 70%;
+    //background-size: cover;
 
     .navbar {
       width: 90%;
