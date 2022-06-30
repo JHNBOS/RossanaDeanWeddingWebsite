@@ -15,8 +15,7 @@ const routes: Routes = [
 	{ path: 'home', redirectTo: '', pathMatch: 'full' },
 	{
 		path: 'sign-in',
-		component: SignInComponent,
-    canLoad: [AuthGuard],
+		component: SignInComponent
 	}
 ];
 

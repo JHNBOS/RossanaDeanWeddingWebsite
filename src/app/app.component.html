@@ -3,8 +3,18 @@
   <div class="main">
     <div class="row">
 
-      <div class="col-sm-12 col-md-12 col-lg-10 col-xl-8 mx-lg-auto main-content" [ngClass]="cssClass">
-        <app-header [hide]="hideMenu"></app-header>
+      <div class="col-sm-12 col-md-12 col-lg-10 col-xl-8 mx-lg-auto main-content"
+        [ngClass]="isLoggedIn === false ? 'bg--primary' : ''">
+
+        <ng-container *ngIf="isLoggedIn">
+          <app-header></app-header>
+        </ng-container>
+
+        <ng-container *ngIf="isLoggedIn === false">
+          <div class="header">
+            <div class="logo">&nbsp;</div>
+          </div>
+        </ng-container>
 
         <div class="container">
           <router-outlet></router-outlet>

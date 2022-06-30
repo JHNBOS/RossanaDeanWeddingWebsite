@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ActivationStart } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -8,11 +7,7 @@ import { DataService } from '../../services/data.service';
 	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-	@Input('hide') hide: boolean = false;
-
-	constructor(private router: Router, private route: ActivatedRoute, public dataService: DataService) {
-
-	}
+	constructor(public dataService: DataService) {}
 
 	ngOnInit(): void {}
 }

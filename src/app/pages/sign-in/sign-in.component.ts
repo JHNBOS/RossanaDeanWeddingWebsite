@@ -1,3 +1,4 @@
+import { DataService } from './../../core/services/data.service';
 import { AuthenticationService } from './../../core/services/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,7 +13,7 @@ export class SignInComponent implements OnInit {
 	public password: string = '';
 	public error: string = '';
 
-	constructor(public router: Router, private authenticationService: AuthenticationService) {}
+	constructor(public router: Router, private authenticationService: AuthenticationService, private dataService: DataService) {}
 
 	ngOnInit(): void {}
 
@@ -24,7 +25,8 @@ export class SignInComponent implements OnInit {
 			this.router.navigate(['/']);
 			return;
 		}
-    this.password = '';
+
+		this.password = '';
 		this.error = 'The password you have entered is incorrect.';
 	}
 }

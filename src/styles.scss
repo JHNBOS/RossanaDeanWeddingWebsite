@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "../src/assets/styles/variables.scss";
+@import "../src/assets/styles/header.scss";
 
 html,
 body {
@@ -28,6 +29,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left top;
+    z-index: 2;
   }
 
   &::after {
@@ -41,6 +43,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
+    z-index: 2;
   }
 }
 
@@ -57,6 +60,15 @@ body {
 
   &.bg--primary {
     background-color: $background-color;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 992px) {
+  .wrapper {
+    &::before,
+    &::after {
+      z-index: 0;
+    }
   }
 }
 

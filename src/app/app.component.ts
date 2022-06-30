@@ -1,5 +1,5 @@
+import { AuthenticationService } from './core/services/authentication.service';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ActivationStart, NavigationEnd, Router } from '@angular/router';
 import { DataService } from './core/services/data.service';
 
 @Component({
@@ -8,24 +8,14 @@ import { DataService } from './core/services/data.service';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-	public cssClass: string = 'bg--primary';
-	public hideMenu: boolean = true;
+	public isLoggedIn: boolean = false;
 
-	constructor(private router: Router, private route: ActivatedRoute, public dataService: DataService) {
-		this.dataService.currentMessage.subscribe((data) => {
-			if (data.length == null) {
-				this.cssClass = '';
-				this.hideMenu = false;
-				return;
-			}
+	constructor(public dataService: DataService, public authenticationService: AuthenticationService) {}
 
-			const message = JSON.parse(data);
-			this.cssClass = message.cssClass;
-			this.hideMenu = message.hideMenu;
-		});
+	async ngOnInit(): Promise<void> {
+		await this.authenticationService.saveSecret();
+		this.isLoggedIn = this.authenticationService.isLoggedIn;
 	}
-
-	ngOnInit(): void {}
 
 	ngAfterViewInit(): void {}
 }

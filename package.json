@@ -4,6 +4,7 @@
   "homepage": "http://jhnbos.github.io/RossanaDeanWeddingWebsite/",
   "scripts": {
     "ng": "ng",
+    "gdeploy": "ng build --output-path dist/docs --base-href=/RossanaDeanWeddingWebsite/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist/rossana-dean-wedding-site",
     "start": "ng serve",
@@ -42,6 +43,7 @@
     "@ng-bootstrap/ng-bootstrap": "^12.1.2",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0",
     "autoprefixer": "10.4.5",
     "firebase-tools": "^8.0.0 || ^10.7.1",
     "gh-pages": "^4.0.0",
