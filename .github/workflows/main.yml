@@ -4,9 +4,14 @@ name: CI
 
 # Controls when the workflow will run
 on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types:
+      - completed
+      
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "gh-pages" ]
+  #push:
+  #  branches: [ "gh-pages" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
