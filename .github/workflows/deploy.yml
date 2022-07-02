@@ -17,9 +17,9 @@ jobs:
           # The directory of the angular project, in which all the commands will run
           angular_project_dir: ./ # optional, default is ./
           # Build configuration for the angular app
-          build_configuration: gdeploy # optional, default is production
+          build_configuration: production # optional, default is production
           # base href for the app
-          base_href: / # /RossanaDeanWeddingWebsite/ # optional, default is /
+          base_href: /RossanaDeanWeddingWebsite/ # optional, default is /
           # branch on which the angular build will be deployed
           deploy_branch: gh-pages # optional, default is gh-pages
           # The folder in which `ng build` provides its output. This is the folder which will be deployed to the `deploy_branch`.
