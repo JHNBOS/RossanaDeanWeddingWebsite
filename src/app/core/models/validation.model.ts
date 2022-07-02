@@ -8,6 +8,7 @@ export interface IValidationModel extends ISimpleValidationModel {
 	token: string;
 	validatedAt: Date | null;
 	validUntill: Date | null;
+	setSignIn(token: string): void;
 }
 
 export class ValidationModel implements ISimpleValidationModel, IValidationModel {
@@ -21,9 +22,17 @@ export class ValidationModel implements ISimpleValidationModel, IValidationModel
 		this.validUntill = null;
 	}
 
-	public setSignIn(token: string) {
+	public setSignIn(token: string): void {
 		this.token = token;
 		this.validatedAt = moment().toDate();
-		this.validUntill = moment().add(12, 'hours').toDate();
+		this.validUntill = moment().add(1, 'day').toDate();
+	}
+
+	public static createFromJson(json: any): ValidationModel {
+		const model = new ValidationModel('');
+		model.token = json.token;
+		model.validatedAt = json.validatedAt;
+		model.validUntill = json.validUntill;
+		return model;
 	}
 }

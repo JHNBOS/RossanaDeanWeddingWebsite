@@ -19,12 +19,9 @@ export class AuthGuard implements CanActivate, CanLoad {
 
 	canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
 		if (this.authenticationService.isLoggedIn === false || state.url.includes('sign-in')) {
-			this.dataService.changeMessage(JSON.stringify({ cssClass: 'bg--primary', hideMenu: true }));
 			this.router.navigate(['sign-in']);
 			return false;
 		}
-
-		this.dataService.changeMessage(JSON.stringify({ cssClass: 'bg--secondary', hideMenu: false }));
 		return true;
 	}
 }

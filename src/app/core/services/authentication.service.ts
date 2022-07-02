@@ -32,11 +32,13 @@ export class AuthenticationService {
 	public async signIn(token: string): Promise<boolean> {
 		const secretToken = this.getSecret();
 		if (secretToken == null) return false;
-		if (secretToken.token == token)
-    {
+
+		if (secretToken.token == token) {
 			secretToken.setSignIn(token);
+			this.setSecret(secretToken);
 			return true;
 		}
+
 		return false;
 	}
 
@@ -44,18 +46,17 @@ export class AuthenticationService {
 		const secretToken = this.getSecret();
 		if (secretToken == null) return false;
 
+		if (secretToken.validUntill == null) return false;
+
 		const validUntill = moment(secretToken.validUntill);
 		const isValid = moment().isBefore(validUntill);
-
-		if (isValid === false) {
-			this.removeSecret();
-		}
 
 		return isValid;
 	}
 
 	public getSecret(): ValidationModel {
-		return JSON.parse(localStorage.getItem(this.id)!);
+		const json = JSON.parse(localStorage.getItem(this.id)!);
+		return ValidationModel.createFromJson(json);
 	}
 
 	public setSecret(secret: IValidationModel): void {
