@@ -71,11 +71,6 @@ body {
 }
 
 @media (min-width: 300px) and (max-width: 992px) {
-  html,
-  body {
-    font-size: 12px;
-  }
-
   .wrapper {
     &::before,
     &::after {
