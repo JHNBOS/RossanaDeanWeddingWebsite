@@ -1,41 +1,30 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the workflow will run
+name: CI / CD for Angular
 on:
-  page_build
-      
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  #push:
-  #  branches: [ "gh-pages" ]
+  push:
+    branches: [ "master" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  # workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  build-and-deploy:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Replace tokens
-      # You may pin to the exact commit or the version.
-      # uses: cschleiden/replace-tokens@4f7e3d67f3ff2317ae650842145cdbaefba65189
+      - name: Set up node.js
+        uses: actions/setup-node@v3.3.0
+        with:
+          node-version: '16'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Replace secret
         uses: cschleiden/replace-tokens@v1.1
         with:
-          # 
           tokenPrefix: '{'
-          # 
           tokenSuffix: '}'
-          # 
-          files: 'docs/main*.js'
+          files: 'src/environments/environment.prod.ts'
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
@@ -43,3 +32,14 @@ jobs:
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
           FIREBASE_SENDER_ID: ${{ secrets.FIREBASE_SENDER_ID }}
           FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
+
+      - name: Build
+        run: npm run build:prod
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: dist/docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
