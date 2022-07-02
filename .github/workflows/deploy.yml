@@ -7,39 +7,24 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up node.js
-        uses: actions/setup-node@v3.3.0
+      - name: Angular Deploy gh-pages Actions
+      # You may pin to the exact commit or the version.
+      # uses: AhsanAyaz/angular-deploy-gh-pages-actions@0e4f1a953d00116ca38fbf1bcdb37f91923015ef
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
         with:
-          node-version: '16'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Replace secret
-        uses: cschleiden/replace-tokens@v1.1
-        with:
-          tokenPrefix: '{'
-          tokenSuffix: '}'
-          files: 'src/environments/environment.prod.ts'
-        env:
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-          FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
-          FIREBASE_DOMAIN: ${{ secrets.FIREBASE_DOMAIN }}
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-          FIREBASE_SENDER_ID: ${{ secrets.FIREBASE_SENDER_ID }}
-          FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
-
-      - name: Build
-        run: npm run gdeploy
-
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: gh-pages
-          build_dir: dist/docs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Github access token token used to deploy on gh_pages. You can find it on Github.
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          # The directory of the angular project, in which all the commands will run
+          angular_project_dir: ./ # optional, default is ./
+          # Build configuration for the angular app
+          build_configuration: gdeploy # optional, default is production
+          # base href for the app
+          base_href: /RossanaDeanWeddingWebsite/ # optional, default is /
+          # branch on which the angular build will be deployed
+          deploy_branch: gh-pages # optional, default is gh-pages
+          # The folder in which `ng build` provides its output. This is the folder which will be deployed to the `deploy_branch`.
+          angular_dist_build_folder: dist/docs # optional, default is dist
+          # If the action should run 'ng lint'
+          #run_lint: # optional
+          # Will not fail the step if anything fails
+          #skip_failure: # optional
