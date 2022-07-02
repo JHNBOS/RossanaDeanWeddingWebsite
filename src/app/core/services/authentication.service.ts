@@ -10,6 +10,7 @@ import * as moment from 'moment';
 })
 export class AuthenticationService {
 	private dbPath = '/tokens';
+	private secretKey = 'aaTGGHGhvbgcYRYUH1235I9Eadxcvbio';
 	private id = 'secret';
 
 	private collection: CollectionReference<ISimpleValidationModel>;
@@ -26,16 +27,17 @@ export class AuthenticationService {
 
 	public async saveSecret(): Promise<void> {
 		const secret = await this.loadSecret();
-		this.setSecret(secret);
+		this.setSecretKey(secret);
 	}
 
 	public async signIn(token: string): Promise<boolean> {
-		const secretToken = this.getSecret();
+		const secretToken = this.getSecretKey();
 		if (secretToken == null) return false;
 
-		if (secretToken.token == token) {
-			secretToken.setSignIn(token);
-			this.setSecret(secretToken);
+		const model = new ValidationModel(secretToken);
+
+		if (secretToken == token) {
+			this.setSecret(model);
 			return true;
 		}
 
@@ -61,10 +63,17 @@ export class AuthenticationService {
 	}
 
 	public setSecret(secret: IValidationModel): void {
-		const storageItem = localStorage.getItem(this.id);
-		if (storageItem == null || (storageItem != null && JSON.parse(storageItem).validUntill == null)) {
-			localStorage.setItem(this.id, JSON.stringify(secret));
-		}
+		secret.setSignIn(secret.token);
+		localStorage.setItem(this.id, JSON.stringify(secret));
+	}
+
+	public getSecretKey(): string | null {
+		const key = localStorage.getItem(this.secretKey);
+		return key;
+	}
+
+	public setSecretKey(secret: IValidationModel): void {
+		localStorage.setItem(this.secretKey, secret.token);
 	}
 
 	public removeSecret(): void {
