@@ -61,7 +61,8 @@ export class AuthenticationService {
 	}
 
 	public setSecret(secret: IValidationModel): void {
-		if (localStorage.getItem(this.id) == null) {
+		const storageItem = localStorage.getItem(this.id);
+		if (storageItem == null || (storageItem != null && JSON.parse(storageItem).validUntill == null)) {
 			localStorage.setItem(this.id, JSON.stringify(secret));
 		}
 	}
