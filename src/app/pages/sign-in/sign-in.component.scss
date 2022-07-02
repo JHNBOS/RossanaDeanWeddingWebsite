@@ -17,6 +17,12 @@
   align-items: center;
 }
 
-mat-input{
-  border-color: #facbb1;
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #facbb1;
+  border-color:#facbb1;
+}
+
+::ng-deep .mat-form-field-underline, ::ng-deep .mat-form-field-appearance-outline {
+  background-color: blue !important;
+  border-color:#facbb1;
 }
