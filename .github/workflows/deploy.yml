@@ -19,48 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Replace secret 1
-        uses: bluwy/substitute-string-action@v1
-        id: sub1
-        with:
-          _input-file: 'src/environments/environment.prod.ts'
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-
-      - name: Replace secret 2
-        uses: bluwy/substitute-string-action@v1.0.1
-        id: sub2
-        with:
-          _input-file: 'src/environments/environment.prod.ts'
-          FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
-
-      - name: Replace secret 3
-        uses: bluwy/substitute-string-action@v1.0.1
-        id: sub3
-        with:
-          _input-file: 'src/environments/environment.prod.ts'
-          FIREBASE_DOMAIN: ${{ secrets.FIREBASE_DOMAIN }}
-
-      - name: Replace secret 4
-        uses: bluwy/substitute-string-action@v1.0.1
-        id: sub4
-        with:
-          _input-file: 'src/environments/environment.prod.ts'
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-
-      - name: Replace secret 5
-        uses: bluwy/substitute-string-action@v1.0.1
-        id: sub5
-        with:
-          _input-file: 'src/environments/environment.prod.ts'
-          FIREBASE_SENDER_ID: ${{ secrets.FIREBASE_SENDER_ID }}
-
-      - name: Replace secret 6
-        uses: bluwy/substitute-string-action@v1.0.1
-        id: sub6
-        with:
-          _input-file: 'src/environments/environment.prod.ts'
-          FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
-
       - name: Build
         run: npm run gdeploy
 
