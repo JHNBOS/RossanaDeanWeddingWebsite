@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Home path
-        run: ls $GITHUB_WORKSPACE
+        run: echo ls -la
       
       - name: Checkout
         uses: actions/checkout@v3
