@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~/src/assets/styles/variables';
-@import '~/src/assets/styles/header';
+@import "~/src/assets/styles/variables";
+@import "~/src/assets/styles/header";
 
 html,
 body {
@@ -71,6 +71,11 @@ body {
 }
 
 @media (min-width: 300px) and (max-width: 992px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
   .wrapper {
     &::before,
     &::after {
