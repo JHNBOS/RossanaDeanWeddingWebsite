@@ -21,6 +21,9 @@ jobs:
 
       - name: Build
         run: npm run gdeploy
+        
+      - name: Create 404
+        run: cp index.html 404.html
 
       - name: GitHub Pages action
         # You may pin to the exact commit or the version.
