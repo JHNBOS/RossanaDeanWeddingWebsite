@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import "variables";
 
 .header {
   display: flex;
@@ -51,7 +51,7 @@
     padding-bottom: 15px;
     background: $background-color;
 
-    background-image: url("../img/flowers_top--transparent2.png");
+    background-image: url("~/src/assets/img/flowers_top--transparent2.png");
     background-size: 100% auto;
     //background-size: contain;
     background-repeat: no-repeat;
@@ -112,7 +112,7 @@
     padding-bottom: 15px;
     background: $background-color;
 
-    background-image: url("../img/flowers_top--transparent2.png");
+    background-image: url("~/src/assets/img/flowers_top--transparent2.png");
     background-size: 100% auto;
     //background-size: contain;
     background-repeat: no-repeat;
@@ -175,7 +175,7 @@
     //padding-bottom: 15px;
     background: $background-color;
 
-    background-image: url("../img/flowers_top--transparent2.png");
+    background-image: url("~/src/assets/img/flowers_top--transparent2.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
     //background-size: 100% 70%;
