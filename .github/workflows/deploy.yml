@@ -24,7 +24,6 @@ jobs:
         id: sub1
         with:
           _input-file: 'src/environments/environment.prod.ts'
-          _format-key: FIREBASE_API_KEY
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
 
       - name: Replace secret 2
@@ -32,7 +31,6 @@ jobs:
         id: sub2
         with:
           _input-file: 'src/environments/environment.prod.ts'
-          _format-key: FIREBASE_APP_ID
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
 
       - name: Replace secret 3
@@ -40,7 +38,6 @@ jobs:
         id: sub3
         with:
           _input-file: 'src/environments/environment.prod.ts'
-          _format-key: FIREBASE_DOMAIN
           FIREBASE_DOMAIN: ${{ secrets.FIREBASE_DOMAIN }}
 
       - name: Replace secret 4
@@ -48,7 +45,6 @@ jobs:
         id: sub4
         with:
           _input-file: 'src/environments/environment.prod.ts'
-          _format-key: FIREBASE_PROJECT_ID
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
 
       - name: Replace secret 5
@@ -56,7 +52,6 @@ jobs:
         id: sub5
         with:
           _input-file: 'src/environments/environment.prod.ts'
-          _format-key: FIREBASE_SENDER_ID
           FIREBASE_SENDER_ID: ${{ secrets.FIREBASE_SENDER_ID }}
 
       - name: Replace secret 6
@@ -64,7 +59,6 @@ jobs:
         id: sub6
         with:
           _input-file: 'src/environments/environment.prod.ts'
-          _format-key: FIREBASE_STORAGE_BUCKET
           FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
 
       - name: Build
