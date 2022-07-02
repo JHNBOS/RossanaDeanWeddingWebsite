@@ -7,6 +7,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Home path
+        run: echo $GITHUB_WORKSPACE
+      
       - name: Checkout
         uses: actions/checkout@v3
 
