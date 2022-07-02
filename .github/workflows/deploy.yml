@@ -39,9 +39,11 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
-          target_branch: gh-pages/docs
+          target_branch: gh-pages
           build_dir: dist/docs
           jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
+      - name: Copy to docs
+        run: mkdir docs && mv -f -v * docs
