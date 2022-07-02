@@ -24,7 +24,7 @@ jobs:
         with:
           tokenPrefix: '{'
           tokenSuffix: '}'
-          files: './src/environments/environment.prod.ts'
+          files: '../src/environments/environment.prod.ts'
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
