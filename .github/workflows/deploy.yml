@@ -46,4 +46,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Copy to docs
-        run: mkdir docs && mv -f -v * docs
+        run: |
+          mkdir docs
+          mv * docs
