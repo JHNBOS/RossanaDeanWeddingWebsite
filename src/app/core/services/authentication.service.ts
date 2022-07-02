@@ -4,6 +4,7 @@ import { Injectable, NgZone } from '@angular/core';
 import { doc, Firestore, collection, CollectionReference, getDoc } from '@angular/fire/firestore';
 import { IValidationModel } from '../models/validation.model';
 import * as moment from 'moment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
 	providedIn: 'root'
@@ -43,6 +44,8 @@ export class AuthenticationService {
 	}
 
 	public get isLoggedIn(): boolean {
+		if (environment.production == false) return true;
+
 		const secretToken = this.getSecret();
 		if (secretToken == null) return false;
 
