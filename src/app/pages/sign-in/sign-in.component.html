@@ -7,7 +7,7 @@
 
       <div class="message">Please sign in using the password on your invite.</div>
 
-      <mat-form-field class="w-100" appearance="fill">
+      <mat-form-field class="w-100 pink" appearance="fill">
         <mat-label>Password</mat-label>
         <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="Enter your password" [(ngModel)]="password">
         <button type="button" mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
@@ -18,7 +18,7 @@
 
       <p class="text-danger" *ngIf="error.length > 0">{{error}}</p>
 
-      <button type="button" mat-flat-button color="primary" (click)="signIn()">
+      <button type="button" class="teal" mat-flat-button color="primary" (click)="signIn()">
         Sign in
       </button>
     </div>
