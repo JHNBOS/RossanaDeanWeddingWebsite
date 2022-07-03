@@ -3,7 +3,10 @@
   <div class="main">
     <div class="row">
 
-      <div class="col-sm-12 col-md-12 col-lg-10 col-xl-8 mx-lg-auto main-content"
+      <div class="col-lg-1 col-xl-2 position-relative">
+        <img src="assets/img/flowers_top-left--transparent.png" class="bg-top" alt="Decorative flowers"/>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-10 col-xl-8 main-content position-relative"
         [ngClass]="isLoggedIn === false ? 'bg--primary' : ''">
 
         <ng-container *ngIf="isLoggedIn">
@@ -20,6 +23,9 @@
           <router-outlet></router-outlet>
         </div>
 
+      </div>
+      <div class="col-lg-1 col-xl-2 position-relative">
+        <img src="assets/img/flowers_bottom-right--transparent.png" class="bg-bottom" alt="Decorative flowers"/>
       </div>
 
     </div>

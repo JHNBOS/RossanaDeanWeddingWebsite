@@ -19,6 +19,7 @@ body {
   height: 100%;
   background-color: $background-color;
 
+  /*
   &::before {
     content: "";
     position: absolute;
@@ -46,6 +47,25 @@ body {
     background-position: right bottom;
     z-index: 2;
   }
+  */
+}
+
+.bg-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
 }
 
 .main {
