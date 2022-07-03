@@ -11,9 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { registerLocaleData } from '@angular/common';
-import localeNl from '@angular/common/locales/nl';
 import localeEn from '@angular/common/locales/en';
-import { RouterModule } from '@angular/router';
 
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
@@ -40,9 +38,7 @@ registerLocaleData(localeEn, 'en');
 		provideStorage(() => getStorage()),
 		AngularFireModule.initializeApp(environment.firebaseConfig)
 	],
-  exports: [
-    MaterialModule
-  ],
+	exports: [MaterialModule],
 	providers: [
 		{
 			provide: LOCALE_ID,

@@ -1,3 +1,6 @@
+import { VenueComponent } from './pages/venue/venue.component';
+import { AccomodationsComponent } from './pages/accomodations/accomodations.component';
+import { RsvpComponent } from './pages/rsvp/rsvp.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,8 +12,26 @@ const routes: Routes = [
 	{
 		path: '',
 		component: HomeComponent,
-    canLoad: [AuthGuard],
-		canActivate: [AuthGuard],
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'rsvp',
+		component: RsvpComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'venue',
+		component: VenueComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'accomodations',
+		component: AccomodationsComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
 	},
 	{ path: 'home', redirectTo: '', pathMatch: 'full' },
 	{
