@@ -65,9 +65,9 @@ jobs:
           # Set tag message
           #tag_message: # optional
           # Enable the GitHub Pages built-in Jekyll
-          #enable_jekyll: # optional, default is false
+          enable_jekyll: false # optional, default is false
           # An alias for enable_jekyll to disable adding .nojekyll file to master or gh-pages branches
-          disable_nojekyll: true # optional, default is false
+          disable_nojekyll: false # optional, default is false
           # Set custom domain
           cname: meettheblackmores-wedding.be # optional
           # Set files or directories to exclude from a publish directory.
