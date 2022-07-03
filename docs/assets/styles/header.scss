@@ -170,14 +170,15 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    padding-top: 5vh;
-    padding-bottom: 5rem;
+    padding-top: 6vh;
+    padding-bottom: 2rem;
     //padding-bottom: 15px;
     background: $background-color;
 
     background-image: url("~/src/assets/img/flowers_top--transparent2.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
+    background-position: center -5vh;
     //background-size: 100% 70%;
     //background-size: cover;
 
