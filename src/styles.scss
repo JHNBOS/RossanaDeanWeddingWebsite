@@ -64,10 +64,6 @@ body {
   &.bg--primary {
     background-color: $background-color;
   }
-
-  &::-webkit-scrollbar {
-    background: transparent; /* Chrome/Safari/Webkit */
-  }
 }
 
 @media (min-width: 300px) and (max-width: 992px) {

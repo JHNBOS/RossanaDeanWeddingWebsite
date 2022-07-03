@@ -1,4 +1,4 @@
-@import '~/src/assets/styles/variables';
+@import "~/src/assets/styles/variables";
 
 .marry-quote {
   font-family: "Parisienne", sans-serif;
@@ -35,4 +35,25 @@
   object-fit: contain;
   width: auto;
   max-height: 500px;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .marry-quote {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .invite {
+    font-size: 1.6rem;
+  }
+
+  .wedding {
+    .day {
+      font-size: 2.5rem;
+    }
+
+    .date {
+      font-size: 1.75rem;
+    }
+  }
 }
