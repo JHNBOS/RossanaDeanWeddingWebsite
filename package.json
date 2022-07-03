@@ -4,9 +4,9 @@
   "homepage": "http://jhnbos.github.io/RossanaDeanWeddingWebsite/",
   "scripts": {
     "ng": "ng",
-    "gdeploy": "ng build --output-path dist/docs",
+    "gdeploy": "ng build --output-path dist/docs --base-href=/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist/rossana-dean-wedding-site",
+    "deploy": "gh-pages -d dist/rossana-dean-wedding-site ",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
