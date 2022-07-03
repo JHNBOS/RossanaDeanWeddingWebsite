@@ -1,0 +1,37 @@
+@import "~/src/assets/styles/variables";
+
+.marry-quote {
+  font-family: "Bauer Bodoni", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: $dark-text;
+}
+
+.location {
+  font-family: "Josefin", sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  color: $dark-text;
+}
+
+.rsvp-intro {
+  font-family: "ITC Avant-Garde Pro Book", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: $primary-text;
+}
+
+button.teal{
+  width: 250px;
+  height: 50px;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .marry-quote {
+    font-size: 2rem;
+  }
+
+  .location {
+    font-size: 1.6rem;
+  }
+}

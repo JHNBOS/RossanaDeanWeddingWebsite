@@ -16,32 +16,3 @@
   display: flex;
   align-items: center;
 }
-
-.mat-flat-button.teal {
-  background-color: $teal !important;
-  color: $dark-text !important;
-  min-width: 130px;
-}
-
-.mat-form-field.pink {
-  &.mat-focused {
-    ::ng-deep .mat-form-field-label {
-      color: $primary-color !important;
-    }
-
-    ::ng-deep .mat-form-field-underline,
-    ::ng-deep .mat-form-field-appearance-outline {
-      &::before {
-        background-color: $primary-color !important;
-      }
-
-      .mat-form-field-ripple {
-        background-color: $primary-color !important;
-      }
-    }
-
-    ::ng-deep .mat-input-element {
-      caret-color: $primary-color !important;
-    }
-  }
-}

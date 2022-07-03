@@ -80,7 +80,7 @@ body {
   height: auto;
   z-index: 1;
   background-color: $background-light-color;
-  box-shadow: 0 0 10px 1px rgb(0, 0, 0, 0.10);
+  box-shadow: 0 0 10px 1px rgb(0, 0, 0, 0.1);
 
   &.bg--primary {
     background-color: $background-color;
@@ -96,6 +96,7 @@ body {
     }
   }
 }
+
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
