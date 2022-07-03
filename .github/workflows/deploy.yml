@@ -24,7 +24,7 @@ jobs:
         
       - name: Create 404
         run: |
-          cd dist/docs
+          cd dist
           cp index.html 404.html
           cd -
 
@@ -41,9 +41,9 @@ jobs:
           # Set a target branch for deployment.
           publish_branch: gh-pages # optional, default is gh-pages
           # Set an input directory for deployment.
-          publish_dir: dist/docs # optional, default is public
+          publish_dir: dist # optional, default is public
           # Set an destination subdirectory for deployment.
-          destination_dir: docs # optional, default is
+          #destination_dir: # optional, default is
           # Set an external repository (owner/repo).
           #external_repository: # optional
           # If empty commits should be made to the publication branch
