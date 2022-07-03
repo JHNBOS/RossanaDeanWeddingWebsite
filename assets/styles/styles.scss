@@ -1,2 +1,44 @@
 @import "header";
 @import "variables";
+
+.mat-flat-button.teal {
+  background-color: $teal !important;
+  color: $dark-text !important;
+  min-width: 130px;
+  width: 220px;
+  height: 45px;
+  text-transform: uppercase;
+  font-family: "Avant-Garde Medium", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $dark-text;
+
+  &:hover{
+    background-color: darken($teal, 2%) !important;
+  }
+}
+
+.mat-form-field.pink {
+  &.mat-focused {
+    .mat-form-field-label {
+      color: $primary-color !important;
+    }
+
+    .mat-form-field-underline,
+    .mat-form-field-appearance-outline {
+      &::before {
+        background-color: $primary-color !important;
+      }
+
+      .mat-form-field-ripple {
+        background-color: $primary-color !important;
+      }
+    }
+
+    .mat-input-element {
+      caret-color: $primary-color !important;
+    }
+  }
+}

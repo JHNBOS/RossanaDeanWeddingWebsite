@@ -4,45 +4,51 @@ $primary-color: #facbb1;
 $secondary-color: #e31d4b;
 $primary-text: #707070;
 $dark-text: #282828;
-$teal: #cddcd8;
+//$teal: #cddcd8;
+$teal: #c5dcd6;
 $green: #8ce27e;
 
 @font-face {
   font-family: "Avant-Garde Extra Light";
-  src: url("../../assets/fonts/avant-garde_extra-light.ttf");
+  src: url("~/src/assets/fonts/avant-garde_extra-light.ttf");
 }
 
 @font-face {
   font-family: "Avant-Garde Medium";
-  src: url("../../assets/fonts/avant-garde_medium.ttf");
+  src: url("~/src/assets/fonts/avant-garde_medium.ttf");
 }
 
 @font-face {
   font-family: "hjirnotes";
-  src: url("../../assets/fonts/hjirnotes.ttf");
+  src: url("~/src/assets/fonts/hjirnotes.ttf");
 }
 
 @font-face {
   font-family: "Josefin";
-  src: url("../../assets/fonts/josefin.ttf");
+  src: url("~/src/assets/fonts/josefin.ttf");
 }
 
 @font-face {
   font-family: "Parisienne";
-  src: url("../../assets/fonts/parisienne.ttf");
+  src: url("~/src/assets/fonts/parisienne.ttf");
 }
 
 @font-face {
   font-family: "Serlio";
-  src: url("../../assets/fonts/serlio.ttf");
+  src: url("~/src/assets/fonts/serlio.ttf");
 }
 
 @font-face {
   font-family: "ITC Avant-Garde Pro Book";
-  src: url("../../assets/fonts/ITC_avant-garde_pro--bk.ttf");
+  src: url("~/src/assets/fonts/ITC_avant-garde_pro--bk.ttf");
 }
 
 @font-face {
   font-family: "ITC Avant-Garde Pro Book Oblique";
-  src: url("../../assets/fonts/ITC_avant-garde_pro--obl.ttf");
+  src: url("~/src/assets/fonts/ITC_avant-garde_pro--obl.ttf");
+}
+
+@font-face {
+  font-family: "Bauer Bodoni";
+  src: url("~/src/assets/fonts/bauer-bodoni--standard.ttf");
 }
