@@ -1,1 +1,90 @@
 @import "~/src/assets/styles/variables";
+
+.title {
+  font-family: "Bauer Bodoni", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: $dark-text;
+}
+
+.venue-name {
+  font-family: "Josefin", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: $primary-text;
+  letter-spacing: 2px;
+}
+
+.address {
+  font-family: "Josefin", sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  color: $secondary-color;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: darken($secondary-color, 10%);
+  }
+}
+
+.dress-code {
+  text-align: center;
+
+  .dress-code_title {
+    font-family: "Mrs Eaves", sans-serif;
+    font-size: 2.1rem;
+    color: $primary-text;
+  }
+
+  .ladies {
+    font-family: "Avant-Garde Medium", sans-serif;
+    font-size: 1rem;
+    color: $primary-text;
+  }
+
+  .gentlemen {
+    font-family: "Avant-Garde Medium", sans-serif;
+    font-size: 1rem;
+    color: $primary-text;
+  }
+}
+
+.present {
+  font-family: "Mrs Eaves", sans-serif;
+  font-size: 2.3rem;
+  color: #fa9a8a;
+  text-align: center;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .venue-name {
+    font-size: 1.6rem;
+  }
+
+  .address {
+    font-size: 1rem;
+  }
+
+  .dress-code {
+    .dress-code_title {
+      font-size: 2.1rem;
+    }
+
+    .ladies {
+      font-size: 1rem;
+    }
+
+    .gentlemen {
+      font-size: 1rem;
+    }
+  }
+
+  .present {
+    font-size: 2.3rem;
+  }
+}
