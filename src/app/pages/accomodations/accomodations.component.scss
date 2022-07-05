@@ -14,10 +14,14 @@
   color: $primary-text;
 }
 
+// .hotel-card {
+
+// }
 
 @media (min-width: 300px) and (max-width: 768px) {
   .title {
     font-size: 2rem;
+    margin-top: 2rem !important;
   }
 
   .hotel-intro {
