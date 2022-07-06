@@ -28,12 +28,6 @@
   }
 }
 
-.alta-ripa {
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-  object-position: center; 
-}
-
 .dress-code {
   text-align: center;
 
@@ -75,6 +69,12 @@
 
   .address {
     font-size: 1rem;
+  }
+  
+  .alta-ripa {
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-position: center; 
   }
 
   .dress-code {
