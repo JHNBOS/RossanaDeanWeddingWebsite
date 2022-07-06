@@ -25,7 +25,7 @@ export class ValidationModel implements ISimpleValidationModel, IValidationModel
 	public setSignIn(token: string): void {
 		this.token = token;
 		this.validatedAt = moment().toDate();
-		this.validUntill = moment().add(1, 'day').toDate();
+		this.validUntill = moment().add(2, 'hours').toDate();
 	}
 
 	public static createFromJson(json: any): ValidationModel {
