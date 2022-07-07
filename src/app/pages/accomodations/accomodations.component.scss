@@ -14,9 +14,15 @@
   color: $primary-text;
 }
 
-// .hotel-card {
+.hotel-card {
+  margin-bottom: 2rem;
 
-// }
+  .mat-card-content {
+    p {
+      font-size: 1rem;
+    }
+  }
+}
 
 .rating {
   margin-top: 1rem;
