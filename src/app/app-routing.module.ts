@@ -1,3 +1,7 @@
+import { TransportationComponent } from './pages/transportation/transportation.component';
+import { ThingsToDoComponent } from './pages/things-to-do/things-to-do.component';
+import { GuestbookComponent } from './pages/guestbook/guestbook.component';
+import { DietaryComponent } from './pages/dietary/dietary.component';
 import { VenueComponent } from './pages/venue/venue.component';
 import { AccomodationsComponent } from './pages/accomodations/accomodations.component';
 import { RsvpComponent } from './pages/rsvp/rsvp.component';
@@ -30,6 +34,30 @@ const routes: Routes = [
 	{
 		path: 'accomodations',
 		component: AccomodationsComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'dietary',
+		component: DietaryComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'guestbook',
+		component: GuestbookComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'things-to-do',
+		component: ThingsToDoComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'transportation-to-venue',
+		component: TransportationComponent,
 		canLoad: [AuthGuard],
 		canActivate: [AuthGuard]
 	},

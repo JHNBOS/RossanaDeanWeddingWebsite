@@ -15,7 +15,7 @@
   align-items: center;
   color: $dark-text;
 
-  &:hover{
+  &:hover {
     background-color: darken($teal, 2%) !important;
   }
 }
@@ -41,4 +41,17 @@
       caret-color: $primary-color !important;
     }
   }
+}
+
+.coming-soon {
+  font-family: "Mrs Eaves", sans-serif !important;
+  font-size: 1.7rem !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  margin-top: 1rem !important;
+}
+
+.coming-soon--icon {
+  font-size: 1.5rem !important;
+  text-align: center !important;
 }
