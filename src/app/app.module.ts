@@ -19,7 +19,6 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 
 import { environment } from '../environments/environment';
 import { MaterialModule } from './shared/material.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 registerLocaleData(localeEn, 'en');
 
@@ -31,7 +30,6 @@ registerLocaleData(localeEn, 'en');
 		BrowserAnimationsModule,
 		PagesModule,
 		MaterialModule,
-		FontAwesomeModule,
 		provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
 		provideFirestore(() => getFirestore()),
 		provideAuth(() => getAuth()),
