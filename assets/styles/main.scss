@@ -13,11 +13,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $dark-text;
 
   &:hover {
     background-color: darken($teal, 2%) !important;
   }
+}
+
+.mat-flat-button.red {
+  background-color: $secondary-color !important;
+  color: #ffffff !important;
+  min-width: 130px;
+  width: 220px;
+  height: 45px;
+  text-transform: uppercase;
+  font-family: "Avant-Garde Medium", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: darken($secondary-color, 3%) !important;
+  }
+}
+
+.mat-flat-button.small {
+  width: 150px;
+  height: 35px;
+  font-size: 0.85rem;
 }
 
 .mat-form-field.pink {
