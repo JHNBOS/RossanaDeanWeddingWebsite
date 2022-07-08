@@ -30,6 +30,10 @@
   .star {
     color: #ffcb1e;
   }
+
+  .empty-star {
+    color: inherit;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
