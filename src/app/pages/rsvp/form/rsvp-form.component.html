@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center">
+      <h2 class="title mt-3">
+        RSVP
+      </h2>
+
+      <h3 class="mt-2 rsvp-intro">
+        We hope to see you on our wedding day!
+      </h3>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center">
+
+      <div class="w-75">
+
+        <mat-form-field class="w-100 pink" appearance="outline">
+          <mat-label>Search for your name(s)</mat-label>
+          <input matInput type="text" placeholder="Search for your name(s)" [matAutocomplete]="auto"
+            [formControl]="formControl" [(ngModel)]="query" (focus)="hideAutocomplete()" (keyup)="hideAutocomplete()"
+            (keypress.backspace)="onBackspace()" />
+          <button type="button" matSuffix mat-icon-button aria-label="Clear" *ngIf="query.length > 0"
+            (click)="query = ''">
+            <mat-icon>close</mat-icon>
+          </button>
+
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" #autocomplete>
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+      </div>
+
+    </div>
+  </div>
+</div>
