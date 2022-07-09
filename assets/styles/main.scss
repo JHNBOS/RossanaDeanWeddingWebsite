@@ -49,6 +49,11 @@
       color: $primary-color !important;
     }
 
+    .mat-form-field-outline,
+    .mat-form-field-outline-thick {
+      color: $primary-color !important;
+    }
+
     .mat-form-field-underline,
     .mat-form-field-appearance-outline {
       &::before {
