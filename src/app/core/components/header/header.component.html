@@ -5,43 +5,47 @@
   <nav class="navbar navbar-expand-xl bg-transparent navbar-light">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-        (click)="isMenuCollapsed = !isMenuCollapsed">
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> Menu
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav" [hidden]="isMenuCollapsed">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" (click)="isMenuCollapsed = true">Home</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/rsvp" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" (click)="isMenuCollapsed = true">RSVP</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav">RSVP</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/venue" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" (click)="isMenuCollapsed = true">Venue</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav">Venue</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/dietary" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" (click)="isMenuCollapsed = true">Dietary restrictions</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav">Dietary
+              restrictions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/things-to-do" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" (click)="isMenuCollapsed = true">Things to do</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav">Things to
+              do</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/accomodations" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" (click)="isMenuCollapsed = true">Accomodations</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav">Accomodations</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/transportation-to-venue" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" (click)="isMenuCollapsed = true">Transportation to venue</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav">Transportation to venue</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/guestbook" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" (click)="isMenuCollapsed = true">Guestbook</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav">Guestbook</a>
           </li>
         </ul>
       </div>

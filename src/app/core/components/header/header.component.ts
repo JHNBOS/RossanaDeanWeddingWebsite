@@ -7,8 +7,6 @@ import { DataService } from '../../services/data.service';
 	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public isMenuCollapsed = true;
-
 	constructor(public dataService: DataService) {}
 
 	ngOnInit(): void {}
