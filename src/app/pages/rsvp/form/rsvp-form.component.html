@@ -35,7 +35,9 @@
           </mat-autocomplete>
         </mat-form-field>
 
-        <h4>You have selected {{selectedCollection?.name}}</h4>
+        <div id="formAttending" *ngIf="selectedCollection != null">
+          <h4>Attending</h4>
+        </div>
 
       </div>
 

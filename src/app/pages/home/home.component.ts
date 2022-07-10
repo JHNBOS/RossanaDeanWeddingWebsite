@@ -7,13 +7,12 @@ import { trigger, style, animate, transition, query, keyframes, state } from '@a
 	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-	public redHeart: string = 'assets/img/heart_red.png';
+	public redHeart: string = 'assets/img/heart_pinkish.png';
 	public photoHeart: string = 'assets/img/heart.png';
 
 	constructor() {}
 
 	ngOnInit(): void {}
 
-	ngAfterViewInit(): void {
-	}
+	ngAfterViewInit(): void {}
 }
