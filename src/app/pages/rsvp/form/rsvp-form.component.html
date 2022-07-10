@@ -37,6 +37,10 @@
 
         <div id="formAttending" *ngIf="selectedCollection != null">
           <h4>Attending</h4>
+
+          <div class="d-flex flex-column">
+            <span *ngFor="let person of selectedCollection!.persons">Is <b>{{person.name}}</b> attending?</span>
+          </div>
         </div>
 
       </div>
