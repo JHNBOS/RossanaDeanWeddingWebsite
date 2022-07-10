@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +14,7 @@ import { ThingsToDoComponent } from './things-to-do/things-to-do.component';
 import { TransportationComponent } from './transportation/transportation.component';
 import { GuestbookComponent } from './guestbook/guestbook.component';
 import { RsvpFormComponent } from './rsvp/form/rsvp-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
 	declarations: [
@@ -27,7 +29,7 @@ import { RsvpFormComponent } from './rsvp/form/rsvp-form.component';
 		GuestbookComponent,
 		RsvpFormComponent
 	],
-	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, MaterialModule],
+	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, BrowserAnimationsModule, MaterialModule],
 	exports: [
 		HomeComponent,
 		SignInComponent,

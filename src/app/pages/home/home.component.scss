@@ -38,10 +38,61 @@
   }
 }
 
+#heart-holder {
+  min-height: 500px;
+  height: auto;
+}
+
 .heart {
   object-fit: contain;
   width: auto;
   max-height: 500px;
+
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+
+  // -webkit-transition: opacity 1s ease;
+  // -moz-transition: opacity 1s ease;
+  // -o-transition: opacity 1s ease;
+  // transition: opacity 1s ease;
+}
+
+.heart--top {
+  animation-name: fadeOut;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.heart--bottom {
+  animation-name: fadeIn;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 768px) {

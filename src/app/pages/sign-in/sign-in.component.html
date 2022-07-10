@@ -7,7 +7,7 @@
 
       <div class="message">Please sign in using the password on your invite.</div>
 
-      <mat-form-field class="w-100 pink" appearance="outline">
+      <mat-form-field class="w-100 pink" appearance="fill">
         <mat-label>Password</mat-label>
         <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="Enter your password"
           [(ngModel)]="password" (keyup.enter)="signIn()">
