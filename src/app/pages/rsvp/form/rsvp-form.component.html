@@ -28,12 +28,14 @@
             <mat-icon>close</mat-icon>
           </button>
 
-          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" #autocomplete>
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" #autocomplete (optionSelected)="selectOption($event)" [displayWith]="displayGuests">
             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-              {{option}}
+              {{option.name}}
             </mat-option>
           </mat-autocomplete>
         </mat-form-field>
+
+        <h4>You have selected {{selectedCollection?.name}}</h4>
 
       </div>
 

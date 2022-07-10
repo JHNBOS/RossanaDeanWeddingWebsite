@@ -2,7 +2,8 @@ import { Timestamp } from '@angular/fire/firestore';
 
 export interface IGuestCollection {
 	id: string;
-	guests: Array<IGuest>;
+	name: string;
+	persons: Array<IGuest>;
 }
 
 export interface IGuest {

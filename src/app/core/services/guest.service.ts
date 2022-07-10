@@ -1,5 +1,5 @@
 import { map, Observable } from 'rxjs';
-import { IGuestCollection } from './../models/guest.model';
+import { Guest, IGuestCollection } from './../models/guest.model';
 import { ISimpleValidationModel, ValidationModel } from './../models/validation.model';
 import { Router } from '@angular/router';
 import { Injectable, NgZone } from '@angular/core';
@@ -23,7 +23,21 @@ export class GuestService {
 
 	public list(): Promise<Array<IGuestCollection>> {
 		return new Promise((resolve) =>
-			this.guests.pipe(map((guests) => guests.map((g) => g as IGuestCollection))).subscribe((guests) => resolve(guests))
+			this.guests
+				.pipe(
+					map((guests) =>
+						guests.map((g) => {
+							const guestCollection = g as IGuestCollection;
+							for (const person of guestCollection.persons) {
+								const personGuest = new Guest(person.id, person.name);
+								const index = guestCollection.persons.indexOf(person);
+								guestCollection.persons[index] = personGuest;
+							}
+              return guestCollection;
+						})
+					)
+				)
+				.subscribe((guests) => resolve(guests))
 		);
 	}
 
