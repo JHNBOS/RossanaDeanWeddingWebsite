@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { GuestService } from './../../../core/services/guest.service';
 import { IGuest, IGuestCollection } from './../../../core/models/guest.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -26,7 +27,10 @@ export class RsvpFormComponent implements OnInit {
 	async ngOnInit(): Promise<void> {
 		const collection = await this.service.list();
 		this.guests = collection;
-		this.selectedCollection = this.guests[0];
+
+		if (environment.production == false) {
+			this.selectedCollection = this.guests[0];
+		}
 
 		this.filteredOptions = this.formControl.valueChanges.pipe(
 			startWith(''),
