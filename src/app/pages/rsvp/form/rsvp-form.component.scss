@@ -76,7 +76,7 @@
           color: $green;
 
           &.active {
-            background-color: $green;
+            background-color: rgb(140, 226, 126, 0.8);
             color: #fff;
           }
         }
@@ -86,7 +86,7 @@
           color: $secondary-color;
 
           &.active {
-            background-color: $secondary-color;
+            background-color: rgb(227, 29, 75, 0.8);
             color: #fff;
           }
         }
