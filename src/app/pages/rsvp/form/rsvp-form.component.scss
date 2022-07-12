@@ -16,12 +16,12 @@
 }
 
 #txtSearchName {
-  width: 75%;
+  width: 80%;
 }
 
 #formAttending {
   margin-top: 1rem;
-  width: 75%;
+  width: 80%;
 
   h4 {
     font-family: "Avant-Garde Medium", sans-serif;
@@ -97,6 +97,10 @@
       }
     }
   }
+}
+
+button.red {
+  width: 140px !important;
 }
 
 @media (min-width: 300px) and (max-width: 768px) {

@@ -1,4 +1,3 @@
-import { environment } from 'src/environments/environment';
 import { GuestService } from './../../../core/services/guest.service';
 import { IGuest, IGuestCollection } from './../../../core/models/guest.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -6,6 +5,9 @@ import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent, MatAutocompleteTrigger } from '@angular/material/autocomplete';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import moment from 'moment';
+import { Timestamp } from 'firebase/firestore';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-rsvp-form',
@@ -22,19 +24,18 @@ export class RsvpFormComponent implements OnInit {
 
 	@ViewChild(MatAutocompleteTrigger) autocomplete!: MatAutocompleteTrigger;
 
-	constructor(public service: GuestService) {}
+	constructor(public router: Router, public service: GuestService) {}
 
 	async ngOnInit(): Promise<void> {
 		const collection = await this.service.list();
 		this.guests = collection;
 
-		if (environment.production == false) {
-			this.selectedCollection = this.guests[0];
-		}
-
 		this.filteredOptions = this.formControl.valueChanges.pipe(
 			startWith(''),
-			map((value) => this._filter(value || ''))
+			map((value) => {
+				this.query = value ?? '';
+				return this._filter(value || '');
+			})
 		);
 	}
 
@@ -45,6 +46,18 @@ export class RsvpFormComponent implements OnInit {
 
 	public setAttending(person: IGuest, isAttending: boolean): void {
 		person.isAttending = isAttending;
+	}
+
+	public async sendForm(): Promise<void> {
+		localStorage.setItem('rsvp', moment().format('DD-MM-YYYY HH:mm'));
+
+		for (const guest of this.selectedCollection!.persons) {
+			guest.repliedAt = Timestamp.now();
+		}
+
+		await this.service.save(this.selectedCollection!);
+
+		this.router.navigate(['/rsvp']);
 	}
 
 	public displayGuests(option: IGuestCollection): string {

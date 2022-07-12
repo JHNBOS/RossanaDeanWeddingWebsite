@@ -19,7 +19,7 @@
 <div class="row mt-5">
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
     <div class="d-flex flex-column align-items-center wedding">
-      <p class="rsvp-intro">
+      <p class="rsvp-intro" *ngIf="hasReplied == false">
         We can't wait to celebrate this amazing day with you.
         <br />
         In anticipation of the big day, we have created this website to keep
@@ -28,13 +28,14 @@
         up to date on all the details of our wedding.
       </p>
 
-      <p class="my-3 text-center">
-        Starting from November 1st, you will be able to let us know if you are attending or not.</p>
-
-      <button type="button" class="teal mt-3 mat-elevation-z3 d-none" mat-flat-button color="primary"
-        routerLink="/rsvp-form" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <button type="button" class="teal mt-3 mat-elevation-z3" mat-flat-button color="primary" routerLink="/rsvp-form"
+        routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="hasReplied == false">
         Click here to RSVP
       </button>
+
+      <p class="rsvp-intro" *ngIf="hasReplied">
+        Thank you for letting us know, that you will be celebrating our special day with us.
+      </p>
     </div>
   </div>
 </div>

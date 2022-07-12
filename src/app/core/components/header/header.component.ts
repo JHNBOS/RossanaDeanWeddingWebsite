@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-header',
@@ -7,7 +7,11 @@ import { DataService } from '../../services/data.service';
 	styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-	constructor(public dataService: DataService) {}
+	public isRsvpForm: boolean = false;
 
-	ngOnInit(): void {}
+	constructor(public router: Router) {}
+
+	ngOnInit(): void {
+		this.isRsvpForm = this.router.url.includes('rsvp');
+	}
 }
