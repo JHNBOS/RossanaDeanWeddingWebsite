@@ -26,6 +26,7 @@ export class RsvpFormComponent implements OnInit {
 	async ngOnInit(): Promise<void> {
 		const collection = await this.service.list();
 		this.guests = collection;
+		this.selectedCollection = this.guests[0];
 
 		this.filteredOptions = this.formControl.valueChanges.pipe(
 			startWith(''),
@@ -36,7 +37,10 @@ export class RsvpFormComponent implements OnInit {
 	public selectOption(event: MatAutocompleteSelectedEvent): void {
 		const option = event.option;
 		this.selectedCollection = option.value;
-		console.log('SELECTED: ', option);
+	}
+
+	public setAttending(person: IGuest, isAttending: boolean): void {
+		person.isAttending = isAttending;
 	}
 
 	public displayGuests(option: IGuestCollection): string {

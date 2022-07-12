@@ -14,11 +14,9 @@
 
 <div class="row mt-5">
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
-    <div class="d-flex flex-column align-items-center">
+    <div class="d-flex flex-column align-items-center justify-content-center">
 
-      <div class="w-75">
-
-        <mat-form-field class="w-100 pink" appearance="outline">
+        <mat-form-field id="txtSearchName" class="pink mx-auto" appearance="outline">
           <mat-label>Search for your name(s)</mat-label>
           <input matInput type="text" placeholder="Search for your name(s)" [matAutocomplete]="auto"
             [formControl]="formControl" [(ngModel)]="query" (focus)="hideAutocomplete()" (keyup)="hideAutocomplete()"
@@ -28,7 +26,8 @@
             <mat-icon>close</mat-icon>
           </button>
 
-          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" #autocomplete (optionSelected)="selectOption($event)" [displayWith]="displayGuests">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" #autocomplete
+            (optionSelected)="selectOption($event)" [displayWith]="displayGuests">
             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
               {{option.name}}
             </mat-option>
@@ -39,11 +38,30 @@
           <h4>Attending</h4>
 
           <div class="d-flex flex-column">
-            <span *ngFor="let person of selectedCollection!.persons">Is <b>{{person.name}}</b> attending?</span>
+            <div class="attending-row" *ngFor="let person of selectedCollection!.persons">
+
+              <div class="attending-form">
+                <span class="attending-text">Is <b>{{person.name}}</b> attending?</span>
+                <div class="attending-buttons">
+                  <button type="button" class="btn-green" [class.active]="person.isAttending" mat-stroked-button
+                    color="primary" (click)="setAttending(person, true)">
+                    Yes
+                  </button>
+                  <button type="button" class="btn-red" [class.active]="person.isAttending == false" mat-stroked-button
+                    color="primary" (click)="setAttending(person, false)">
+                    No
+                  </button>
+                </div>
+              </div>
+
+              <div class="attending-status">
+                <mat-icon *ngIf="person.isAttending">mood</mat-icon>
+                <mat-icon *ngIf="person.isAttending == false">mood_bad</mat-icon>
+              </div>
+            </div>
+
           </div>
         </div>
-
-      </div>
 
     </div>
   </div>
