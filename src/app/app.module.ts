@@ -40,7 +40,7 @@ registerLocaleData(localeEn, 'en');
 	providers: [
 		{
 			provide: LOCALE_ID,
-			useValue: 'nl'
+			useValue: 'en'
 		},
 		AuthenticationService
 	],

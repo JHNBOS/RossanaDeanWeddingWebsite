@@ -1,0 +1,36 @@
+@import "~/src/assets/styles/main";
+
+.title {
+  font-family: "Bauer Bodoni", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: $dark-text;
+}
+
+.custom-sidenav-container {
+  position: absolute;
+  height: 100%;
+  display: inherit;
+  transform: inherit;
+}
+
+.mat-sidenav {
+  width: 200px;
+  height: 100%;
+}
+
+.mat-drawer-container {
+  height: 100%;
+  width: 100%;
+}
+
+.mat-sidenav-content {
+  width: 100%;
+}
+
+.admin-active,
+.admin-active:focus,
+.admin-active:active {
+  background-color: $secondary-color;
+  color: white;
+}

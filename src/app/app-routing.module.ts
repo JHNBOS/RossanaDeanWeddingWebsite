@@ -1,3 +1,6 @@
+import { AdminComponent } from './pages/admin/admin.component';
+import { GuestOverviewComponent } from './pages/admin/guest-overview/guest-overview.component';
+import { AddGuestComponent } from './pages/admin/add-guest/add-guest.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
@@ -61,6 +64,18 @@ const routes: Routes = [
 		component: TransportationComponent,
 		canLoad: [AuthGuard],
 		canActivate: [AuthGuard]
+	},
+	{
+		path: 'guest-overview',
+		component: GuestOverviewComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'admin',
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard],
+		component: AdminComponent
 	},
 	{ path: 'home', redirectTo: '', pathMatch: 'full' },
 	{

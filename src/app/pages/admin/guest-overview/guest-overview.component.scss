@@ -1,0 +1,17 @@
+@import "~/src/assets/styles/main";
+
+.mat-table {
+  width: 100%;
+  background-color: $background-light-color;
+}
+
+.mat-paginator {
+  width: 100%;
+  background-color: $background-light-color;
+
+}
+
+
+:host ::ng-deep.mat-paginator .mat-paginator-container {
+  justify-content: space-between !important;
+}

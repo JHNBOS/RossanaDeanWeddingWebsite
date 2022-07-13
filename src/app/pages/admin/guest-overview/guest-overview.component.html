@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-12">
+    <div class="d-flex flex-column align-items-center">
+
+      <mat-form-field class="pink w-100 mt-3 mb-1" appearance="fill">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
+      </mat-form-field>
+
+      <table mat-table [dataSource]="dataSource" class="" matSort>
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
+          <td mat-cell *matCellDef="let element;"> {{guests.indexOf(element) + 1 }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+          <td mat-cell *matCellDef="let element">
+            <span class="text-muted" *ngIf="element.repliedAt == null">Not replied</span>
+            <span class="text-success" *ngIf="element.repliedAt != null">Replied</span>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="repliedAt">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Replied at</th>
+          <td mat-cell *matCellDef="let element">
+            <span *ngIf="element.repliedAt == null">-</span>
+            <span *ngIf="element.repliedAt != null">{{element.repliedAt.toDate() | date: 'EEEE d MMMM yyyy'}}</span>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+
+      <mat-paginator #paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="10" showFirstLastButtons>
+      </mat-paginator>
+    </div>
+  </div>
+</div>

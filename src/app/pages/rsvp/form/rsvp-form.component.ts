@@ -55,7 +55,7 @@ export class RsvpFormComponent implements OnInit {
 			guest.repliedAt = Timestamp.now();
 		}
 
-		await this.service.save(this.selectedCollection!);
+		await this.service.update(this.selectedCollection!);
 
 		this.router.navigate(['/rsvp']);
 	}

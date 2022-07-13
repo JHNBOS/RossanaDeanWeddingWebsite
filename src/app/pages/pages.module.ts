@@ -15,6 +15,9 @@ import { TransportationComponent } from './transportation/transportation.compone
 import { GuestbookComponent } from './guestbook/guestbook.component';
 import { RsvpFormComponent } from './rsvp/form/rsvp-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GuestOverviewComponent } from './admin/guest-overview/guest-overview.component';
+import { AddGuestComponent } from './admin/add-guest/add-guest.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
 	declarations: [
@@ -27,7 +30,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		ThingsToDoComponent,
 		TransportationComponent,
 		GuestbookComponent,
-		RsvpFormComponent
+		RsvpFormComponent,
+		GuestOverviewComponent,
+		AddGuestComponent,
+		AdminComponent
 	],
 	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, BrowserAnimationsModule, MaterialModule],
 	exports: [
@@ -40,7 +46,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		ThingsToDoComponent,
 		TransportationComponent,
 		GuestbookComponent,
-		RsvpFormComponent
+		RsvpFormComponent,
+		GuestOverviewComponent,
+		AddGuestComponent,
+		AdminComponent
 	]
 })
 export class PagesModule {}

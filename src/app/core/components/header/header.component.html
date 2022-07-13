@@ -1,5 +1,5 @@
 <div class="header">
-  <div class="logo" routerLink="/">
+  <div class="logo" (click)="enterAdminMenu()">
     Rossana & Dean
   </div>
   <nav class="navbar navbar-expand-xl bg-transparent navbar-light">
@@ -15,8 +15,9 @@
               [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [class.active]="isRsvpForm" aria-current="page" routerLink="/rsvp" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav">RSVP</a>
+            <a class="nav-link" [class.active]="isRsvpForm" aria-current="page" routerLink="/rsvp"
+              routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav">RSVP</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/venue" routerLinkActive="active"
@@ -49,8 +50,8 @@
               [routerLinkActiveOptions]="{exact:true}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [class.active]="isRsvpForm" aria-current="page" routerLink="/rsvp" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}">RSVP</a>
+            <a class="nav-link" [class.active]="isRsvpForm" aria-current="page" routerLink="/rsvp"
+              routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">RSVP</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/venue" routerLinkActive="active"

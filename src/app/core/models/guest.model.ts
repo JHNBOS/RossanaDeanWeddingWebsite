@@ -6,23 +6,32 @@ export interface IGuestCollection {
 	persons: Array<IGuest>;
 }
 
+export interface ISimpleGuestCollection {
+	id: string;
+	name: string;
+	persons: Array<ISimpleGuest>;
+}
 export interface IGuest {
 	id: string;
 	name: string;
 	isAttending: boolean;
-	repliedAt: Timestamp;
+	repliedAt: Timestamp | null;
 }
 
+export interface ISimpleGuest {
+	id: string;
+	name: string;
+}
 export class Guest implements IGuest {
 	public id: string;
 	public name: string;
 	public isAttending: boolean;
-	public repliedAt: Timestamp;
+	public repliedAt: Timestamp | null;
 
 	constructor(id: string, name: string) {
 		this.id = id;
 		this.name = name;
 		this.isAttending = true;
-		this.repliedAt = Timestamp.fromDate(new Date(1970, 1, 1));
+		this.repliedAt = null;
 	}
 }
