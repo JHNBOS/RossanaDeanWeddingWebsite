@@ -27,15 +27,17 @@
         </ng-container>
 
         <ng-container matColumnDef="repliedAt">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header [style.flex]="'0 0 25%'" [style.white-space]="'nowrap'">Replied at</th>
-          <td class="text-center" mat-cell *matCellDef="let element" [style.flex]="'0 0 25%'" [style.white-space]="'nowrap'">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header [style.flex]="'0 0 25%'" [style.white-space]="'nowrap'">
+            Replied at</th>
+          <td class="text-center" mat-cell *matCellDef="let element" [style.flex]="'0 0 25%'"
+            [style.white-space]="'nowrap'">
             <span *ngIf="element.repliedAt == null">-</span>
             <span *ngIf="element.repliedAt != null">{{element.repliedAt.toDate() | date: 'EEEE d MMMM yyyy'}}</span>
           </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="editGuests(row.collectionId)"></tr>
         <tr class="mat-row" *matNoDataRow>
           <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
         </tr>

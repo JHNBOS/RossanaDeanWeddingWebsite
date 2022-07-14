@@ -6,7 +6,7 @@ import { Injectable, NgZone } from '@angular/core';
 import { doc, Firestore, collection, CollectionReference, getDoc, collectionData, updateDoc, DocumentReference } from '@angular/fire/firestore';
 import { IValidationModel } from '../models/validation.model';
 import * as moment from 'moment';
-import { addDoc, getDocs, setDoc } from 'firebase/firestore';
+import { addDoc, deleteDoc, getDocs, setDoc } from 'firebase/firestore';
 
 @Injectable({
 	providedIn: 'root'
@@ -20,6 +20,17 @@ export class GuestService {
 	constructor(public router: Router, public ngZone: NgZone, private firestore: Firestore) {
 		this.collection = collection(this.firestore, this.dbPath) as CollectionReference<IGuestCollection>;
 		this.guests = collectionData(this.collection);
+	}
+
+	public async findById(id: string): Promise<IGuestCollection> {
+		const docRef = doc(this.firestore, this.dbPath, id);
+		const guestCollection = await getDoc(docRef);
+		return guestCollection.data() as IGuestCollection;
+	}
+
+	public async delete(id: string): Promise<void> {
+		const docRef = doc(this.firestore, this.dbPath, id);
+		await deleteDoc(docRef);
 	}
 
 	public async list(): Promise<Array<IGuestCollection>> {
@@ -75,6 +86,25 @@ export class GuestService {
 		const docReference = doc(this.firestore, this.dbPath, `${guestCollection.id}`) as DocumentReference<IGuestCollection>;
 		await updateDoc(docReference, { persons: arr });
 		await updateDoc(docReference, { id: docReference.id });
+
+		return guestCollection;
+	}
+
+	public async updateSimple(guestCollection: ISimpleGuestCollection): Promise<ISimpleGuestCollection> {
+		const collection = { ...guestCollection };
+
+		let arr = new Array<any>();
+		for (const person of guestCollection.persons) {
+			arr.push({ ...person });
+		}
+
+		collection.persons = arr;
+
+		const docReference = doc(this.firestore, this.dbPath, `${guestCollection.id}`) as DocumentReference<ISimpleGuestCollection>;
+		await updateDoc(docReference, {
+			name: collection.name,
+			persons: arr
+		});
 
 		return guestCollection;
 	}

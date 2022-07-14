@@ -1,3 +1,4 @@
+import { EditGuestComponent } from './pages/admin/edit-guest/edit-guest.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { GuestOverviewComponent } from './pages/admin/guest-overview/guest-overview.component';
 import { AddGuestComponent } from './pages/admin/add-guest/add-guest.component';
@@ -77,6 +78,12 @@ const routes: Routes = [
 		canActivate: [AuthGuard],
 		component: AdminComponent
 	},
+  {
+    path: 'guests/:id',
+    component: EditGuestComponent,
+    canLoad: [AuthGuard],
+		canActivate: [AuthGuard],
+  },
 	{ path: 'home', redirectTo: '', pathMatch: 'full' },
 	{
 		path: 'sign-in',

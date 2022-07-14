@@ -18,10 +18,25 @@ export interface IGuest {
 	repliedAt: Timestamp | null;
 }
 
+export interface IGuestCollectionRow {
+	id: string;
+	name: string;
+	persons: Array<IGuestRow>;
+}
+
+export interface IGuestRow {
+	id: string;
+	collectionId: string;
+	name: string;
+	isAttending: boolean;
+	repliedAt: Timestamp | null;
+}
+
 export interface ISimpleGuest {
 	id: string;
 	name: string;
 }
+
 export class Guest implements IGuest {
 	public id: string;
 	public name: string;

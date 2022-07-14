@@ -7,11 +7,22 @@ table {
 .mat-table {
   width: 100%;
   background-color: $background-light-color;
+
+  .mat-row {
+    &:hover {
+      background-color: darken($background-light-color, 5%);
+      cursor: pointer;
+    }
+  }
 }
 
 .mat-paginator {
   width: 100%;
   background-color: $background-light-color;
+}
+
+:host ::ng-deep.mat-column-repliedAt .mat-sort-header-container {
+  justify-content: center;
 }
 
 :host ::ng-deep.mat-paginator .mat-paginator-container {
@@ -24,7 +35,7 @@ table {
     align-items: center;
   }
 
-  :host ::ng-deep.mat-paginator .mat-paginator-range-label{
+  :host ::ng-deep.mat-paginator .mat-paginator-range-label {
     display: none;
   }
 }

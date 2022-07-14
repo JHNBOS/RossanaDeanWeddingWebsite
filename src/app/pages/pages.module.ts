@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GuestOverviewComponent } from './admin/guest-overview/guest-overview.component';
 import { AddGuestComponent } from './admin/add-guest/add-guest.component';
 import { AdminComponent } from './admin/admin.component';
+import { EditGuestComponent } from './admin/edit-guest/edit-guest.component';
 
 @NgModule({
 	declarations: [
@@ -33,7 +34,8 @@ import { AdminComponent } from './admin/admin.component';
 		RsvpFormComponent,
 		GuestOverviewComponent,
 		AddGuestComponent,
-		AdminComponent
+		AdminComponent,
+  EditGuestComponent
 	],
 	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, BrowserAnimationsModule, MaterialModule],
 	exports: [
