@@ -1,1 +1,83 @@
 @import "~/src/assets/styles/main";
+
+.title {
+  font-family: "Bauer Bodoni", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: $dark-text;
+  letter-spacing: 2px;
+}
+
+.dietary-intro {
+  font-family: "Avant-Garde Medium", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: $primary-text;
+}
+
+.replied {
+  font-family: "Avant-Garde Medium", sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  color: $secondary-color;
+}
+
+:host ::ng-deep .mat-pseudo-checkbox.mat-pseudo-checkbox-checked,
+.mat-pseudo-checkbox.mat-pseudo-checkbox-indeterminate {
+  background-color: $checkbox !important;
+}
+
+#txtOtherRestriction {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-5%);
+  width: 35%;
+}
+
+::ng-deep #txtOtherRestriction .mat-form-field-infix {
+  border: 1px solid #6f6f6f;
+}
+
+::ng-deep #txtOtherRestriction .mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: 0px !important;
+}
+
+.mat-form-field,
+.mat-selection-list {
+  width: 50%;
+}
+
+button.red {
+  width: 140px !important;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    margin-top: 2rem !important;
+  }
+
+  .dietary-intro {
+    font-size: 1rem;
+  }
+
+  .mat-form-field,
+  .mat-selection-list {
+    width: 100%;
+  }
+
+  #txtOtherRestriction {
+    position: relative;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+    width: 100%;
+  }
+
+  button.red {
+    width: 80% !important;
+    margin: 0 auto 1rem auto;
+  }
+}

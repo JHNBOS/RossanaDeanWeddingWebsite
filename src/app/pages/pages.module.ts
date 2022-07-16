@@ -19,6 +19,7 @@ import { GuestOverviewComponent } from './admin/guest-overview/guest-overview.co
 import { AddGuestComponent } from './admin/add-guest/add-guest.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditGuestComponent } from './admin/edit-guest/edit-guest.component';
+import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overview.component';
 
 @NgModule({
 	declarations: [
@@ -35,7 +36,8 @@ import { EditGuestComponent } from './admin/edit-guest/edit-guest.component';
 		GuestOverviewComponent,
 		AddGuestComponent,
 		AdminComponent,
-  EditGuestComponent
+		EditGuestComponent,
+		DietaryOverviewComponent
 	],
 	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, BrowserAnimationsModule, MaterialModule],
 	exports: [
@@ -51,7 +53,9 @@ import { EditGuestComponent } from './admin/edit-guest/edit-guest.component';
 		RsvpFormComponent,
 		GuestOverviewComponent,
 		AddGuestComponent,
-		AdminComponent
+		AdminComponent,
+		EditGuestComponent,
+		DietaryOverviewComponent
 	]
 })
 export class PagesModule {}

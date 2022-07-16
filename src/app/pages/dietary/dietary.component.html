@@ -1,7 +1,53 @@
-<div class="d-flex flex-column justify-content-center align-items-center">
-  <h2 class="coming-soon">We know you can't wait any longer, but just hang in there.<br />Come back soon!</h2>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center">
+      <h2 class="title mt-3">
+        Dietary restrictions
+      </h2>
 
-  <div class="d-flex flex-row align-items-center">
-    <i class="fas fa-construction coming-soon--icon"></i>
+      <p class="my-2 replied" *ngIf="hasReplied">
+        Thank you very much for letting us know, <br />we will accomodate your dietary restrictions.
+      </p>
+
+      <p class="mt-2 dietary-intro">
+        To make sure you can enjoy all meals and desserts during our wedding party, <br />
+        please let us know if there are any dietary restrictions we should take into account.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+
+      <mat-form-field class="pink mt-2" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" placeholder="Ex. Harry Potter" [(ngModel)]="name">
+      </mat-form-field>
+
+      <mat-selection-list class="" #restrictions>
+        <mat-list-option checkboxPosition="before" value="lactose">Lactose intolerance</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="gluten">Gluten intolerance/sensitivity</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="vegatarian">Vegatarian</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="vegan">Vegan</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="dairy">Dairy-free</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="shellfish">Shellfish allergy</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="peanut">Peanut allergy</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="other" (click)="showHideInput()">Other:</mat-list-option>
+      </mat-selection-list>
+
+      <mat-form-field id="txtOtherRestriction" class="gray" floatLabel="never" #otherInput
+        [hidden]="showInput === false">
+        <textarea matInput placeholder="Describe dietary restriction(s)..." appearance="fill"
+          [(ngModel)]="otherRestrictions" rows="5"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-end mt-5">
+      <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()">
+        Send
+      </button>
+    </div>
   </div>
 </div>

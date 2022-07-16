@@ -43,30 +43,60 @@
   font-size: 0.85rem;
 }
 
-.mat-form-field.pink {
-  &.mat-focused {
-    .mat-form-field-label {
-      color: $primary-color !important;
-    }
-
-    .mat-form-field-outline,
-    .mat-form-field-outline-thick {
-      color: $primary-color !important;
-    }
-
-    .mat-form-field-underline,
-    .mat-form-field-appearance-outline {
-      &::before {
-        background-color: $primary-color !important;
+.mat-form-field{
+  &.pink {
+    &.mat-focused {
+      .mat-form-field-label {
+        color: $primary-color !important;
       }
 
-      .mat-form-field-ripple {
-        background-color: $primary-color !important;
+      .mat-form-field-outline,
+      .mat-form-field-outline-thick {
+        color: $primary-color !important;
+      }
+
+      .mat-form-field-underline,
+      .mat-form-field-appearance-outline {
+        &::before {
+          background-color: $primary-color !important;
+        }
+
+        .mat-form-field-ripple {
+          background-color: $primary-color !important;
+        }
+      }
+
+      .mat-input-element {
+        caret-color: $primary-color-dark !important;
       }
     }
+  }
 
-    .mat-input-element {
-      caret-color: $primary-color-dark !important;
+  &.gray {
+    &.mat-focused {
+      .mat-form-field-label {
+        color: rgba(0,0,0,.54) !important;
+      }
+
+      .mat-form-field-outline,
+      .mat-form-field-outline-thick {
+        color: rgba(0,0,0,.12) !important;
+      }
+
+      .mat-form-field-underline,
+      .mat-form-field-appearance-outline {
+        &::before {
+          background-color: rgba(0,0,0,.12) !important;
+        }
+
+        .mat-form-field-ripple {
+          background-color: rgba(0,0,0,.12) !important;
+        }
+      }
+
+      .mat-input-element {
+        caret-color: rgba(0,0,0,.30) !important;
+      }
     }
   }
 }

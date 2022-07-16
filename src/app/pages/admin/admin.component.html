@@ -5,7 +5,7 @@
         Admin
       </h2>
 
-      <mat-tab-group class="w-100 mt-2" mat-align-tabs="start" animationDuration="1000ms">
+      <mat-tab-group class="w-100 mt-4" mat-align-tabs="start" animationDuration="1000ms">
         <mat-tab label="Guests">
           <div class="container">
             <app-guest-overview></app-guest-overview>
@@ -14,6 +14,11 @@
         <mat-tab label="Add guests">
           <div class="container">
             <app-add-guest></app-add-guest>
+          </div>
+        </mat-tab>
+        <mat-tab label="Dietary restrictions">
+          <div class="container">
+            <app-dietary-overview></app-dietary-overview>
           </div>
         </mat-tab>
       </mat-tab-group>
