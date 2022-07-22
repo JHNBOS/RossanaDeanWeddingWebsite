@@ -34,8 +34,8 @@ export class GuestOverviewComponent implements OnInit, AfterViewInit {
 				return collection.persons;
 			})
 			.sort((a, b) => {
-				if (a.repliedAt == null && b.repliedAt == null) return 1;
-				return a.repliedAt! < b.repliedAt! ? 1 : -1;
+				if (a.repliedAt == null && b.repliedAt == null) return 0;
+				return a.repliedAt! > b.repliedAt! ? 1 : -1;
 			});
 
 		this.dataSource = new MatTableDataSource(this.guests);
