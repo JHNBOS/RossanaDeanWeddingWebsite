@@ -42,6 +42,9 @@ export class GuestService {
 
 			for (const person of guestCollection.persons) {
 				const personGuest = new Guest(person.id, person.name);
+        personGuest.isAttending = person.isAttending;
+        personGuest.repliedAt = person.repliedAt;
+
 				const index = guestCollection.persons.indexOf(person);
 				guestCollection.persons[index] = personGuest;
 			}

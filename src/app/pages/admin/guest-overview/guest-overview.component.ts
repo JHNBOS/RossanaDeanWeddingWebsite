@@ -4,7 +4,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { IGuestRow } from 'src/app/core/models/guest.model';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, Sort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 
 @Component({
@@ -47,6 +47,27 @@ export class GuestOverviewComponent implements OnInit, AfterViewInit {
 
 		if (this.dataSource.paginator) {
 			this.dataSource.paginator.firstPage();
+		}
+	}
+
+	sortData(sort: Sort) {
+		const data = this.guests.slice();
+
+		if (!sort.active || sort.direction === '') {
+			this.dataSource.data = data;
+		} else {
+			if (sort.active === 'status') {
+				this.dataSource.data = data.sort((a, b) => {
+					if (a.repliedAt == null && b.repliedAt == null) return 1;
+					return (a.repliedAt! < b.repliedAt! ? 1 : -1) * (sort.direction === 'asc' ? 1 : -1);
+				});
+			} else {
+				this.dataSource.data = data.sort((a, b) => {
+					const aValue = (a as any)[sort.active];
+					const bValue = (b as any)[sort.active];
+					return (aValue < bValue ? -1 : 1) * (sort.direction === 'asc' ? 1 : -1);
+				});
+			}
 		}
 	}
 
