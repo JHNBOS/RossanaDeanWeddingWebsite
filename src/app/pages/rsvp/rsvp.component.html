@@ -19,7 +19,7 @@
 <div class="row mt-5">
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
     <div class="d-flex flex-column align-items-center wedding">
-      <p class="rsvp-intro" *ngIf="hasReplied == false">
+      <p class="rsvp-intro d-none" *ngIf="hasReplied == false">
         We can't wait to celebrate this amazing day with you.
         <br />
         In anticipation of the big day, we have created this website to keep
@@ -32,6 +32,10 @@
         routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="hasReplied == false">
         Click here to RSVP
       </button>
+
+      <p class="rsvp-warning" *ngIf="hasReplied == false">
+        Kindly RSVP your attendance before <br /> the 1st of February 2023.
+      </p>
 
       <p class="rsvp-intro" *ngIf="hasReplied">
         Thank you for letting us know, that you will be celebrating our special day with us.
