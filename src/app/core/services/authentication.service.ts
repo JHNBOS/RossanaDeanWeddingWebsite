@@ -1,9 +1,11 @@
 import { ISimpleValidationModel, ValidationModel } from './../models/validation.model';
 import { Router } from '@angular/router';
 import { Injectable, NgZone } from '@angular/core';
-import { doc, Firestore, collection, CollectionReference, getDoc } from '@angular/fire/firestore';
+import { doc, Firestore, collection, CollectionReference, getDoc, setDoc } from '@angular/fire/firestore';
 import { IValidationModel } from '../models/validation.model';
 import * as moment from 'moment';
+import { Auth, signInAnonymously, User } from '@angular/fire/auth';
+import { signOut, User as FireUser, UserCredential } from 'firebase/auth';
 
 @Injectable({
 	providedIn: 'root'
@@ -14,9 +16,31 @@ export class AuthenticationService {
 	private id = 'secret';
 
 	private collection: CollectionReference<ISimpleValidationModel>;
+	public userData: User | null = null;
 
-	constructor(public router: Router, public ngZone: NgZone, private firestore: Firestore) {
+	constructor(public router: Router, public ngZone: NgZone, private firestore: Firestore, public fireAuth: Auth) {
 		this.collection = collection(this.firestore, this.dbPath) as CollectionReference<ISimpleValidationModel>;
+
+		this.fireAuth.onAuthStateChanged((user: User | null) => {
+			if (user == null) {
+				this.userData = null;
+				localStorage.setItem('user', 'null');
+				JSON.parse(localStorage.getItem('user')!);
+				return;
+			}
+
+			this.userData = user;
+			localStorage.setItem('user', JSON.stringify(this.userData));
+			JSON.parse(localStorage.getItem('user')!);
+		});
+	}
+
+	public async signOut(): Promise<void> {
+		await signOut(this.fireAuth);
+
+    this.removeSecret();
+		localStorage.removeItem('user');
+		this.router.navigate(['sign-in']);
 	}
 
 	public async loadSecret(): Promise<ValidationModel> {
@@ -38,6 +62,8 @@ export class AuthenticationService {
 
 		if (secretToken == token) {
 			this.setSecret(model);
+
+			const userData = await signInAnonymously(this.fireAuth);
 			return true;
 		}
 
