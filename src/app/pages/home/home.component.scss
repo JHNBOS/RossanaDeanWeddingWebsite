@@ -63,16 +63,25 @@
   animation-name: fadeOut;
   animation-timing-function: ease;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   opacity: 1;
+}
+
+.heart--middle {
+  animation-name: fadeIn;
+  animation-timing-function: ease;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .heart--bottom {
   animation-name: fadeIn;
   animation-timing-function: ease;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 8s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
