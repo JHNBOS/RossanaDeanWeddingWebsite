@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 	styleUrls: ['./dietary-overview.component.scss']
 })
 export class DietaryOverviewComponent implements OnInit {
-	public readonly displayedColumns: string[] = ['position', 'name', 'restrictions'];
+	public readonly displayedColumns: string[] = ['position', 'name', 'restrictions', 'description'];
 
 	public diets: Array<IDietaryForm> = [];
 	public dataSource!: MatTableDataSource<IDietaryForm>;

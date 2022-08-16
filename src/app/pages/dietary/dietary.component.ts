@@ -21,9 +21,10 @@ export class DietaryComponent implements OnInit {
 
 	constructor(private service: DietaryService) {}
 
-	ngOnInit(): void {
-		this.hasReplied = localStorage.getItem('dietary') != null ? true : false;
-	}
+  async ngOnInit(): Promise<void> {
+    const dietaryKey = localStorage.getItem('dietary');
+    this.hasReplied = dietaryKey != null;
+  }
 
 	public showHideInput(): void {
 		const isSelected = this.restrictions.selectedOptions.selected.filter((option) => option.value === 'other').length > 0;

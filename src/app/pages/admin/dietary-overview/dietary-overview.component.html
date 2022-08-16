@@ -14,19 +14,27 @@
         </ng-container>
 
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header [style.flex]="'0 0 40%'">Name</th>
-          <td mat-cell *matCellDef="let element" [style.flex]="'0 0 40%'"> {{element.name}} </td>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header [style.flex]="'0 0 30%'">Name</th>
+          <td mat-cell *matCellDef="let element" [style.flex]="'0 0 30%'"> {{element.name}} </td>
         </ng-container>
 
         <ng-container matColumnDef="restrictions">
-          <th mat-header-cell *matHeaderCellDef [style.flex]="'0 0 45%'" [style.white-space]="'nowrap'">
-            Restrictions</th>
-          <td class="text-center" mat-cell *matCellDef="let element" [style.flex]="'0 0 45%'"
-            [style.white-space]="'nowrap'">
-
-            <ul>
-              <li **ngFor="let item of element.restrictions">{{item}}</li>
+          <th mat-header-cell *matHeaderCellDef [style.flex]="'0 0 25%'">
+            Restrictions
+          </th>
+          <td mat-cell *matCellDef="let element" [style.flex]="'0 0 25%'">
+            <ul class="my-0 py-2">
+              <li *ngFor="let item of element.restrictions">{{item}}</li>
             </ul>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef [style.flex]="'0 0 30%'">
+            Description
+          </th>
+          <td mat-cell *matCellDef="let element" [style.flex]="'0 0 30%'">
+            <p>{{element.other}}</p>
           </td>
         </ng-container>
 
