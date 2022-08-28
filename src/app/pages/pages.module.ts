@@ -12,7 +12,6 @@ import { AccomodationsComponent } from './accomodations/accomodations.component'
 import { DietaryComponent } from './dietary/dietary.component';
 import { ThingsToDoComponent } from './things-to-do/things-to-do.component';
 import { TransportationComponent } from './transportation/transportation.component';
-import { GuestbookComponent } from './guestbook/guestbook.component';
 import { RsvpFormComponent } from './rsvp/form/rsvp-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GuestOverviewComponent } from './admin/guest-overview/guest-overview.component';
@@ -31,7 +30,6 @@ import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overv
 		DietaryComponent,
 		ThingsToDoComponent,
 		TransportationComponent,
-		GuestbookComponent,
 		RsvpFormComponent,
 		GuestOverviewComponent,
 		AddGuestComponent,
@@ -49,7 +47,6 @@ import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overv
 		DietaryComponent,
 		ThingsToDoComponent,
 		TransportationComponent,
-		GuestbookComponent,
 		RsvpFormComponent,
 		GuestOverviewComponent,
 		AddGuestComponent,
