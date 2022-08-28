@@ -59,3 +59,24 @@ $checkbox: #018786;
   font-family: "Mrs Eaves";
   src: url("~/src/assets/fonts/mrs-eaves.ttf");
 }
+
+$sizes: (
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+
+$utilities: (
+  "width": (
+    responsive: true,
+    property: width,
+    class: w,
+    values: $sizes,
+  ),
+  "height": (
+    responsive: true,
+    property: height,
+    class: h,
+    values: $sizes,
+  ),
+);
