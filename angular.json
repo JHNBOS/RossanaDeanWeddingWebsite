@@ -33,7 +33,8 @@
 						"styles": [
 							"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
 							"src/assets/styles/main.scss",
-							"src/styles.scss"
+							"src/styles.scss",
+              "node_modules/ol/ol.css"
 						],
 						"scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
 						"stylePreprocessorOptions": {
@@ -103,7 +104,8 @@
 						"styles": [
 							"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
 							"src/assets/styles/main.scss",
-							"src/styles.scss"
+							"src/styles.scss",
+              "node_modules/ol/ol.css"
 						],
 						"scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
 						"stylePreprocessorOptions": {

@@ -10,7 +10,7 @@ import { RsvpComponent } from './rsvp/rsvp.component';
 import { VenueComponent } from './venue/venue.component';
 import { AccomodationsComponent } from './accomodations/accomodations.component';
 import { DietaryComponent } from './dietary/dietary.component';
-import { ThingsToDoComponent } from './things-to-do/things-to-do.component';
+import { PlacesToEatComponent } from './places-to-eat/places-to-eat.component';
 import { TransportationComponent } from './transportation/transportation.component';
 import { RsvpFormComponent } from './rsvp/form/rsvp-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,7 +28,7 @@ import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overv
 		VenueComponent,
 		AccomodationsComponent,
 		DietaryComponent,
-		ThingsToDoComponent,
+		PlacesToEatComponent,
 		TransportationComponent,
 		RsvpFormComponent,
 		GuestOverviewComponent,
@@ -45,7 +45,7 @@ import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overv
 		VenueComponent,
 		AccomodationsComponent,
 		DietaryComponent,
-		ThingsToDoComponent,
+		PlacesToEatComponent,
 		TransportationComponent,
 		RsvpFormComponent,
 		GuestOverviewComponent,

@@ -1,0 +1,68 @@
+@import "~/src/assets/styles/main";
+
+.title {
+  font-family: "Bauer Bodoni", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: $dark-text;
+}
+
+.places-intro {
+  font-family: "Avant-Garde Medium", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: $primary-text;
+}
+
+.place-card {
+  margin-bottom: 2rem;
+
+  .mat-card-header {
+    flex-direction: column;
+  }
+
+  .mat-card-content {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.place-item {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+
+  .mat-icon {
+    font-size: 1rem;
+    color: $secondary-color;
+    width: auto;
+    margin-right: 8px;
+  }
+}
+
+.rating {
+  margin: 0;
+
+  .star,
+  .star_half {
+    color: #ffcb1e;
+  }
+
+  .empty-star {
+    color: inherit;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    margin-top: 2rem !important;
+  }
+
+  .places-intro {
+    font-size: 1rem;
+  }
+}
