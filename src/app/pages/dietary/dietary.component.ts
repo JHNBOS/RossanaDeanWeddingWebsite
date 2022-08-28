@@ -2,7 +2,7 @@ import { DietaryForm } from './../../core/models/dietary.model';
 import { DietaryService } from './../../core/services/dietary.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatInput } from '@angular/material/input';
-import { MatSelectionList } from '@angular/material/list';
+import { MatSelectionList, MatSelectionListChange } from '@angular/material/list';
 import moment from 'moment';
 
 @Component({
@@ -15,21 +15,17 @@ export class DietaryComponent implements OnInit {
 	public otherRestrictions: string = '';
 	public showInput: boolean = false;
 	public hasReplied: boolean = false;
-  public disableSubmit: boolean = false;
+	public disableSubmit: boolean = true;
 
 	@ViewChild(MatSelectionList) restrictions: MatSelectionList;
 	@ViewChild(MatInput) otherInput: MatInput;
 
 	constructor(private service: DietaryService) {}
 
-  async ngOnInit(): Promise<void> {
-    const dietaryKey = localStorage.getItem('dietary');
-    this.hasReplied = dietaryKey != null;
-
-    this.restrictions.registerOnChange((e) => {
-      this.disableSubmit = this.restrictions.selectedOptions.selected.length === 0;
-    });
-  }
+	async ngOnInit(): Promise<void> {
+		const dietaryKey = localStorage.getItem('dietary');
+		this.hasReplied = dietaryKey != null;
+	}
 
 	public showHideInput(): void {
 		const isSelected = this.restrictions.selectedOptions.selected.filter((option) => option.value === 'other').length > 0;
@@ -51,6 +47,14 @@ export class DietaryComponent implements OnInit {
 		this.restrictions.deselectAll();
 		this.showInput = false;
 		this.otherRestrictions = '';
-    this.name = '';
+		this.name = '';
+	}
+
+	public onChange() {
+		this.disableSubmit =
+			this.restrictions.selectedOptions.selected.length === 0 ||
+			this.name.length === 0 ||
+			(this.restrictions.selectedOptions.selected.filter((option) => option.value === 'other').length > 0 &&
+				this.otherRestrictions.length === 0);
 	}
 }

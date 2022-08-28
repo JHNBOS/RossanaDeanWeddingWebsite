@@ -17,6 +17,11 @@
   &:hover {
     background-color: darken($teal, 2%) !important;
   }
+
+  &:disabled {
+    background-color: #d4d4d4 !important;
+    color: #333333 !important
+  }
 }
 
 .mat-flat-button.red {
@@ -35,6 +40,11 @@
   &:hover {
     background-color: darken($secondary-color, 3%) !important;
   }
+
+  &:disabled {
+    background-color: #d4d4d4 !important;
+    color: #333333 !important
+  }
 }
 
 .mat-flat-button.green {
@@ -52,6 +62,11 @@
 
   &:hover {
     background-color: darken($secondary-color, 3%) !important;
+  }
+
+  &:disabled {
+    background-color: #d4d4d4 !important;
+    color: #333333 !important
   }
 }
 

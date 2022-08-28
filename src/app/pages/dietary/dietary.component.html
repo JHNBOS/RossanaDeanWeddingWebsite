@@ -22,10 +22,10 @@
 
       <mat-form-field class="pink mt-2" appearance="outline">
         <mat-label>Name</mat-label>
-        <input matInput type="text" placeholder="Ex. Harry Potter" [(ngModel)]="name">
+        <input matInput type="text" placeholder="Ex. Harry Potter" [(ngModel)]="name" required (keyup)="onChange()">
       </mat-form-field>
 
-      <mat-selection-list class="" #restrictions>
+      <mat-selection-list class="" #restrictions (selectionChange)="onChange()">
         <mat-list-option checkboxPosition="before" value="lactose">Lactose intolerance</mat-list-option>
         <mat-list-option checkboxPosition="before" value="gluten">Gluten intolerance/sensitivity</mat-list-option>
         <mat-list-option checkboxPosition="before" value="vegatarian">Vegatarian</mat-list-option>
@@ -39,7 +39,7 @@
       <mat-form-field id="txtOtherRestriction" class="gray" floatLabel="never" #otherInput
         [hidden]="showInput === false">
         <textarea matInput placeholder="Describe dietary restriction(s)..." appearance="fill"
-          [(ngModel)]="otherRestrictions" rows="5"></textarea>
+          [(ngModel)]="otherRestrictions" rows="5" (keyup)="onChange()"></textarea>
       </mat-form-field>
     </div>
 
