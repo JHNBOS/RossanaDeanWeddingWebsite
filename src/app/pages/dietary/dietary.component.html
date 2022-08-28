@@ -44,7 +44,7 @@
     </div>
 
     <div class="d-flex align-items-center justify-content-end mt-5">
-      <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()">
+      <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()" [disabled]="disableSubmit">
         Send
       </button>
     </div>

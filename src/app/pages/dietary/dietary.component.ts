@@ -15,6 +15,7 @@ export class DietaryComponent implements OnInit {
 	public otherRestrictions: string = '';
 	public showInput: boolean = false;
 	public hasReplied: boolean = false;
+  public disableSubmit: boolean = false;
 
 	@ViewChild(MatSelectionList) restrictions: MatSelectionList;
 	@ViewChild(MatInput) otherInput: MatInput;
@@ -24,6 +25,10 @@ export class DietaryComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     const dietaryKey = localStorage.getItem('dietary');
     this.hasReplied = dietaryKey != null;
+
+    this.restrictions.registerOnChange((e) => {
+      this.disableSubmit = this.restrictions.selectedOptions.selected.length === 0;
+    });
   }
 
 	public showHideInput(): void {
