@@ -37,6 +37,24 @@
   }
 }
 
+.mat-flat-button.green {
+  background-color: $green !important;
+  color: #ffffff !important;
+  min-width: 130px;
+  width: 220px;
+  height: 45px;
+  text-transform: uppercase;
+  font-family: "Avant-Garde Medium", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: darken($secondary-color, 3%) !important;
+  }
+}
+
 .mat-flat-button.small {
   width: 150px;
   height: 35px;
