@@ -29,6 +29,7 @@ export interface IGuestRow {
 	collectionId: string;
 	name: string;
 	isAttending: boolean;
+  areAllAttending: boolean;
 	repliedAt: Timestamp | null;
 }
 

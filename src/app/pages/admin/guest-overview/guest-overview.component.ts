@@ -30,12 +30,23 @@ export class GuestOverviewComponent implements OnInit, AfterViewInit {
 			.flatMap((collection) => {
 				for (const person of collection.persons) {
 					person.collectionId = collection.id;
+					person.areAllAttending = collection.persons.filter((p) => p.isAttending === true).length === collection.persons.length;
 				}
 				return collection.persons;
 			})
 			.sort((a, b) => {
 				if (a.repliedAt == null && b.repliedAt == null) return 0;
-				return a.repliedAt! > b.repliedAt! ? 1 : -1;
+				if (a.repliedAt == null || b.repliedAt == null) {
+					const r = a.repliedAt != null ? -0.5 : 0.5;
+					// if (a.name.localeCompare(b.name) < 0) r * 2;
+					// if (a.name.localeCompare(b.name) > 0 ) r * -2;
+					return r;
+				}
+
+				const r = a.repliedAt! > b.repliedAt! ? 1 : -1;
+				// if (a.name.localeCompare(b.name) < 0) r * 2;
+				// if (a.name.localeCompare(b.name) > 0) r * -2;
+				return r;
 			});
 
 		this.dataSource = new MatTableDataSource(this.guests);
@@ -76,9 +87,6 @@ export class GuestOverviewComponent implements OnInit, AfterViewInit {
 	}
 
 	public editGuests(id: string): void {
-		const guests = this.guests.filter((g) => g.collectionId == id)[0];
-		if (guests.repliedAt != null) return;
-
 		this.router.navigate(['/guests/', id]);
 	}
 }
