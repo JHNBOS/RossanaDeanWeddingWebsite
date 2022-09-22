@@ -30,7 +30,11 @@ export class GuestOverviewComponent implements OnInit, AfterViewInit {
 			.flatMap((collection) => {
 				for (const person of collection.persons) {
 					person.collectionId = collection.id;
-					person.areAllAttending = collection.persons.filter((p) => p.isAttending === true).length === collection.persons.length;
+					if (collection.persons.length === 1) {
+						person.areAllAttending = person.repliedAt != null;
+					} else {
+						person.areAllAttending = collection.persons.filter((p) => p.isAttending === true).length === collection.persons.length;
+					}
 				}
 				return collection.persons;
 			})

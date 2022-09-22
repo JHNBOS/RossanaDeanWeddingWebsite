@@ -1,5 +1,5 @@
 import { map, Observable } from 'rxjs';
-import { Guest, IGuest, IGuestCollection, ISimpleGuest, ISimpleGuestCollection } from './../models/guest.model';
+import { Guest, IGuest, IGuestCollection, ISimpleGuest, ISimpleGuestCollection, ISimpleGuestEditCollection } from './../models/guest.model';
 import { ISimpleValidationModel, ValidationModel } from './../models/validation.model';
 import { Router } from '@angular/router';
 import { Injectable, NgZone } from '@angular/core';
@@ -42,8 +42,8 @@ export class GuestService {
 
 			for (const person of guestCollection.persons) {
 				const personGuest = new Guest(person.id, person.name);
-        personGuest.isAttending = person.isAttending;
-        personGuest.repliedAt = person.repliedAt;
+				personGuest.isAttending = person.isAttending;
+				personGuest.repliedAt = person.repliedAt;
 
 				const index = guestCollection.persons.indexOf(person);
 				guestCollection.persons[index] = personGuest;
@@ -93,17 +93,19 @@ export class GuestService {
 		return guestCollection;
 	}
 
-	public async updateSimple(guestCollection: ISimpleGuestCollection): Promise<ISimpleGuestCollection> {
+	public async updateSimple(guestCollection: ISimpleGuestEditCollection): Promise<ISimpleGuestCollection> {
 		const collection = { ...guestCollection };
 
 		let arr = new Array<any>();
 		for (const person of guestCollection.persons) {
-			arr.push({ ...person });
+			const toSave = { ...person };
+			delete (toSave as any).isNew;
+			arr.push(toSave);
 		}
 
 		collection.persons = arr;
 
-		const docReference = doc(this.firestore, this.dbPath, `${guestCollection.id}`) as DocumentReference<ISimpleGuestCollection>;
+		const docReference = doc(this.firestore, this.dbPath, `${guestCollection.id}`) as DocumentReference<ISimpleGuestEditCollection>;
 		await updateDoc(docReference, {
 			name: collection.name,
 			persons: arr

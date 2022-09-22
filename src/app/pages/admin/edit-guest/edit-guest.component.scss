@@ -6,3 +6,69 @@
   text-align: center;
   color: $dark-text;
 }
+
+.guest-card {
+  display: flex;
+  flex-direction: column;
+
+  .txtGuestName {
+    font-size: 18px;
+  }
+
+  .mat-card-content {
+    margin-bottom: 6px;
+  }
+
+  .attending-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+
+    button {
+      width: auto;
+    }
+
+    .btn-green {
+      background-color: transparent;
+      color: $green;
+
+      &.active {
+        background-color: rgb(140, 226, 126, 0.8);
+        color: #fff;
+      }
+    }
+
+    .btn-red {
+      background-color: transparent;
+      color: $secondary-color;
+
+      &.active {
+        background-color: rgb(227, 29, 75, 0.8);
+        color: #fff;
+      }
+    }
+  }
+
+  &:first-of-type {
+    margin-top: 0rem;
+  }
+}
+
+#actions {
+  border-top: 1px solid rgb(0 0 0 / 12%);
+}
+
+#btnAddGuest {
+  background-color: $green !important;
+  color: #ffffff !important;
+
+  &:hover {
+    background-color: darken($green, 3%) !important;
+  }
+
+  &:disabled {
+    background-color: #d4d4d4 !important;
+    color: #333333 !important;
+  }
+}

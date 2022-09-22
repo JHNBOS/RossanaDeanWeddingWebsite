@@ -1,7 +1,7 @@
 @import "header";
 @import "variables";
 
-.mat-flat-button.teal {
+.mat-button-base.teal {
   background-color: $teal !important;
   color: $dark-text !important;
   min-width: 130px;
@@ -20,11 +20,18 @@
 
   &:disabled {
     background-color: #d4d4d4 !important;
-    color: #333333 !important
+    color: #333333 !important;
+  }
+
+  &.btn-sm {
+    min-width: 130px;
+    width: 150px;
+    height: 35px;
+    font-size: 0.95rem;
   }
 }
 
-.mat-flat-button.red {
+.mat-button-base.red {
   background-color: $secondary-color !important;
   color: #ffffff !important;
   min-width: 130px;
@@ -43,11 +50,18 @@
 
   &:disabled {
     background-color: #d4d4d4 !important;
-    color: #333333 !important
+    color: #333333 !important;
+  }
+
+  &.btn-sm {
+    min-width: 130px;
+    width: 150px;
+    height: 35px;
+    font-size: 0.95rem;
   }
 }
 
-.mat-flat-button.green {
+.mat-button-base.green {
   background-color: $green !important;
   color: #ffffff !important;
   min-width: 130px;
@@ -61,22 +75,29 @@
   align-items: center;
 
   &:hover {
-    background-color: darken($secondary-color, 3%) !important;
+    background-color: darken($green, 3%) !important;
   }
 
   &:disabled {
     background-color: #d4d4d4 !important;
-    color: #333333 !important
+    color: #333333 !important;
+  }
+
+  &.btn-sm {
+    min-width: 130px;
+    width: 150px;
+    height: 35px;
+    font-size: 0.95rem;
   }
 }
 
-.mat-flat-button.small {
+.mat-button-base.small {
   width: 150px;
   height: 35px;
   font-size: 0.85rem;
 }
 
-.mat-form-field{
+.mat-form-field {
   &.pink {
     &.mat-focused {
       .mat-form-field-label {
@@ -108,27 +129,27 @@
   &.gray {
     &.mat-focused {
       .mat-form-field-label {
-        color: rgba(0,0,0,.54) !important;
+        color: rgba(0, 0, 0, 0.54) !important;
       }
 
       .mat-form-field-outline,
       .mat-form-field-outline-thick {
-        color: rgba(0,0,0,.12) !important;
+        color: rgba(0, 0, 0, 0.12) !important;
       }
 
       .mat-form-field-underline,
       .mat-form-field-appearance-outline {
         &::before {
-          background-color: rgba(0,0,0,.12) !important;
+          background-color: rgba(0, 0, 0, 0.12) !important;
         }
 
         .mat-form-field-ripple {
-          background-color: rgba(0,0,0,.12) !important;
+          background-color: rgba(0, 0, 0, 0.12) !important;
         }
       }
 
       .mat-input-element {
-        caret-color: rgba(0,0,0,.30) !important;
+        caret-color: rgba(0, 0, 0, 0.3) !important;
       }
     }
   }

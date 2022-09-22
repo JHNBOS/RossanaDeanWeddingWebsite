@@ -6,6 +6,12 @@ export interface IGuestCollection {
 	persons: Array<IGuest>;
 }
 
+export interface ISimpleGuestEditCollection {
+	id: string;
+	name: string;
+	persons: Array<ISimpleGuestEdit>;
+}
+
 export interface ISimpleGuestCollection {
 	id: string;
 	name: string;
@@ -29,13 +35,17 @@ export interface IGuestRow {
 	collectionId: string;
 	name: string;
 	isAttending: boolean;
-  areAllAttending: boolean;
+	areAllAttending: boolean;
 	repliedAt: Timestamp | null;
 }
 
 export interface ISimpleGuest {
 	id: string;
 	name: string;
+}
+
+export interface ISimpleGuestEdit extends IGuest {
+	isNew: boolean;
 }
 
 export class Guest implements IGuest {

@@ -1,23 +1,25 @@
-import { IGuestCollection } from './../../../core/models/guest.model';
-import { Component, OnInit } from '@angular/core';
+import { IGuestCollection, ISimpleGuestEdit, ISimpleGuestEditCollection } from './../../../core/models/guest.model';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ISimpleGuest, ISimpleGuestCollection } from 'src/app/core/models/guest.model';
 import { GuestService } from 'src/app/core/services/guest.service';
+import { Timestamp } from 'firebase/firestore';
 
 @Component({
 	selector: 'app-edit-guest',
 	templateUrl: './edit-guest.component.html',
-	styleUrls: ['./edit-guest.component.scss']
+	styleUrls: ['./edit-guest.component.scss'],
+	changeDetection: ChangeDetectionStrategy.Default
 })
 export class EditGuestComponent implements OnInit {
 	public id: string = '';
-
 	public coupleNames: string = '';
-	public firstPerson: string = '';
-	public secondPerson: string = '';
-	public thirdPerson: string = '';
 
-	private guestCollection: ISimpleGuestCollection;
+	public guests: IGuestCollection;
+	public guestCollection: ISimpleGuestEditCollection = {
+		id: '',
+		name: '',
+		persons: []
+	};
 
 	constructor(public router: Router, public route: ActivatedRoute, public service: GuestService) {
 		this.route.paramMap.subscribe(async (params) => {
@@ -29,23 +31,57 @@ export class EditGuestComponent implements OnInit {
 	}
 
 	async ngOnInit(): Promise<void> {
-		this.guestCollection = (await this.service.findById(this.id)) as ISimpleGuestCollection;
+		this.guests = await this.service.findById(this.id);
+		this.guestCollection = {
+			id: this.guests.id,
+			name: this.guests.name,
+			persons: this.guests.persons.map((p, index) => {
+				return {
+					id: p.id != null && p.id.length > 0 ? p.id : (index + 1).toString(),
+					name: p.name,
+					isAttending: p.isAttending ?? false,
+					repliedAt: p.repliedAt ?? null,
+					isNew: false
+				};
+			})
+		};
 		this.fillFields();
 	}
 
 	private fillFields(): void {
 		this.coupleNames = this.guestCollection.name;
-		this.firstPerson = this.guestCollection.persons[0]?.name ?? '';
-		this.secondPerson = this.guestCollection.persons[1]?.name ?? '';
-		this.thirdPerson = this.guestCollection.persons[2]?.name ?? '';
+	}
+
+	public trackGuest(index: number, guest: ISimpleGuestEdit): any {
+		return guest.id;
+	}
+
+	public isAttending(guest: ISimpleGuestEdit): boolean {
+		const person = this.guestCollection.persons.find((g) => g.id === guest.id || g.name === guest.name);
+		if (person != null) {
+			return person.isAttending;
+		}
+		return false;
+	}
+
+	public addGuest(): void {
+		const id = (this.guestCollection.persons.length + 1).toString();
+		const name = `Guest #${this.guestCollection.persons.filter((p) => p.isNew).length + 1}`;
+		const guest: ISimpleGuestEdit = { id: id, name: name, isNew: true, isAttending: false, repliedAt: null };
+		this.guestCollection.persons.push(guest);
+	}
+
+	public deleteGuest(guest: ISimpleGuestEdit): void {
+		if (confirm('Are you sure you want to delete this guest?') === false) return;
+
+		const index = this.guestCollection.persons.findIndex((g) => g.id === guest.id);
+		if (index > -1) {
+			this.guestCollection.persons.splice(index, 1);
+		}
 	}
 
 	public async save(): Promise<void> {
 		this.guestCollection.name = this.coupleNames;
-
-		this.checkPerson(0, this.firstPerson);
-		this.checkPerson(1, this.secondPerson);
-		this.checkPerson(2, this.thirdPerson);
 
 		await this.service.updateSimple(this.guestCollection);
 
@@ -57,14 +93,13 @@ export class EditGuestComponent implements OnInit {
 
 		this.id = '';
 		this.coupleNames = '';
-		this.firstPerson = '';
-		this.secondPerson = '';
-		this.thirdPerson = '';
 
 		this.router.navigate(['/admin']);
 	}
 
 	public async delete(): Promise<void> {
+		if (confirm('Are you sure you want to delete all the guests?') === false) return;
+
 		await this.service.delete(this.id);
 
 		this.guestCollection = {
@@ -75,27 +110,18 @@ export class EditGuestComponent implements OnInit {
 
 		this.id = '';
 		this.coupleNames = '';
-		this.firstPerson = '';
-		this.secondPerson = '';
-		this.thirdPerson = '';
 
 		this.router.navigate(['/admin']);
 	}
 
-	private checkPerson(index: number, name: string): void {
-		if (name.length > 0 && this.guestCollection.persons[index] != null) {
-			this.guestCollection.persons[index].name = name;
-		}
+	public setAttending(guest: ISimpleGuestEdit, isAttending: boolean): void {
+		const person = this.guestCollection.persons.find((g) => g.id === guest.id);
+		if (person != null) {
+			person.isAttending = isAttending;
 
-		if (name.length === 0 && this.guestCollection.persons[index] != null) {
-			this.guestCollection.persons = this.guestCollection.persons.splice(index, 1);
-		}
-
-		if (name.length > 0 && this.guestCollection.persons[index] == null) {
-			this.guestCollection.persons.push({
-				id: (index + 1).toString(),
-				name: name
-			});
+			if (person.isNew || (person.isNew === false && person.repliedAt == null)) {
+				person.repliedAt = Timestamp.now();
+			}
 		}
 	}
 }
