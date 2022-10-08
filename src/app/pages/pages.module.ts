@@ -1,3 +1,4 @@
+import { TransprtOverviewComponent } from './admin/transport-overview/transport-overview.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -35,7 +36,8 @@ import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overv
 		AddGuestComponent,
 		AdminComponent,
 		EditGuestComponent,
-		DietaryOverviewComponent
+		DietaryOverviewComponent,
+		TransprtOverviewComponent
 	],
 	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, BrowserAnimationsModule, MaterialModule],
 	exports: [
@@ -52,7 +54,8 @@ import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overv
 		AddGuestComponent,
 		AdminComponent,
 		EditGuestComponent,
-		DietaryOverviewComponent
+		DietaryOverviewComponent,
+		TransprtOverviewComponent
 	]
 })
 export class PagesModule {}

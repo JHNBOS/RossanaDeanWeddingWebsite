@@ -1,12 +1,9 @@
-import { map, Observable } from 'rxjs';
-import { Guest, IGuest, IGuestCollection, ISimpleGuest, ISimpleGuestCollection, ISimpleGuestEditCollection } from './../models/guest.model';
-import { ISimpleValidationModel, ValidationModel } from './../models/validation.model';
+import { Observable } from 'rxjs';
+import { Guest, IGuestCollection, ISimpleGuest, ISimpleGuestCollection, ISimpleGuestEditCollection } from './../models/guest.model';
 import { Router } from '@angular/router';
 import { Injectable, NgZone } from '@angular/core';
 import { doc, Firestore, collection, CollectionReference, getDoc, collectionData, updateDoc, DocumentReference } from '@angular/fire/firestore';
-import { IValidationModel } from '../models/validation.model';
-import * as moment from 'moment';
-import { addDoc, deleteDoc, getDocs, setDoc } from 'firebase/firestore';
+import { addDoc, deleteDoc, getDocs } from 'firebase/firestore';
 
 @Injectable({
 	providedIn: 'root'

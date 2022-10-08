@@ -1,13 +1,9 @@
 import { IDietaryForm } from './../models/dietary.model';
-import { map, Observable } from 'rxjs';
-import { Guest, IGuest, IGuestCollection, ISimpleGuest, ISimpleGuestCollection } from '../models/guest.model';
-import { ISimpleValidationModel, ValidationModel } from '../models/validation.model';
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Injectable, NgZone } from '@angular/core';
-import { doc, Firestore, collection, CollectionReference, getDoc, collectionData, updateDoc, DocumentReference } from '@angular/fire/firestore';
-import { IValidationModel } from '../models/validation.model';
-import * as moment from 'moment';
-import { addDoc, deleteDoc, getDocs, setDoc } from 'firebase/firestore';
+import { doc, Firestore, collection, CollectionReference, collectionData } from '@angular/fire/firestore';
+import { addDoc, deleteDoc, getDocs } from 'firebase/firestore';
 
 @Injectable({
 	providedIn: 'root'
@@ -25,7 +21,12 @@ export class DietaryService {
 
 	public async list(): Promise<Array<IDietaryForm>> {
 		const snapshot = await getDocs(this.collection);
-		return snapshot.docs.map((doc) => doc.data() as IDietaryForm);
+		return snapshot.docs.map((doc) => {
+			const data = doc.data() as IDietaryForm;
+			data.id = doc.id;
+
+			return data;
+		});
 	}
 
 	public async add(diet: IDietaryForm): Promise<IDietaryForm> {
@@ -33,5 +34,10 @@ export class DietaryService {
 		const docReference = await addDoc(this.collection, _diet);
 
 		return _diet as IDietaryForm;
+	}
+
+	public async delete(id: string): Promise<void> {
+		const docRef = doc(this.firestore, this.dbPath, id);
+		await deleteDoc(docRef);
 	}
 }

@@ -34,9 +34,9 @@ export class TransportGuestService {
 		const snapshot = await getDocs(this.collection);
 
 		return snapshot.docs.map((doc) => {
-			const data = doc.data();
-			const guest = data as ITransportGuest;
-			return guest;
+			const data = doc.data() as ITransportGuest;
+			data.id = doc.id;
+			return data;
 		});
 	}
 

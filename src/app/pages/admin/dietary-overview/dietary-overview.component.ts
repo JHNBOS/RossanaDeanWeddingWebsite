@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 	styleUrls: ['./dietary-overview.component.scss']
 })
 export class DietaryOverviewComponent implements OnInit {
-	public readonly displayedColumns: string[] = ['position', 'name', 'restrictions', 'description'];
+	public readonly displayedColumns: string[] = ['position', 'name', 'restrictions', 'description', 'actions'];
 
 	public diets: Array<IDietaryForm> = [];
 	public dataSource!: MatTableDataSource<IDietaryForm>;
@@ -23,12 +23,15 @@ export class DietaryOverviewComponent implements OnInit {
 	constructor(public router: Router, private service: DietaryService) {}
 
 	async ngOnInit(): Promise<void> {
-		const _diets = await this.service.list();
-		this.diets = _diets.map((diet) => diet as IDietaryForm);
+		await this.loadData();
 
 		this.dataSource = new MatTableDataSource(this.diets);
 		this.dataSource.paginator = this.paginator;
 		this.dataSource.sort = this.sort;
+	}
+
+	public async loadData(): Promise<void> {
+		this.diets = await this.service.list();
 	}
 
 	ngAfterViewInit() {}
@@ -40,5 +43,13 @@ export class DietaryOverviewComponent implements OnInit {
 		if (this.dataSource.paginator) {
 			this.dataSource.paginator.firstPage();
 		}
+	}
+
+	public async delete(diet: IDietaryForm): Promise<void> {
+		if (confirm('Are you sure you want to delete this?') === false) return;
+		await this.service.delete(diet.id);
+
+		await this.loadData();
+		this.dataSource.data = this.diets;
 	}
 }
