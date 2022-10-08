@@ -1,7 +1,68 @@
-<div class="d-flex flex-column justify-content-center align-items-center">
-  <h2 class="coming-soon">We know you can't wait any longer, but just hang in there.<br />Come back soon!</h2>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center">
+      <h2 class="title mt-3">
+        Transportation
+      </h2>
 
-  <div class="d-flex flex-row align-items-center">
-    <i class="fas fa-construction coming-soon--icon"></i>
+      <p class="mt-2 transportation-intro">
+        To make sure everyone is on time and arrives safely to the venue, we have arranged a touring bus.
+        We have already taken into account seating for the guests arriving from outside Belgium and The Netherlands.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section class="d-flex justify-content-center align-items-center mt-3 mb-4">
+  <img class="img-fluid bus-banner" alt="Bus" src="assets/img/bus.png" />
+</section>
+
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center">
+      <p class="mt-2 transportation-places">
+        Please beware,
+        <br />
+        there are a limited number of seats available.
+      </p>
+
+      <p class="mt-2 transportation-deadline">
+        Please respond before 31st of November
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+
+      <div class="mt-2 w-75 d-flex flex-row align-items-center justify-content-center"
+        *ngFor="let name of names; trackBy: trackGuest;let i = index;">
+        <mat-form-field class="pink w-100" appearance="outline">
+          <mat-label>Full name</mat-label>
+          <input id="txtGuestName_{{i}}" matInput type="text" placeholder="Ex. Harry Potter" [(ngModel)]="names[i]"
+            required (keyup)="checkState()">
+        </mat-form-field>
+
+        <button mat-icon-button color="error" aria-label="Delete" class="mb-3" (click)="deleteGuest(i)" *ngIf="i > 0">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
+      <div
+        class="w-100 d-flex mt-3 mb-4 flex-column flex-lg-row justify-content-end align-items-center align-self-center">
+        <button type="button" id="btnAddGuest" mat-mini-fab color="primary" aria-label="Add" (click)="addGuest()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="d-flex align-items-center justify-content-end mt-5 mb-4">
+      <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()" [disabled]="disableSubmit">
+        Send
+      </button>
+    </div>
   </div>
 </div>
