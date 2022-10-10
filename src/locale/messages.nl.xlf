@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+    <trans-unit id="navHome" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navRSVP" datatype="html">
+        <source>RSVP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navVenue" datatype="html">
+        <source>Locatie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navDiet" datatype="html">
+        <source> Dieet wensen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navDinner" datatype="html">
+        <source>Uit eten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navHotels" datatype="html">
+        <source>Hotels</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navTransport" datatype="html">
+        <source>Transport</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="turnovaDescription" datatype="html">
+        <source> Hotel Corsendonk Turnova is een vier sterren hotel in het centrum van Turnhout. Het beschikt over een modern en stijlvol interieur, met zijn eigen wellnes. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">37,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="turnovaPrices" datatype="html">
+        <source>Prijzen vanaf €230 voor twee nachten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="vianeDescription" datatype="html">
+        <source> Hotel Corsendonk Viane is een drie sterren hotel in het centrum in Turnhout. Het beschikt over een stijlvol en tijdloos interieur, en is gemakkelijk bereikbaar via openbaar vervoer en de auto. Gratis parkeren inbegrepen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">67,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="vianePrices" datatype="html">
+        <source>Prijzen vanaf €155 voor twee nachten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="westernplusDescription" datatype="html">
+        <source> City Hotel Best Western Plus is een vier sterren hotel gelegen in het bruisende centrum van Turnhout, vlakbij de Grote Markt. Het hotel bevindt zich vlakbij het station en de bushaltes, en heeft een eigen casino, sportschool en restaurant. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">99,102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="westernplusDescription-2" datatype="html">
+        <source> De elegant ingerichte hotelkamers hebben heerlijke bedden en luxueuze badkamers met toilet. De kamers hebben hiernaast ook WiFi internet, televisie en koffie faciliteiten. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">104,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="westernplusPrices" datatype="html">
+        <source>Prijzen vanaf €160 voor twee nachten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bonbonDescription" datatype="html">
+        <source> Bed and breakfast Bon Bon &apos;Nuit&apos; is een B&amp;B met een chocolade thema, met kamers ontworpen zoals Parijs in de jaren '30. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> In de ochtend kunnen gasten genieten van een luxe ontbijt met verse broodjes, vers gebakken croissant en meerdere soorten chocolademelk, gezien ze op de begane grond hun eigen bakkerij en chocolaterie hebben. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">132,137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bonbonDescription-2" datatype="html">
+        <source> De B&amp;B bevindt zich vlak om de hoek van het treinstation in het centrum van Turnhout. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">139,141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bonbonPrices" datatype="html">
+        <source>Prijzen vanaf €175 voor twee nachten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="driezenDescription" datatype="html">
+        <source> Hotel Ter Driezen is een klein familiebedrijf in het centrum van Turnhout, met de charme van een oud herenhuis. Het hotel heeft traditioneel uitziende kamers met een terras, tuinen &amp; gratis ontbijt &amp; Wi-Fi. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">170,173</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="driezenPrices" datatype="html">
+        <source>Prijzen vanaf €330 voor twee nachten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/accomodations/accomodations.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietTitle" datatype="html">
+        <source> Dieet wensen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietThanksMessage" datatype="html">
+        <source> Heel erg bedankt voor het laten weten, <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>we zullen proberen om rekening te houden met je wensen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietIntro" datatype="html">
+        <source> Laat het ons weten als er dieetbeperkingen zijn waarmee we rekening moeten houden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietFormName" datatype="html">
+        <source>Volledige naam</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietLactose" datatype="html">
+        <source>Lactose intolerantie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietGluten" datatype="html">
+        <source>Gluten intolerantie/gevoeligheid</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietVegatarian" datatype="html">
+        <source>Vegatarisch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietVegan" datatype="html">
+        <source>Vegan</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietDairy" datatype="html">
+        <source>Zuivel vrij</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietShellfish" datatype="html">
+        <source>Schaaldieren allergie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietPeanut" datatype="html">
+        <source>Pinda allergie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietOther" datatype="html">
+        <source>Anders:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dietFormSend" datatype="html">
+        <source> Versturen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/dietary/dietary.component.html</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeQuote" datatype="html">
+        <source> On this day, we will marry the one we laugh with, live for, dream with and love …. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeQuote2" datatype="html">
+        <source> We invite you to celebrate our special day with us </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeWeddingDay" datatype="html">
+        <source>Trouwdag</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeWeddingDate" datatype="html">
+        <source>Zaterdag 3 juni, 2023</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dinnerTitle" datatype="html">
+        <source> Uit eten </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dinnerIntro" datatype="html">
+        <source> Aangezien we weten dat je honger zult hebben na aankomst in Turnhout op vrijdag, <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> hebben we een aantal restaurants geselecteerd in Turnhout, met allerlei verschillende keukens om uit te kiezen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">8,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cachetOpeningTime" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;schedule&quot;&gt;"/>schedule<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Geopend van 18:00 tot 22:00 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cachetCuisine" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;restaurant&quot;&gt;"/>restaurant<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Italiaans, Frans </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="argentinoOpeningTime" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;schedule&quot;&gt;"/>schedule<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Geopend van 18:00 tot 00:00 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="argentinoCuisine" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;restaurant&quot;&gt;"/>restaurant<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Argentijns </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="becherelleOpeningTime" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;schedule&quot;&gt;"/>schedule<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Geopend van 17:00 tot 21:30 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">117,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="becherelleCuisine" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;restaurant&quot;&gt;"/>restaurant<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Frans, Belgisch </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">120,121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="amuOpeningTime" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;schedule&quot;&gt;"/>schedule<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Geopend van 11:30 tot 00:00 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">157,158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="amuCuisine" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;restaurant&quot;&gt;"/>restaurant<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Belgisch, vis </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">160,161</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="puurOpeningTime" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;schedule&quot;&gt;"/>schedule<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Geopend van 12:00 tot 00:00 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">196,197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="puurCuisine" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;restaurant&quot;&gt;"/>restaurant<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Mediterraans </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">199,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="marangonOpeningTime" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;schedule&quot;&gt;"/>schedule<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Geopend van 19:00 tot 21:30 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">235,236</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="marangonCuisine" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;restaurant&quot;&gt;"/>restaurant<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Italiaans (ook vegetarisch) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">238,239</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="efezeOpeningTime" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;schedule&quot;&gt;"/>schedule<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Geopend van 11:00 tot 00:00 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">274,275</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="efezeCuisine" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;restaurant&quot;&gt;"/>restaurant<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Mediterraans </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">277,278</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="keizershofOpeningTime" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;schedule&quot;&gt;"/>schedule<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Geopend van 17:00 tot 21:00 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">313,314</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="keizershofCuisine" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;restaurant&quot;&gt;"/>restaurant<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Belgisch (ook vegetarisch) </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/places-to-eat/places-to-eat.component.html</context>
+          <context context-type="linenumber">316,317</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpFormTitle" datatype="html">
+        <source> RSVP </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/form/rsvp-form.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpFormIntro" datatype="html">
+        <source> We hopen je op onze bruiloft te zien! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/form/rsvp-form.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpFormInputLabel" datatype="html">
+        <source>Zoek je naam</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/form/rsvp-form.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpFormAttendingTitle" datatype="html">
+        <source>Aanwezigheid</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/form/rsvp-form.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpFormYes" datatype="html">
+        <source> Ja </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/form/rsvp-form.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpFormNo" datatype="html">
+        <source> Nee </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/form/rsvp-form.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpFormSend" datatype="html">
+        <source> Versturen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/form/rsvp-form.component.html</context>
+          <context context-type="linenumber">71,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpTitle" datatype="html">
+        <source> Wij gaan trouwen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/rsvp.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpLocation" datatype="html">
+        <source> 3 juni, 2023 - Oud-Turnhout, België </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/rsvp.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpIntro" datatype="html">
+        <source> We kunnen niet wachten om deze speciale dag met juliie te vieren. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> In afwachting van de grote dag hebben we deze website gemaakt om jullie op de hoogte te houden <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> rondom alle details van onze bruiloft. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/rsvp.component.html</context>
+          <context context-type="linenumber">22,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpButton" datatype="html">
+        <source> Klik hier </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/rsvp.component.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpDeadline" datatype="html">
+        <source> RSVP uw aanwezigheid vóór <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> 1 februari 2023. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/rsvp.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpTransport" datatype="html">
+        <source> Om ervoor te zorgen dat iedereen op tijd is en veilig op de locatie arriveert, hebben we een touringbus geregeld die vertrekt en <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> arriveert in Turnhout centrum (loopafstand van de 5 hotels die we hebben geadviseerd op de website). <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> We zullen meer informatie over het exacte ophaalpunt dichterbij de tijd. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Let op, er is een beperkt aantal stoelen beschikbaar. Reageer alstublief vóór 31 november 2022 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/rsvp.component.html</context>
+          <context context-type="linenumber">41,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="rsvpFinishMessage" datatype="html">
+        <source> Bedankt dat je ons laat weten dat je deze speciale dag met ons wilt vieren. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/rsvp/rsvp.component.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginTite" datatype="html">
+        <source>Welkom</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginMessage" datatype="html">
+        <source>Log in met het wachtwoord op je uitnodiging.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginPassword" datatype="html">
+        <source>Wachtwoord</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source> Inloggen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venueTitle" datatype="html">
+        <source> Trouwlocatie </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/venue/venue.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venuePresent" datatype="html">
+        <source>Your loving presence at our wedding is a gift...we request no other.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/venue/venue.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venueDresscode" datatype="html">
+        <source>Dress code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/venue/venue.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venueDresscodeLadies" datatype="html">
+        <source> Dames - avondjurk of cocktail dress </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/venue/venue.component.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="venueDresscodeGentlemen" datatype="html">
+        <source> Heren - pak </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/venue/venue.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

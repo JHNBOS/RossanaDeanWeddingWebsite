@@ -1,15 +1,15 @@
 <div class="row">
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
     <div class="d-flex flex-column align-items-center">
-      <h2 class="title mt-3">
+      <h2 class="title mt-3" i18n="@@dietTitle">
         Dietary restrictions
       </h2>
 
-      <p class="my-2 replied" *ngIf="hasReplied">
+      <p class="my-2 replied" *ngIf="hasReplied" i18n="@@dietThanksMessage">
         Thank you very much for letting us know, <br />we will try to accomodate your dietary restriction(s).
       </p>
 
-      <p class="mt-2 dietary-intro">
+      <p class="mt-2 dietary-intro" i18n="@@dietIntro">
         Please let us know if there are any dietary restriction(s) we should take into account.
       </p>
     </div>
@@ -21,19 +21,19 @@
     <div class="d-flex flex-column align-items-center justify-content-center w-100">
 
       <mat-form-field class="pink mt-2" appearance="outline">
-        <mat-label>Full name</mat-label>
+        <mat-label i18n="@@dietFormName">Full name</mat-label>
         <input matInput type="text" placeholder="Ex. Harry Potter" [(ngModel)]="name" required (keyup)="onChange()">
       </mat-form-field>
 
       <mat-selection-list class="" #restrictions (selectionChange)="onChange()">
-        <mat-list-option checkboxPosition="before" value="lactose">Lactose intolerance</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="gluten">Gluten intolerance/sensitivity</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="vegatarian">Vegatarian</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="vegan">Vegan</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="dairy">Dairy-free</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="shellfish">Shellfish allergy</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="peanut">Peanut allergy</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="other" (click)="showHideInput()">Other:</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="lactose" i18n="@@dietLactose">Lactose intolerance</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="gluten" i18n="@@dietGluten">Gluten intolerance/sensitivity</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="vegatarian" i18n="@@dietVegatarian">Vegatarian</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="vegan" i18n="@@dietVegan">Vegan</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="dairy" i18n="@@dietDairy">Dairy-free</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="shellfish" i18n="@@dietShellfish">Shellfish allergy</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="peanut" i18n="@@dietPeanut">Peanut allergy</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="other" i18n="@@dietOther" (click)="showHideInput()">Other:</mat-list-option>
       </mat-selection-list>
 
       <mat-form-field id="txtOtherRestriction" class="gray" floatLabel="never" #otherInput
@@ -44,7 +44,7 @@
     </div>
 
     <div class="d-flex align-items-center justify-content-end mt-5">
-      <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()" [disabled]="disableSubmit">
+      <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()" [disabled]="disableSubmit" i18n="@@dietFormSend">
         Send
       </button>
     </div>

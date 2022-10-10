@@ -2,13 +2,13 @@
   <div class="col-sm-12 col-md-12 col-lg-8 mx-lg-auto d-flex flex-column">
     <div class="d-flex flex-column justify-content-center align-items-center align-self-center">
       <div class="logo">
-        <span>Welcome</span>
+        <span i18n="@@loginTite">Welcome</span>
       </div>
 
-      <div class="message">Please sign in using the password on your invite.</div>
+      <div class="message" i18n="@@loginMessage">Please sign in using the password on your invite.</div>
 
       <mat-form-field class="w-100 pink" appearance="fill">
-        <mat-label>Password</mat-label>
+        <mat-label i18n="@@loginPassword">Password</mat-label>
         <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="Enter your password"
           [(ngModel)]="password" (keyup.enter)="signIn()">
         <button type="button" mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
@@ -19,7 +19,7 @@
 
       <p class="text-danger" *ngIf="error.length > 0">{{error}}</p>
 
-      <button type="button" class="teal mat-elevation-z3" mat-flat-button color="primary" (click)="signIn()">
+      <button type="button" class="teal mat-elevation-z3" mat-flat-button color="primary" (click)="signIn()" i18n="@@loginButton">
         Sign in
       </button>
     </div>
