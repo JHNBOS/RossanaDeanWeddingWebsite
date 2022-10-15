@@ -12,7 +12,7 @@
 		"venue": "Locatie",
 		"diet": "Dieetwensen",
 		"dinner": "Uit eten",
-		"hotels": "Accomodaties"
+		"hotels": "Hotels"
 	},
 	"home": {
 		"quote": "On this day, we will marry the one we laugh with, live for, dream with and love …",
@@ -28,7 +28,7 @@
 		"intro": "We kunnen niet wachten om deze speciale dag met juliie te vieren. <br /> In afwachting van de grote dag hebben we deze website gemaakt om jullie op de hoogte te houden <br /> rondom alle details van onze bruiloft.",
 		"button": "Klik hier voor RSVP",
 		"deadline": "RSVP uw aanwezigheid vóór 1 februari 2023.",
-		"transport": "Om ervoor te zorgen dat iedereen op tijd is en veilig op de locatie arriveert, hebben we een touringbus geregeld die vertrekt en <br /> arriveert in Turnhout centrum (loopafstand van de 5 hotels die we hebben geadviseerd op de website). <br /><br /> We zullen meer informatie over het exacte ophaalpunt dichterbij de tijd. <br /><br /> Let op, er is een beperkt aantal stoelen beschikbaar. Reageer alstublief vóór 31 november 2022",
+		"transport": "Om ervoor te zorgen dat iedereen op tijd is en veilig op de locatie arriveert, <br /> hebben we een touringbus geregeld die vertrekt en arriveert in Turnhout centrum <br /> (loopafstand van de 5 hotels die we hebben geadviseerd op de website). <br /><br /> We zullen meer informatie over het exacte ophaalpunt dichterbij de tijd. <br /><br /> Let op, er is een beperkt aantal stoelen beschikbaar. <br /> <b>Reageer alstublief vóór 31 november 2022</b>",
 		"successMessage": "Bedankt dat je ons laat weten dat je deze speciale dag met ons wilt vieren.",
 		"form": {
 			"title": "RSVP",
@@ -110,6 +110,8 @@
 		}
 	},
 	"hotels": {
+    "title": "Hotels",
+    "intro": "We kunnen niet wachten om het samen met jou te vieren! <br /> Om ervoor te zorgen dat je goed uitgerust bent tijdens je verblijf hier in België,<br /> hebben we een aantal opties voor je verblijf in Turnhout geselecteerd.",
 		"turnova": {
 			"description": "Hotel Corsendonk Turnova is een vier sterren hotel in het centrum van Turnhout. Het beschikt over een modern en stijlvol interieur, met zijn eigen wellnes.",
 			"description2": "",
