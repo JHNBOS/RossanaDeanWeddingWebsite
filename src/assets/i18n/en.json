@@ -28,7 +28,7 @@
 		"intro": "We can&apos;t wait to celebrate this amazing day with you. <br /> In anticipation of the big day, we have created this website to keep you <br /> up to date on all the details of our wedding. ",
 		"button": "Click here to RSVP",
 		"deadline": "Kindly RSVP your attendance before the 1st of February 2023.",
-		"transport": "To make sure everyone is on time and arrives safely to the venue, we have arranged a touring bus departing and <br /> arriving in Turnhout centre (walking distance of the 5 hotels we adviced on the site). <br /><br /> We will let you know the exact pick up point nearer the time. <br /><br /> Please beware, there are a limited number of seats available. Please respond before 31st of November 2022.",
+		"transport": "To make sure everyone is on time and arrives safely to the venue, <br /> we have arranged a touring bus departing and arriving in Turnhout centre <br /> (walking distance of the 5 hotels we adviced on the site). <br /><br /> We will let you know the exact pick up point nearer the time. <br /><br /> Please beware, there are a limited number of seats available. <br /> <b>Please respond before 31st of November 2022</b>",
 		"successMessage": "Thank you for letting us know, that you will be celebrating our special day with us.",
 		"form": {
 			"title": "RSVP",
@@ -111,7 +111,7 @@
 	},
 	"hotels": {
     "title": "Accomodations",
-    "intro": "We can't wait to celebrate with you! To make sure you are well rested on your stay here in Belgium,<br />we have selected a few options for your stay in Turnhout.",
+    "intro": "We can't wait to celebrate with you!<br /> To make sure you are well rested on your stay here in Belgium,<br />we have selected a few options for your stay in Turnhout.",
 		"turnova": {
 			"description": "Hotel Corsendonk Turnova is a four star hotel in the centre of Turnhout. It features a modern and stylish interior, with it&apos;s own wellness.",
 			"description2": "",

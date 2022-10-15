@@ -12,10 +12,16 @@ export class AppComponent implements OnInit {
 	public isLoggedIn = false;
 
 	constructor( public router: Router, public authenticationService: AuthenticationService, public translate: TranslateService ) {
-		translate.addLangs(
-			[ 'en', 'nl', 'pt' ] );
+		translate.addLangs( [ 'en', 'nl', 'pt' ] );
 		translate.setDefaultLang( 'en' );
-		translate.use( 'en' );
+
+		let language = 'en';
+		const browserLanguage = window.navigator.language;
+
+		if( browserLanguage.includes( '-' ) === false ) language = browserLanguage;
+		else language = browserLanguage.split( '-' )[0];
+
+		translate.use( language );
 
 		this.authenticationService.saveSecret();
 	}
