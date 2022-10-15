@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 	templateUrl: './transport-overview.component.html',
 	styleUrls: ['./transport-overview.component.scss']
 })
-export class TransprtOverviewComponent implements OnInit, AfterViewInit {
+export class TransportOverviewComponent implements OnInit, AfterViewInit {
 	public readonly displayedColumns: string[] = ['position', 'name', 'repliedAt', 'actions'];
 
 	public guests: Array<ITransportGuest> = [];

@@ -1,13 +1,9 @@
 <div class="row">
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
     <div class="d-flex flex-column align-items-center">
-      <h2 class="title mt-3" i18n="@@rsvpFormTitle">
-        RSVP
-      </h2>
+      <h2 class="title mt-3" [translate]="'rsvp.form.title'"></h2>
 
-      <h3 class="mt-2 rsvp-intro" i18n="@@rsvpFormIntro">
-        We hope to see you on our wedding day!
-      </h3>
+      <h3 class="mt-2 rsvp-intro" [translate]="'rsvp.form.intro'"></h3>
     </div>
   </div>
 </div>
@@ -17,8 +13,8 @@
     <div class="d-flex flex-column align-items-center justify-content-center">
 
       <mat-form-field id="txtSearchName" class="pink mx-auto" appearance="outline">
-        <mat-label i18n="@@rsvpFormInputLabel">Search for your name(s)</mat-label>
-        <input matInput type="text" placeholder="Search for your name(s)" [matAutocomplete]="auto"
+        <mat-label [translate]="'rsvp.form.inputLabel'"></mat-label>
+        <input matInput type="text" placeholder="{{ 'rsvp.form.inputLabel' | translate }}" [matAutocomplete]="auto"
           [formControl]="formControl" (focus)="hideAutocomplete()" (keyup)="hideAutocomplete()"
           (keypress.backspace)="onBackspace()" />
         <button type="button" matSuffix mat-icon-button aria-label="Clear" *ngIf="query.length > 0"
@@ -35,21 +31,21 @@
       </mat-form-field>
 
       <div id="formAttending" *ngIf="selectedCollection != null">
-        <h4 i18n="@@rsvpFormAttendingTitle">Attending</h4>
+        <h4 [translate]="'rsvp.form.attending'"></h4>
 
         <div class="d-flex flex-column">
           <div class="attending-row" *ngFor="let person of selectedCollection!.persons">
 
             <div class="attending-form">
-              <span class="attending-text">Is <b>{{person.name}}</b> attending?</span>
+              <span class="attending-text">Is <b>{{person.name}}</b> {{'rsvp.form.attendingForm' | translate }}?</span>
               <div class="attending-buttons">
                 <button type="button" class="btn-green" [class.active]="person.isAttending" mat-stroked-button
-                  color="primary" (click)="setAttending(person, true)" i18n="@@rsvpFormYes">
-                  Yes
+                  color="primary" (click)="setAttending(person, true)" [translate]="'rsvp.form.yes'"
+                  title="{{ 'rsvp.form.yes' | translate }}">
                 </button>
                 <button type="button" class="btn-red" [class.active]="person.isAttending == false" mat-stroked-button
-                  color="primary" (click)="setAttending(person, false)" i18n="@@rsvpFormNo">
-                  No
+                  color="primary" (click)="setAttending(person, false)" [translate]="'rsvp.form.no'"
+                  title="{{ 'rsvp.form.no' | translate }}">
                 </button>
               </div>
             </div>
@@ -67,8 +63,8 @@
 
     <div class="d-flex align-items-center justify-content-end mt-5">
       <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()"
-        *ngIf="selectedCollection != null" i18n="@@rsvpFormSend">
-        Send
+        *ngIf="selectedCollection != null" title="{{ 'rsvp.form.send' | translate }}">
+        <span [translate]="'rsvp.form.send'"></span>
       </button>
     </div>
   </div>

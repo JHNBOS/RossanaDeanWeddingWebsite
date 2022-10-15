@@ -1,14 +1,9 @@
 <div class="row">
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
     <div class="d-flex flex-column align-items-center">
-      <h2 class="title mt-3" i18n="@@dinnerTitle">
-        Places to eat
-      </h2>
+      <h2 class="title mt-3" [translate]="'dinner.title'"></h2>
 
-      <p class="mt-2 places-intro" i18n="@@dinnerIntro">
-        Since we know you'll be hungry after arriving in Turnhout on friday, <br />
-        we have selected a number of restaurants in Turnhout with all kinds of cuisines to choose from.
-      </p>
+      <p class="mt-2 places-intro" [innerHTML]="'dinner.intro' | translate"></p>
     </div>
   </div>
 </div>
@@ -35,16 +30,18 @@
           <span class="place-item d-flex align-items-center">
             <mat-icon class="place">place</mat-icon> Guldensporenlei 23
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@cachetOpeningTime">
-            <mat-icon class="schedule">schedule</mat-icon> Open from 18:00 till 22:00
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="schedule">schedule</mat-icon> <span [translate]="'dinner.places.cachet.time'"></span>
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@cachetCuisine">
-            <mat-icon class="restaurant">restaurant</mat-icon> Italian, French
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="restaurant">restaurant</mat-icon> <span
+              [translate]="'dinner.places.cachet.cuisine'"></span>
           </span>
         </mat-card-content>
-        <mat-card-actions class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
-          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary" href="https://www.cachetdecire.be/en/" target="_blank"
-            rel="noopener">
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary"
+            href="https://www.cachetdecire.be/en/" target="_blank" rel="noopener">
             VISIT WEBSITE
           </a>
 
@@ -74,16 +71,18 @@
           <span class="place-item d-flex align-items-center">
             <mat-icon class="place">place</mat-icon> Grote Markt 48-24
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@argentinoOpeningTime">
-            <mat-icon class="schedule">schedule</mat-icon> Open from 18:00 till 00:00
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="schedule">schedule</mat-icon> <span [translate]="'dinner.places.argentino.time'"></span>
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@argentinoCuisine">
-            <mat-icon class="restaurant">restaurant</mat-icon> Argentinian grill
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="restaurant">restaurant</mat-icon> <span
+              [translate]="'dinner.places.argentino.cuisine'"></span>
           </span>
         </mat-card-content>
-        <mat-card-actions class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
-          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary" href="http://www.argentino.be/index_2.html"
-            target="_blank" rel="noopener">
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary"
+            href="http://www.argentino.be/index_2.html" target="_blank" rel="noopener">
             VISIT WEBSITE
           </a>
 
@@ -113,16 +112,18 @@
           <span class="place-item d-flex align-items-center">
             <mat-icon class="place">place</mat-icon> Patersstraat 13
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@becherelleOpeningTime">
-            <mat-icon class="schedule">schedule</mat-icon> Open from 17:00 till 21:30
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="schedule">schedule</mat-icon> <span [translate]="'dinner.places.becherelle.time'"></span>
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@becherelleCuisine">
-            <mat-icon class="restaurant">restaurant</mat-icon> French, Belgian
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="restaurant">restaurant</mat-icon> <span
+              [translate]="'dinner.places.becherelle.cuisine'"></span>
           </span>
         </mat-card-content>
-        <mat-card-actions class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
-          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary" href="https://www.becherelle.be/becherelle/"
-            target="_blank" rel="noopener">
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary"
+            href="https://www.becherelle.be/becherelle/" target="_blank" rel="noopener">
             VISIT WEBSITE
           </a>
 
@@ -153,16 +154,17 @@
           <span class="place-item d-flex align-items-center">
             <mat-icon class="place">place</mat-icon> Patersstraat 79
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@amuOpeningTime">
-            <mat-icon class="schedule">schedule</mat-icon> Open from 11:30 till 00:00
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="schedule">schedule</mat-icon> <span [translate]="'dinner.places.amu.time'"></span>
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@amuCuisine">
-            <mat-icon class="restaurant">restaurant</mat-icon> Belgian, Fish
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="restaurant">restaurant</mat-icon> <span [translate]="'dinner.places.amu.cuisine'"></span>
           </span>
         </mat-card-content>
-        <mat-card-actions class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
-          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary" href="http://www.amu-turnhout.be/" target="_blank"
-            rel="noopener">
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary"
+            href="http://www.amu-turnhout.be/" target="_blank" rel="noopener">
             VISIT WEBSITE
           </a>
 
@@ -192,16 +194,17 @@
           <span class="place-item d-flex align-items-center">
             <mat-icon class="place">place</mat-icon> Heizijde 99
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@puurOpeningTime">
-            <mat-icon class="schedule">schedule</mat-icon> Open from 12:00 till 00:00
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="schedule">schedule</mat-icon> <span [translate]="'dinner.places.puur.time'"></span>
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@puurCuisine">
-            <mat-icon class="restaurant">restaurant</mat-icon> Mediterranean
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="restaurant">restaurant</mat-icon> <span [translate]="'dinner.places.puur.cuisine'"></span>
           </span>
         </mat-card-content>
-        <mat-card-actions class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
-          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary" href="https://www.heizijde99.be/" target="_blank"
-            rel="noopener">
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary"
+            href="https://www.heizijde99.be/" target="_blank" rel="noopener">
             VISIT WEBSITE
           </a>
 
@@ -231,16 +234,18 @@
           <span class="place-item d-flex align-items-center">
             <mat-icon class="place">place</mat-icon> Patersstraat 9
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@marangonOpeningTime">
-            <mat-icon class="schedule">schedule</mat-icon> Open from 19:00 till 21:30
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="schedule">schedule</mat-icon> <span [translate]="'dinner.places.marangon.time'"></span>
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@marangonCuisine">
-            <mat-icon class="restaurant">restaurant</mat-icon> Italian (Vegetarian friendly)
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="restaurant">restaurant</mat-icon> <span
+              [translate]="'dinner.places.marangon.cuisine'"></span>
           </span>
         </mat-card-content>
-        <mat-card-actions class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
-          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary" href="http://www.cucinamarangon.be/" target="_blank"
-            rel="noopener">
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary"
+            href="http://www.cucinamarangon.be/" target="_blank" rel="noopener">
             VISIT WEBSITE
           </a>
 
@@ -270,16 +275,17 @@
           <span class="place-item d-flex align-items-center">
             <mat-icon class="place">place</mat-icon> Grote Markt 32
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@efezeOpeningTime">
-            <mat-icon class="schedule">schedule</mat-icon> Open from 11:00 till 00:00
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="schedule">schedule</mat-icon> <span [translate]="'dinner.places.efeze.time'"></span>
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@efezeCuisine">
-            <mat-icon class="restaurant">restaurant</mat-icon> Mediterranean
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="restaurant">restaurant</mat-icon> <span [translate]="'dinner.places.efeze.cuisine'"></span>
           </span>
         </mat-card-content>
-        <mat-card-actions class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
-          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary" href="https://restaurantefeze.be/" target="_blank"
-            rel="noopener">
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary"
+            href="https://restaurantefeze.be/" target="_blank" rel="noopener">
             VISIT WEBSITE
           </a>
 
@@ -309,16 +315,18 @@
           <span class="place-item d-flex align-items-center">
             <mat-icon class="place">place</mat-icon> Hoveniersstraat 1
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@keizershofOpeningTime">
-            <mat-icon class="schedule">schedule</mat-icon> Open from 17:00 till 21:00
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="schedule">schedule</mat-icon> <span [translate]="'dinner.places.keizershof.time'"></span>
           </span>
-          <span class="place-item d-flex align-items-center" i18n="@@keizershofCuisine">
-            <mat-icon class="restaurant">restaurant</mat-icon> Belgian (Vegetarian friendly)
+          <span class="place-item d-flex align-items-center">
+            <mat-icon class="restaurant">restaurant</mat-icon> <span
+              [translate]="'dinner.places.keizershof.cuisine'"></span>
           </span>
         </mat-card-content>
-        <mat-card-actions class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
-          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary" href="https://www.het-keizershof.be/" target="_blank"
-            rel="noopener">
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+          <a mat-flat-button class="red small mb-2 mb-lg-0 mb-xl-0 mb-xxl-0" color="primary"
+            href="https://www.het-keizershof.be/" target="_blank" rel="noopener">
             VISIT WEBSITE
           </a>
 

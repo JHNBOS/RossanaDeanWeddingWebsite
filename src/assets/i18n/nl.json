@@ -1,0 +1,139 @@
+{
+	"signIn": {
+		"title": "Welkom",
+		"intro": "Log in met het wachtwoord op je uitnodiging.",
+		"password": "Wachtwoord",
+		"passwordPlaceholder": "Vul uw wachtwoord in",
+		"button": "Aanmelden"
+	},
+	"navigation": {
+		"home": "Home",
+		"rsvp": "RSVP",
+		"venue": "Locatie",
+		"diet": "Dieetwensen",
+		"dinner": "Uit eten",
+		"hotels": "Accomodaties"
+	},
+	"home": {
+		"quote": "On this day, we will marry the one we laugh with, live for, dream with and love …",
+		"intro": "We invite you to celebrate our special day with us",
+		"wedding": {
+			"day": "Trouwdag",
+			"date": "Zaterdag 3 juni, 2023"
+		}
+	},
+	"rsvp": {
+		"title": "Wij gaan trouwen",
+		"location": "3 juni, 2023 - Oud-Turnhout, België",
+		"intro": "We kunnen niet wachten om deze speciale dag met juliie te vieren. <br /> In afwachting van de grote dag hebben we deze website gemaakt om jullie op de hoogte te houden <br /> rondom alle details van onze bruiloft.",
+		"button": "Klik hier voor RSVP",
+		"deadline": "RSVP uw aanwezigheid vóór 1 februari 2023.",
+		"transport": "Om ervoor te zorgen dat iedereen op tijd is en veilig op de locatie arriveert, hebben we een touringbus geregeld die vertrekt en <br /> arriveert in Turnhout centrum (loopafstand van de 5 hotels die we hebben geadviseerd op de website). <br /><br /> We zullen meer informatie over het exacte ophaalpunt dichterbij de tijd. <br /><br /> Let op, er is een beperkt aantal stoelen beschikbaar. Reageer alstublief vóór 31 november 2022",
+		"successMessage": "Bedankt dat je ons laat weten dat je deze speciale dag met ons wilt vieren.",
+		"form": {
+			"title": "RSVP",
+			"intro": "We hopen je op onze bruiloft te zien!",
+			"inputLabel": "Zoek uw naam op",
+			"attending": "Aanwezigheid",
+			"attendingForm": "aanwezig",
+			"yes": "Ja",
+			"no": "Nee",
+			"send": "Versturen"
+		}
+	},
+	"venue": {
+		"title": "Trouwlocatie",
+		"location": "Engelstraat 6, 2360 Oud-Turnhout, België",
+		"gifts": "Your loving presence at our wedding is a gift...we request no other.",
+		"dresscode": {
+			"title": "Dress code",
+			"ladies": "Dames - avondjurl of cocktail dress",
+			"men": "Heren - pak"
+		}
+	},
+	"dietary": {
+		"title": "Dieetwensen",
+		"intro": "Laat het ons weten als er dieetbeperkingen zijn waarmee we rekening moeten houden.",
+		"successMessage": "Heel erg bedankt voor het laten weten, <br />we zullen proberen om rekening te houden met je wensen.",
+		"form": {
+			"name": "Volledige naam",
+			"options": {
+				"lactose": "Lactose intolerantie",
+				"gluten": "Gluten intolerantie/gevoeligheid",
+				"vegatarian": "Vegatarisch",
+				"vegan": "Vegan",
+				"dairy": "Zuivel vrij",
+				"shellfish": "Schaaldieren allergie",
+				"peanut": "Pinda- en notenallergie",
+				"other": "Anders: "
+			},
+			"otherPlaceholder": "Omschrijf uw dieetwens(en)...",
+			"send": "Versturen"
+		}
+	},
+	"dinner": {
+		"title": "Uit eten",
+		"intro": "Aangezien we weten dat je honger zult hebben na aankomst in Turnhout op vrijdag, <br /> hebben we een aantal restaurants geselecteerd in Turnhout, met allerlei verschillende keukens om uit te kiezen.",
+		"places": {
+			"cachet": {
+				"time": "Geopend van 18:00 tot 22:00",
+				"cuisine": "Italiaans, Frans"
+			},
+			"argentino": {
+				"time": "Geopend van 18:00 tot 00:00",
+				"cuisine": "Argentijnse grill"
+			},
+			"becherelle": {
+				"time": "Geopend van 12:00 tot 00:00",
+				"cuisine": "Frans, Belgisch"
+			},
+			"amu": {
+				"time": "Geopend van 11:30 tot 00:00",
+				"cuisine": "Belgisch, vis"
+			},
+			"puur": {
+				"time": "Geopend van 12:00 tot 00:00",
+				"cuisine": "Mediterraans"
+			},
+			"marango": {
+				"time": "Geopend van 19:00 tot 21:30",
+				"cuisine": "Italiaans (ook vegetarisch)"
+			},
+			"efeze": {
+				"time": "Geopend van 11:00 tot 00:00",
+				"cuisine": "Mediterraans"
+			},
+			"keizershof": {
+				"time": "Geopend van 17:00 tot 21:00",
+				"cuisine": "Belgisch (ook vegetarisch)"
+			}
+		}
+	},
+	"hotels": {
+		"turnova": {
+			"description": "Hotel Corsendonk Turnova is een vier sterren hotel in het centrum van Turnhout. Het beschikt over een modern en stijlvol interieur, met zijn eigen wellnes.",
+			"description2": "",
+			"prices": "Prijzen vanaf €230 voor twee nachten"
+		},
+		"viane": {
+			"description": "Hotel Corsendonk Viane is een drie sterren hotel in het centrum in Turnhout. Het beschikt over een stijlvol en tijdloos interieur, en is gemakkelijk bereikbaar via openbaar vervoer en de auto. Gratis parkeren inbegrepen.",
+			"description2": "",
+			"prices": "Prijzen vanaf €155 voor twee nachten"
+		},
+		"western": {
+			"description": "City Hotel Best Western Plus is een vier sterren hotel gelegen in het bruisende centrum van Turnhout, vlakbij de Grote Markt. Het hotel bevindt zich vlakbij het station en de bushaltes, en heeft een eigen casino, sportschool en restaurant.",
+			"description2": "De elegant ingerichte hotelkamers hebben heerlijke bedden en luxueuze badkamers met toilet. De kamers hebben hiernaast ook WiFi internet, televisie en koffie faciliteiten.",
+			"prices": "Prijzen vanaf €160 voor twee nachten"
+		},
+		"bonbon": {
+			"description": "Bed and breakfast Bon Bon &apos;Nuit&apos; is een B&amp;B met een chocolade thema, met kamers ontworpen zoals Parijs in de jaren '30. <br /> In de ochtend kunnen gasten genieten van een luxe ontbijt met verse broodjes, vers gebakken croissant en meerdere soorten chocolademelk, gezien ze op de begane grond hun eigen bakkerij en chocolaterie hebben. ",
+			"description2": "De B&amp;B bevindt zich vlak om de hoek van het treinstation in het centrum van Turnhout.",
+			"prices": "Prijzen vanaf €175 voor twee nachten"
+		},
+		"driezen": {
+			"description": "Hotel Ter Driezen is een klein familiebedrijf in het centrum van Turnhout, met de charme van een oud herenhuis. Het hotel heeft traditioneel uitziende kamers met een terras, tuinen &amp; gratis ontbijt &amp; Wi-Fi.",
+			"description2": "",
+			"prices": "Prijzen vanaf €330 voor twee nachten"
+		}
+	}
+}

@@ -9,76 +9,106 @@
         <span class="navbar-toggler-icon"></span> Menu
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav d-xs-flex d-xl-none">
+        <!-- Mobile menu -->
+        <ul class="navbar-nav d-xs-flex d-xl-none align-items-center">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav" i18n="@@navHome">Home</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              [translate]="'navigation.home'">
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [class.active]="isRsvpForm" aria-current="page" routerLink="/rsvp"
               routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" i18n="@@navRSVP">RSVP</a>
+              data-bs-target="#navbarNav" [translate]="'navigation.rsvp'">
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/venue" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav" i18n="@@navVenue">Venue</a>
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              [translate]="'navigation.venue'">
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/dietary" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav" i18n="@@navDiet">
-              Dietary restrictions
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              [translate]="'navigation.diet'">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/places-to-eat" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav" i18n="@@navDinner">Places to
-              eat</a>
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.dinner'">
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/accomodations" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" i18n="@@navHotels">Accomodations</a>
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.hotels'"></a>
+          </li>
+
+          <li class="nav-item mt-2">
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('en')">
+              <span class="d-block fi fi-gb"></span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/transportation-to-venue" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" i18n="@@navTransport">Transportation to venue</a>
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('nl')">
+              <span class="d-block fi fi-nl"></span>
+            </a>
+          </li>
+          <!-- Temporarily disabled -->
+          <li class="nav-item d-none">
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('pt')">
+              <span class="d-block fi fi-pt"></span>
+            </a>
           </li>
         </ul>
-        <ul class="navbar-nav d-none d-xl-flex">
+
+        <!-- Desktop menu -->
+        <ul class="navbar-nav d-none d-xl-flex align-items-center">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" i18n="@@navHome">Home</a>
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.home'"></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [class.active]="isRsvpForm" aria-current="page" routerLink="/rsvp"
-              routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" i18n="@@navRSVP">RSVP</a>
+              routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.rsvp'"></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/venue" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" i18n="@@navVenue">Venue</a>
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.venue'"></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/dietary" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" i18n="@@navDiet">Dietary
-              restrictions</a>
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.diet'"></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/places-to-eat" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" i18n="@@navDinner">
-              Places to eat
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.dinner'">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/accomodations" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" i18n="@@navHotels">Accomodations</a>
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.hotels'"></a>
+          </li>
+          <li class="nav-item ml-2">
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('en')">
+              <span class="d-block fi fi-gb"></span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/transportation-to-venue" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" i18n="@@navTransport">Transportation to venue</a>
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('nl')">
+              <span class="d-block fi fi-nl"></span>
+            </a>
+          </li>
+          <!-- Temporarily disabled -->
+          <li class="nav-item d-none">
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('pt')">
+              <span class="d-block fi fi-pt"></span>
+            </a>
           </li>
         </ul>
       </div>
+
     </div>
   </nav>
 

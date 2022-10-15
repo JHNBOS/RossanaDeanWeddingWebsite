@@ -7,13 +7,6 @@
 	"newProjectRoot": "projects",
 	"projects": {
 		"RossanaDeanWeddingSite": {
-			"i18n": {
-				"sourceLocale": "en-US",
-				"locales": {
-					"nl-NL": "src/locale/messages.nl.xlf",
-					"pt-PT": "src/locale/messages.pt.xlf"
-				}
-			},
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -30,9 +23,6 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"localize": [
-              "nl-NL"
-            ],
 						"outputPath": "dist/rossana-dean-wedding-site/docs",
 						"index": "src/index.html",
 						"main": "src/main.ts",
@@ -44,7 +34,8 @@
 							"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
 							"src/assets/styles/main.scss",
 							"src/styles.scss",
-							"node_modules/ol/ol.css"
+							"node_modules/ol/ol.css",
+              "node_modules/flag-icons/css/flag-icons.min.css"
 						],
 						"scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
 						"stylePreprocessorOptions": {
@@ -115,7 +106,8 @@
 							"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
 							"src/assets/styles/main.scss",
 							"src/styles.scss",
-							"node_modules/ol/ol.css"
+							"node_modules/ol/ol.css",
+              "node_modules/flag-icons/css/flag-icons.min.css"
 						],
 						"scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
 						"stylePreprocessorOptions": {

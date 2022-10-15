@@ -1,17 +1,11 @@
 <div class="row">
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
     <div class="d-flex flex-column align-items-center">
-      <h2 class="title mt-3" i18n="@@dietTitle">
-        Dietary restrictions
-      </h2>
+      <h2 class="title mt-3" [translate]="'dietary.title'"></h2>
 
-      <p class="my-2 replied" *ngIf="hasReplied" i18n="@@dietThanksMessage">
-        Thank you very much for letting us know, <br />we will try to accomodate your dietary restriction(s).
-      </p>
+      <p class="my-2 replied" *ngIf="hasReplied" [innerHTML]="'dietary.successMessage' | translate"></p>
 
-      <p class="mt-2 dietary-intro" i18n="@@dietIntro">
-        Please let us know if there are any dietary restriction(s) we should take into account.
-      </p>
+      <p class="mt-2 dietary-intro" [innerHTML]="'dietary.intro' | translate"></p>
     </div>
   </div>
 </div>
@@ -21,31 +15,48 @@
     <div class="d-flex flex-column align-items-center justify-content-center w-100">
 
       <mat-form-field class="pink mt-2" appearance="outline">
-        <mat-label i18n="@@dietFormName">Full name</mat-label>
-        <input matInput type="text" placeholder="Ex. Harry Potter" [(ngModel)]="name" required (keyup)="onChange()">
+        <mat-label [translate]="'dietary.form.name'"></mat-label>
+        <input matInput type="text" placeholder="Harry Potter" [(ngModel)]="name" required (keyup)="onChange()">
       </mat-form-field>
 
       <mat-selection-list class="" #restrictions (selectionChange)="onChange()">
-        <mat-list-option checkboxPosition="before" value="lactose" i18n="@@dietLactose">Lactose intolerance</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="gluten" i18n="@@dietGluten">Gluten intolerance/sensitivity</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="vegatarian" i18n="@@dietVegatarian">Vegatarian</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="vegan" i18n="@@dietVegan">Vegan</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="dairy" i18n="@@dietDairy">Dairy-free</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="shellfish" i18n="@@dietShellfish">Shellfish allergy</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="peanut" i18n="@@dietPeanut">Peanut allergy</mat-list-option>
-        <mat-list-option checkboxPosition="before" value="other" i18n="@@dietOther" (click)="showHideInput()">Other:</mat-list-option>
+        <mat-list-option checkboxPosition="before" value="lactose">
+          <span [translate]="'dietary.form.options.lactose'"></span>
+        </mat-list-option>
+        <mat-list-option checkboxPosition="before" value="gluten">
+          <span [translate]="'dietary.form.options.gluten'"></span>
+        </mat-list-option>
+        <mat-list-option checkboxPosition="before" value="vegatarian">
+          <span [translate]="'dietary.form.options.vegatarian'"></span>
+        </mat-list-option>
+        <mat-list-option checkboxPosition="before" value="vegan">
+          <span [translate]="'dietary.form.options.vegan'"></span>
+        </mat-list-option>
+        <mat-list-option checkboxPosition="before" value="dairy">
+          <span [translate]="'dietary.form.options.dairy'"></span>
+        </mat-list-option>
+        <mat-list-option checkboxPosition="before" value="shellfish">
+          <span [translate]="'dietary.form.options.shellfish'"></span>
+        </mat-list-option>
+        <mat-list-option checkboxPosition="before" value="peanut">
+          <span [translate]="'dietary.form.options.peanut'"></span>
+        </mat-list-option>
+        <mat-list-option checkboxPosition="before" value="other" (click)="showHideInput()">
+          <span [translate]="'dietary.form.options.other'"></span>
+        </mat-list-option>
       </mat-selection-list>
 
       <mat-form-field id="txtOtherRestriction" class="gray" floatLabel="never" #otherInput
         [hidden]="showInput === false">
-        <textarea matInput placeholder="Describe dietary restriction(s)..." appearance="fill"
+        <textarea matInput placeholder="{{ 'dietary.form.otherPlaceholder' | translate }}" appearance="fill"
           [(ngModel)]="otherRestrictions" rows="5" (keyup)="onChange()"></textarea>
       </mat-form-field>
     </div>
 
     <div class="d-flex align-items-center justify-content-end mt-5">
-      <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()" [disabled]="disableSubmit" i18n="@@dietFormSend">
-        Send
+      <button type="button" mat-flat-button color="primary" class="red" (click)="sendForm()" [disabled]="disableSubmit"
+        title="{{ 'dietary.form.send' | translate }}">
+        <span [translate]="'dietary.form.send'"></span>
       </button>
     </div>
   </div>

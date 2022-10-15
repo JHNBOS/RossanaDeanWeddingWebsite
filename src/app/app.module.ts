@@ -19,8 +19,16 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 
 import { environment } from '../environments/environment';
 import { MaterialModule } from './shared/material.module';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-registerLocaleData(localeEn, 'en');
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+	return new TranslateHttpLoader(http);
+}
+
+// registerLocaleData(localeEn, 'en');
 
 @NgModule({
 	declarations: [AppComponent, HeaderComponent],
@@ -30,6 +38,14 @@ registerLocaleData(localeEn, 'en');
 		BrowserAnimationsModule,
 		PagesModule,
 		MaterialModule,
+		HttpClientModule,
+		TranslateModule.forRoot({
+			loader: {
+				provide: TranslateLoader,
+				useFactory: HttpLoaderFactory,
+				deps: [HttpClient]
+			}
+		}),
 		provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
 		provideFirestore(() => getFirestore()),
 		provideAuth(() => getAuth()),

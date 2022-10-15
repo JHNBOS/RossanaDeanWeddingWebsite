@@ -1,0 +1,141 @@
+{
+	"signIn": {
+		"title": "Welcome",
+		"intro": "Please sign in using the password on your invite.",
+		"password": "Password",
+		"passwordPlaceholder": "Enter your password",
+		"button": "Sign in"
+	},
+	"navigation": {
+		"home": "Home",
+		"rsvp": "RSVP",
+		"venue": "Venue",
+		"diet": "Dietary restrictions",
+		"dinner": "Places to eat",
+		"hotels": "Accomodations"
+	},
+	"home": {
+		"quote": "On this day, we will marry the one we laugh with, live for, dream with and love …",
+		"intro": "We invite you to celebrate our special day with us",
+		"wedding": {
+			"day": "Wedding day",
+			"date": "Saturday June 3rd, 2023"
+		}
+	},
+	"rsvp": {
+		"title": "We are getting married",
+		"location": "June 3rd, 2023 - Oud-Turnhout, Belgium",
+		"intro": "We can&apos;t wait to celebrate this amazing day with you. <br /> In anticipation of the big day, we have created this website to keep you <br /> up to date on all the details of our wedding. ",
+		"button": "Click here to RSVP",
+		"deadline": "Kindly RSVP your attendance before the 1st of February 2023.",
+		"transport": "To make sure everyone is on time and arrives safely to the venue, we have arranged a touring bus departing and <br /> arriving in Turnhout centre (walking distance of the 5 hotels we adviced on the site). <br /><br /> We will let you know the exact pick up point nearer the time. <br /><br /> Please beware, there are a limited number of seats available. Please respond before 31st of November 2022.",
+		"successMessage": "Thank you for letting us know, that you will be celebrating our special day with us.",
+		"form": {
+			"title": "RSVP",
+			"intro": "We hope to see you on our wedding day!",
+			"inputLabel": "Search for your name(s)",
+			"attending": "Attending",
+			"attendingForm": "attending",
+			"yes": "Yes",
+			"no": "No",
+			"send": "Send"
+		}
+	},
+	"venue": {
+		"title": "Wedding venue",
+		"location": "Engelstraat 6, 2360 Oud-Turnhout, Belgium",
+		"gifts": "Your loving presence at our wedding is a gift...we request no other.",
+		"dresscode": {
+			"title": "Dress code",
+			"ladies": "Ladies - evening dress or cocktail dress",
+			"men": "Gentlemen - suits"
+		}
+	},
+	"dietary": {
+		"title": "Dietary restrictions",
+		"intro": "Please let us know if there are any dietary restriction(s) we should take into account.",
+		"successMessage": "Thank you very much for letting us know, <br /> we will try to accomodate your dietary restriction(s).",
+		"form": {
+			"name": "Full name",
+			"options": {
+				"lactose": "Lactose intolerance",
+				"gluten": "Gluten intolerance/sensitivity",
+				"vegatarian": "Vegatarian",
+				"vegan": "Vegan",
+				"dairy": "Dairy-free",
+				"shellfish": "Shellfish allergy",
+				"peanut": "Nut and peanut allergy",
+				"other": "Other: "
+			},
+      "otherPlaceholder": "Describe dietary restriction(s)...",
+			"send": "Send"
+		}
+	},
+	"dinner": {
+		"title": "Places to eat",
+		"intro": "Since we know you&apos;ll be hungry after arriving in Turnhout on friday, <br /> we have selected a number of restaurants in Turnhout with all kinds of cuisines to choose from.",
+		"places": {
+			"cachet": {
+				"time": "Open from 18:00 till 22:00",
+				"cuisine": "Italian, French"
+			},
+			"argentino": {
+				"time": "Open from 18:00 till 00:00",
+				"cuisine": "Argentinian grill"
+			},
+			"becherelle": {
+				"time": "Open from 12:00 till 00:00",
+				"cuisine": "French, Belgian"
+			},
+			"amu": {
+				"time": "Open from 11:30 till 00:00",
+				"cuisine": "Belgian, Fish"
+			},
+			"puur": {
+				"time": "Open from 12:00 till 00:00",
+				"cuisine": "Mediterranean"
+			},
+			"marango": {
+				"time": "Open from 19:00 till 21:30",
+				"cuisine": "Italian (Vegetarian friendly)"
+			},
+			"efeze": {
+				"time": "Open from 11:00 till 00:00",
+				"cuisine": "Mediterranean"
+			},
+			"keizershof": {
+				"time": "Open from 17:00 till 21:00",
+				"cuisine": "Belgian (Vegetarian friendly)"
+			}
+		}
+	},
+	"hotels": {
+    "title": "Accomodations",
+    "intro": "We can't wait to celebrate with you! To make sure you are well rested on your stay here in Belgium,<br />we have selected a few options for your stay in Turnhout.",
+		"turnova": {
+			"description": "Hotel Corsendonk Turnova is a four star hotel in the centre of Turnhout. It features a modern and stylish interior, with it&apos;s own wellness.",
+			"description2": "",
+			"prices": "Prices from €230 for two nights"
+		},
+		"viane": {
+			"description": "Hotel Corsendonk Viane is a three star hotel in the centre of Turnhout. It features a stylish and contemporary design, and is easy accesible by public transport and car. Free parking included.",
+			"description2": "",
+			"prices": "Prices from €155 for two nights"
+		},
+		"western": {
+			"description": "City Hotel Best Western Plus is a four star hotel located in the bustling centre of Turnhout, near the Grote Markt. The hotel is situated near the station and the bus stop, and has its own casino, gym and restaurant.",
+			"description2": "The elegantly furnished hotel rooms come with wonderful beds and luxurious bathrooms with a toilet. The rooms furthermore come with WiFi, a TV and tea and coffee facilities.",
+			"prices": "Prices from €160 for two nights"
+		},
+		"bonbon": {
+			"description": "Bed and breakfast Bon Bon &apos;Nuit&apos; is a chocolate-themed bed with rooms designed to look like Paris in the 1930&apos;s. <br/ > In the morning, guests can enjoy a deluxe breakfast including fresh breads, freshly baked croissants and multiple types of hot chocolate, since downstairs they have their own chocolate shop.",
+			"description2": "The B&amp;B lies just around the corner of the train station in Turnhout centre.",
+			"prices": "Prices from €175 for two nights"
+		},
+		"driezen": {
+			"description": "Hotel Ter Driezen is a small family-run hotel in the centre of Turnhout with the charm of an old manor. The hotel has refined rooms with traditional decor, along with a terrace, gardens &amp; free breakfast &amp; Wi-Fi.",
+			"description2": "",
+			"prices": "Prices from €330 for two nights"
+		}
+	}
+}

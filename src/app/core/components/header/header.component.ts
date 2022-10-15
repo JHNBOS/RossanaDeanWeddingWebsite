@@ -1,27 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-@Component({
+import { TranslateService } from '@ngx-translate/core';
+@Component( {
 	selector: 'app-header',
 	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.scss']
-})
+	styleUrls: [ './header.component.scss' ]
+} )
 export class HeaderComponent implements OnInit {
-	public isRsvpForm: boolean = false;
-	public clickCount: number = 0;
+	public isRsvpForm = false;
+	public clickCount = 0;
 
-	constructor(public router: Router) {}
+	constructor( public router: Router, public translate: TranslateService ) {}
 
 	ngOnInit(): void {
-		this.isRsvpForm = this.router.url.includes('rsvp');
+		this.isRsvpForm = this.router.url.includes( 'rsvp' );
 	}
 
 	public enterAdminMenu(): void {
 		this.clickCount++;
 
-		if (this.clickCount < 5) return;
+		if ( this.clickCount < 5 ) return;
 
 		this.clickCount = 0;
-		this.router.navigate(['admin']);
+		this.router.navigate( [ 'admin' ] );
+	}
+
+	public translateWebsite( langCode: string ): void {
+		this.translate.use( langCode );
 	}
 }

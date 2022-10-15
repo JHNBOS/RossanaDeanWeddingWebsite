@@ -1,13 +1,11 @@
 {
   "env": {
-    "node": true,
-    "es2021": true,
-    "webextensions": true
+    "browser": true,
+    "es2021": true
   },
   "extends": [
-    "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-    "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
-    "plugin:prettier/recommended" //
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,63 +15,51 @@
   "plugins": [
     "@typescript-eslint"
   ],
-  "root": true,
   "rules": {
-    "arrow-spacing": [
-      "warn",
+    "indent": [
+      "error",
+      "tab"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "curly": [
+      "error",
+      "multi"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always",
       {
-        "before": true,
-        "after": true
+        "objectsInObjects": true,
+        "arraysInObjects": false
       }
     ],
-    "brace-style": [
-      "warn",
-      "allman",
-      {
-        "allowSingleLine": true
-      }
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
+    "space-in-parens": [
+      "error",
+      "always"
     ],
     "comma-spacing": [
-      "warn",
+      "error",
       {
         "before": false,
         "after": true
       }
     ],
-    "indent": [
-      "error",
-      "tab"
-    ],
-    "no-mixed-spaces-and-tabs": "error",
-    "no-duplicate-imports": "error",
-    "no-multi-spaces": "error",
-    "prefer-const": "warn",
-    "object-curly-newline": "error",
-    "object-curly-spacing": [
-      "warn",
-      "always"
-    ],
-    "space-before-function-paren": [
-      "error",
-      "always"
-    ],
-    "space-before-blocks": [
-      "warn",
-      "always"
-    ],
-    "space-in-parens": [
-      "warn",
-      "always"
-    ],
-    "require-await": "error",
-    "spaced-comment": "warn",
     "no-empty-function": "off",
-    "@typescript-eslint/no-empty-function": ["off"],
-    "@typescript-eslint/no-non-null-assertion": ["off"],
-    "no-empty": "off",
-    "max-len": [
-      "warn",
-      180
-    ]
+    "@typescript-eslint/no-empty-function": "off"
   }
 }

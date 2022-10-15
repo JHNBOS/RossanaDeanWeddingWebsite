@@ -1,4 +1,4 @@
-import { TransprtOverviewComponent } from './admin/transport-overview/transport-overview.component';
+import { TransportOverviewComponent } from './admin/transport-overview/transport-overview.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -20,6 +20,7 @@ import { AddGuestComponent } from './admin/add-guest/add-guest.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditGuestComponent } from './admin/edit-guest/edit-guest.component';
 import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overview.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
 	declarations: [
@@ -37,9 +38,9 @@ import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overv
 		AdminComponent,
 		EditGuestComponent,
 		DietaryOverviewComponent,
-		TransprtOverviewComponent
+		TransportOverviewComponent
 	],
-	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, BrowserAnimationsModule, MaterialModule],
+	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, TranslateModule, BrowserAnimationsModule, MaterialModule],
 	exports: [
 		HomeComponent,
 		SignInComponent,
@@ -55,7 +56,7 @@ import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overv
 		AdminComponent,
 		EditGuestComponent,
 		DietaryOverviewComponent,
-		TransprtOverviewComponent
+		TransportOverviewComponent
 	]
 })
 export class PagesModule {}

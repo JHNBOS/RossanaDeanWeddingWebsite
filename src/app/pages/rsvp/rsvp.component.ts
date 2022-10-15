@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
+@Component( {
 	selector: 'app-rsvp',
 	templateUrl: './rsvp.component.html',
-	styleUrls: ['./rsvp.component.scss']
-})
+	styleUrls: [ './rsvp.component.scss' ]
+} )
 export class RsvpComponent implements OnInit {
-	public hasReplied: boolean = false;
+	public hasReplied = false;
 
 	constructor() {}
 
 	ngOnInit(): void {
-		this.hasReplied = localStorage.getItem('rsvp') != null ? true : false;
+		this.hasReplied = localStorage.getItem( 'rsvp' ) != null ? true : false;
 	}
 }

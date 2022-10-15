@@ -2,25 +2,26 @@
   <div class="col-sm-12 col-md-12 col-lg-8 mx-lg-auto d-flex flex-column">
     <div class="d-flex flex-column justify-content-center align-items-center align-self-center">
       <div class="logo">
-        <span i18n="@@loginTite">Welcome</span>
+        <span [translate]="'signIn.title'"></span>
       </div>
 
-      <div class="message" i18n="@@loginMessage">Please sign in using the password on your invite.</div>
+      <div class="message" [translate]="'signIn.intro'"></div>
 
       <mat-form-field class="w-100 pink" appearance="fill">
-        <mat-label i18n="@@loginPassword">Password</mat-label>
-        <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="Enter your password"
-          [(ngModel)]="password" (keyup.enter)="signIn()">
+        <mat-label [translate]="'signIn.password'"></mat-label>
+        <input matInput [type]="hidePassword ? 'password' : 'text'"
+          placeholder="{{ 'signIn.passwordPlaceholder' | translate }}" [(ngModel)]="password" (keyup.enter)="signIn()">
         <button type="button" mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
-          [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+          [attr.aria-pressed]="hidePassword">
           <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
 
       <p class="text-danger" *ngIf="error.length > 0">{{error}}</p>
 
-      <button type="button" class="teal mat-elevation-z3" mat-flat-button color="primary" (click)="signIn()" i18n="@@loginButton">
-        Sign in
+      <button type="button" class="teal mat-elevation-z3" mat-flat-button color="primary" (click)="signIn()"
+        title="{{ 'signIn.button' | translate }}">
+        <span [translate]="'signIn.button'"></span>
       </button>
     </div>
   </div>
