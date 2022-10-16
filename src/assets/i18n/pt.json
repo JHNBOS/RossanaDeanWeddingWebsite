@@ -95,7 +95,7 @@
 				"time": "Open from 12:00 till 00:00",
 				"cuisine": "Mediterranean"
 			},
-			"marango": {
+			"marangon": {
 				"time": "Open from 19:00 till 21:30",
 				"cuisine": "Italian (Vegetarian friendly)"
 			},
@@ -128,7 +128,7 @@
 			"prices": "Prices from €160 for two nights"
 		},
 		"bonbon": {
-			"description": "Bed and breakfast Bon Bon &apos;Nuit&apos; is a chocolate-themed bed with rooms designed to look like Paris in the 1930&apos;s. <br/ > In the morning, guests can enjoy a deluxe breakfast including fresh breads, freshly baked croissants and multiple types of hot chocolate, since downstairs they have their own chocolate shop.",
+			"description": "Bed and breakfast Bon Bon &apos;Nuit&apos; is a chocolate-themed bed with rooms designed to look like Paris in the 1930&apos;s. <br/ ><br/ > In the morning, guests can enjoy a deluxe breakfast including fresh breads, freshly baked croissants and multiple types of hot chocolate, since downstairs they have their own chocolate shop.",
 			"description2": "The B&amp;B lies just around the corner of the train station in Turnhout centre.",
 			"prices": "Prices from €175 for two nights"
 		},

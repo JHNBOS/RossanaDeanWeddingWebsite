@@ -28,7 +28,7 @@
 		"intro": "We kunnen niet wachten om deze speciale dag met juliie te vieren. <br /> In afwachting van de grote dag hebben we deze website gemaakt om jullie op de hoogte te houden <br /> rondom alle details van onze bruiloft.",
 		"button": "Klik hier voor RSVP",
 		"deadline": "RSVP uw aanwezigheid vóór 1 februari 2023.",
-		"transport": "Om ervoor te zorgen dat iedereen op tijd is en veilig op de locatie arriveert, <br /> hebben we een touringbus geregeld die vertrekt en arriveert in Turnhout centrum <br /> (loopafstand van de 5 hotels die we hebben geadviseerd op de website). <br /><br /> We zullen meer informatie over het exacte ophaalpunt dichterbij de tijd. <br /><br /> Let op, er is een beperkt aantal stoelen beschikbaar. <br /> <b>Reageer alstublief vóór 31 november 2022</b>",
+		"transport": "Om ervoor te zorgen dat iedereen op tijd is en veilig op de locatie arriveert, <br /> hebben we een touringbus geregeld, die vertrekt en aankomt in Turnhout centrum <br /> (loopafstand van de 5 hotels die we hebben geadviseerd op de website). <br /><br /> We zullen meer informatie over het exacte ophaalpunt geven wanneer het zover is. <br /><br /> Let op, er is een beperkt aantal stoelen beschikbaar. <br /> <b>Reageer alstublief vóór 31 november 2022</b>",
 		"successMessage": "Bedankt dat je ons laat weten dat je deze speciale dag met ons wilt vieren.",
 		"form": {
 			"title": "RSVP",
@@ -47,7 +47,7 @@
 		"gifts": "Your loving presence at our wedding is a gift...we request no other.",
 		"dresscode": {
 			"title": "Dress code",
-			"ladies": "Dames - avondjurl of cocktail dress",
+			"ladies": "Dames - avondjurk of cocktail dress",
 			"men": "Heren - pak"
 		}
 	},
@@ -73,7 +73,7 @@
 	},
 	"dinner": {
 		"title": "Uit eten",
-		"intro": "Aangezien we weten dat je honger zult hebben na aankomst in Turnhout op vrijdag, <br /> hebben we een aantal restaurants geselecteerd in Turnhout, met allerlei verschillende keukens om uit te kiezen.",
+		"intro": "Aangezien we weten dat je honger zult hebben na aankomst in Turnhout op vrijdag, <br /> hebben we een aantal restaurants geselecteerd in Turnhout, <br />met allerlei verschillende keukens om uit te kiezen.",
 		"places": {
 			"cachet": {
 				"time": "Geopend van 18:00 tot 22:00",
@@ -95,7 +95,7 @@
 				"time": "Geopend van 12:00 tot 00:00",
 				"cuisine": "Mediterraans"
 			},
-			"marango": {
+			"marangon": {
 				"time": "Geopend van 19:00 tot 21:30",
 				"cuisine": "Italiaans (ook vegetarisch)"
 			},
@@ -128,7 +128,7 @@
 			"prices": "Prijzen vanaf €160 voor twee nachten"
 		},
 		"bonbon": {
-			"description": "Bed and breakfast Bon Bon &apos;Nuit&apos; is een B&amp;B met een chocolade thema, met kamers ontworpen zoals Parijs in de jaren '30. <br /> In de ochtend kunnen gasten genieten van een luxe ontbijt met verse broodjes, vers gebakken croissant en meerdere soorten chocolademelk, gezien ze op de begane grond hun eigen bakkerij en chocolaterie hebben. ",
+			"description": "Bed and breakfast Bon Bon &apos;Nuit&apos; is een B&amp;B met een chocolade thema, met kamers ontworpen zoals Parijs in de jaren '30. <br /><br /> In de ochtend kunnen gasten genieten van een luxe ontbijt met verse broodjes, vers gebakken croissant en meerdere soorten chocolademelk, gezien ze op de begane grond hun eigen bakkerij en chocolaterie hebben. ",
 			"description2": "De B&amp;B bevindt zich vlak om de hoek van het treinstation in het centrum van Turnhout.",
 			"prices": "Prijzen vanaf €175 voor twee nachten"
 		},

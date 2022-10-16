@@ -17,15 +17,15 @@
   ],
   "rules": {
     "indent": [
-      "error",
+      "warning",
       "tab"
     ],
     "linebreak-style": [
-      "error",
+      "warning",
       "unix"
     ],
     "quotes": [
-      "error",
+      "warning",
       "single"
     ],
     "semi": [
@@ -33,11 +33,11 @@
       "always"
     ],
     "curly": [
-      "error",
+      "warning",
       "multi"
     ],
     "object-curly-spacing": [
-      "error",
+      "warning",
       "always",
       {
         "objectsInObjects": true,
@@ -45,18 +45,36 @@
       }
     ],
     "array-bracket-spacing": [
-      "error",
+      "warning",
+      "always"
+    ],
+    "block-spacing": [
+      "warning",
       "always"
     ],
     "space-in-parens": [
-      "error",
+      "warning",
       "always"
     ],
     "comma-spacing": [
-      "error",
+      "warning",
       {
         "before": false,
         "after": true
+      }
+    ],
+    "keyword-spacing": [
+      "warning",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "brace-style": [
+      "warning",
+      "allman",
+      {
+        "allowSingleLine": true
       }
     ],
     "no-empty-function": "off",

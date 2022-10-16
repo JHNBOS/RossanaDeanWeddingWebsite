@@ -12,11 +12,13 @@ export class HeaderComponent implements OnInit {
 
 	constructor( public router: Router, public translate: TranslateService ) {}
 
-	ngOnInit(): void {
+	ngOnInit(): void
+  {
 		this.isRsvpForm = this.router.url.includes( 'rsvp' );
 	}
 
-	public enterAdminMenu(): void {
+	public enterAdminMenu(): void
+  {
 		this.clickCount++;
 
 		if ( this.clickCount < 5 ) return;
@@ -25,7 +27,9 @@ export class HeaderComponent implements OnInit {
 		this.router.navigate( [ 'admin' ] );
 	}
 
-	public translateWebsite( langCode: string ): void {
+	public translateWebsite( langCode: string ): void
+  {
 		this.translate.use( langCode );
+		localStorage.setItem( 'lang', langCode );
 	}
 }
