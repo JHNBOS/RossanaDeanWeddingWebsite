@@ -25,10 +25,10 @@
 	"rsvp": {
 		"title": "Wij gaan trouwen",
 		"location": "3 juni, 2023 - Oud-Turnhout, België",
-		"intro": "We kunnen niet wachten om deze speciale dag met juliie te vieren. <br /> In afwachting van de grote dag hebben we deze website gemaakt om jullie op de hoogte te houden <br /> rondom alle details van onze bruiloft.",
-		"button": "Klik hier voor RSVP",
-		"deadline": "RSVP uw aanwezigheid vóór 1 februari 2023.",
-		"transport": "Om ervoor te zorgen dat iedereen op tijd is en veilig op de locatie arriveert, <br /> hebben we een touringbus geregeld, die vertrekt en aankomt in Turnhout centrum <br /> (loopafstand van de 5 hotels die we hebben geadviseerd op de website). <br /><br /> We zullen meer informatie over het exacte ophaalpunt geven wanneer het zover is. <br /><br /> Let op, er is een beperkt aantal stoelen beschikbaar. <br /> <b>Reageer alstublief vóór 31 november 2022</b>",
+		"intro": "We kunnen niet wachten om deze speciale dag met jullie te vieren. <br /> In afwachting van de grote dag hebben we deze website gemaakt om jullie op de hoogte te houden <br /> rondom alle details van onze bruiloft.",
+		"button": "Klik hier voor RSVP / reserveer plek op bus",
+		"deadline": "RSVP uw aanwezigheid zo spoedig mogelijk, uiterlijk vóór 31 december 2022.",
+		"transport": "Om ervoor te zorgen dat iedereen op tijd is en veilig op de locatie arriveert, <br /> hebben we een touringbus geregeld, die vertrekt en aankomt in Turnhout centrum <br /> (loopafstand van de 5 hotels die we hebben geadviseerd op de website). <br /><br /> We zullen meer informatie over het exacte ophaalpunt geven wanneer het zover is. <br /><br /> <b>Let op, er is een beperkt aantal stoelen beschikbaar.</b>",
 		"successMessage": "Bedankt dat je ons laat weten dat je deze speciale dag met ons wilt vieren.",
 		"form": {
 			"title": "RSVP",
@@ -36,6 +36,7 @@
 			"inputLabel": "Zoek uw naam op",
 			"attending": "Aanwezigheid",
 			"attendingForm": "aanwezig",
+      "requestSeat": "Wilt <b>{{ name }}</b> mee met de bus?",
 			"yes": "Ja",
 			"no": "Nee",
 			"send": "Versturen"
