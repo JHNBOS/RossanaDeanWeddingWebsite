@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 	styleUrls: ['./guest-overview.component.scss']
 })
 export class GuestOverviewComponent implements OnInit, AfterViewInit {
-	public readonly displayedColumns: string[] = ['position', 'name', 'status', 'repliedAt'];
+	public readonly displayedColumns: string[] = ['position', 'name', 'status', 'seat', 'repliedAt'];
 
 	public guests: Array<IGuestRow> = [];
 	public dataSource!: MatTableDataSource<IGuestRow>;
@@ -42,14 +42,10 @@ export class GuestOverviewComponent implements OnInit, AfterViewInit {
 				if (a.repliedAt == null && b.repliedAt == null) return 0;
 				if (a.repliedAt == null || b.repliedAt == null) {
 					const r = a.repliedAt != null ? -0.5 : 0.5;
-					// if (a.name.localeCompare(b.name) < 0) r * 2;
-					// if (a.name.localeCompare(b.name) > 0 ) r * -2;
 					return r;
 				}
 
 				const r = a.repliedAt! > b.repliedAt! ? 1 : -1;
-				// if (a.name.localeCompare(b.name) < 0) r * 2;
-				// if (a.name.localeCompare(b.name) > 0) r * -2;
 				return r;
 			});
 

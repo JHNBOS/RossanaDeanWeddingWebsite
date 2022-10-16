@@ -17,11 +17,13 @@ export interface ISimpleGuestCollection {
 	name: string;
 	persons: Array<ISimpleGuest>;
 }
+
 export interface IGuest {
 	id: string;
 	name: string;
 	isAttending: boolean;
 	repliedAt: Timestamp | null;
+	requestSeatOnBus: boolean | null;
 }
 
 export interface IGuestCollectionRow {
@@ -37,6 +39,7 @@ export interface IGuestRow {
 	isAttending: boolean;
 	areAllAttending: boolean;
 	repliedAt: Timestamp | null;
+	requestSeatOnBus: boolean | null;
 }
 
 export interface ISimpleGuest {
@@ -53,11 +56,13 @@ export class Guest implements IGuest {
 	public name: string;
 	public isAttending: boolean;
 	public repliedAt: Timestamp | null;
+	public requestSeatOnBus: boolean | null;
 
 	constructor(id: string, name: string) {
 		this.id = id;
 		this.name = name;
 		this.isAttending = true;
+		this.requestSeatOnBus = null;
 		this.repliedAt = null;
 	}
 }

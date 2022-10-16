@@ -17,7 +17,7 @@
     <div class="d-flex flex-column align-items-center wedding">
       <p class="rsvp-intro d-none" *ngIf="hasReplied == false" [innerHTML]="'rsvp.intro' | translate"></p>
 
-      <button type="button" class="teal mt-3 mat-elevation-z3" mat-flat-button color="primary" routerLink="/rsvp-form"
+      <button type="button" id="btnRSVP" class="teal mt-3 mat-elevation-z3" mat-flat-button color="primary" routerLink="/rsvp-form"
         routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="hasReplied == false" title="RSVP">
         <span [translate]="'rsvp.button'"></span>
       </button>

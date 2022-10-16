@@ -41,6 +41,21 @@
               </div>
             </div>
 
+            <div class="d-flex flex-column mt-2">
+              <span class="request_seat-text">Requested seat on bus?</span>
+              <div class="request_seat-buttons">
+                <button id="btnRequestSeatGreen_{{guest.id}}" type="button" class="btn-green btn-sm"
+                  [class.active]="hasRequestedSeat(guest)" mat-stroked-button color="primary"
+                  (click)="setRequestedSeat(guest, true)">
+                  Yes
+                </button>
+                <button id="btnRequestSeatRed_{{guest.id}}" type="button" class="btn-red"
+                  [class.active]="hasRequestedSeat(guest) == false" mat-stroked-button color="primary"
+                  (click)="setRequestedSeat(guest, false)">
+                  No
+                </button>
+              </div>
+            </div>
           </mat-card-content>
           <mat-card-actions>
             <button mat-icon-button color="error" aria-label="Delete guest" (click)="deleteGuest(guest)">
@@ -58,7 +73,7 @@
         </div>
 
         <div id="actions"
-          class="w-50 d-flex flex-column flex-lg-row justify-content-between align-items-center align-self-center">
+          class="w-50 my-3 d-flex flex-column flex-lg-row justify-content-between align-items-center align-self-center">
           <button type="button" mat-flat-button color="error" class="red mt-4 mr-5 btn-sm" (click)="delete()">
             Delete
           </button>

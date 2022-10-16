@@ -19,8 +19,8 @@
         </ng-container>
 
         <ng-container matColumnDef="status">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header [style.flex]="'0 0 20%'">Status</th>
-          <td mat-cell *matCellDef="let element" [style.flex]="'0 0 20%'">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header [style.flex]="'0 0 25%'">Status</th>
+          <td mat-cell *matCellDef="let element" [style.flex]="'0 0 25%'">
             <span class="text-muted" *ngIf="element.repliedAt == null">Not replied</span>
             <span class="text-success" *ngIf="element.repliedAt != null && element.isAttending">
               <mat-icon class="text-success check_circle">check_circle</mat-icon>
@@ -34,13 +34,26 @@
           </td>
         </ng-container>
 
+        <ng-container matColumnDef="seat">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header [style.flex]="'0 0 25%'">Seat on bus</th>
+          <td mat-cell *matCellDef="let element" [style.flex]="'0 0 25%'">
+            <span class="text-muted" *ngIf="element.repliedAt == null"></span>
+            <span class="text-success" *ngIf="element.repliedAt != null && element.requestSeatOnBus">
+              <mat-icon class="text-success check_circle">check_circle</mat-icon>
+            </span>
+            <span class="text-danger" *ngIf="element.repliedAt != null && element.requestSeatOnBus === false">
+              <mat-icon class="text-danger cancel">cancel</mat-icon>
+            </span>
+          </td>
+        </ng-container>
+
         <ng-container matColumnDef="repliedAt">
           <th mat-header-cell *matHeaderCellDef mat-sort-header [style.flex]="'0 0 25%'" [style.white-space]="'nowrap'">
             Replied at</th>
           <td class="text-center" mat-cell *matCellDef="let element" [style.flex]="'0 0 25%'"
             [style.white-space]="'nowrap'">
             <span *ngIf="element.repliedAt == null">-</span>
-            <span *ngIf="element.repliedAt != null">{{element.repliedAt.toDate() | date: 'EEEE d MMMM yyyy'}}</span>
+            <span *ngIf="element.repliedAt != null">{{element.repliedAt.toDate() | date: 'EE d MMM yyyy'}}</span>
           </td>
         </ng-container>
 

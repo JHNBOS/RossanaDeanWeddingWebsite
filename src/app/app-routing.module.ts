@@ -12,7 +12,6 @@ import { RsvpComponent } from './pages/rsvp/rsvp.component';
 import { RsvpFormComponent } from './pages/rsvp/form/rsvp-form.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { PlacesToEatComponent } from './pages/places-to-eat/places-to-eat.component';
-import { TransportationComponent } from './pages/transportation/transportation.component';
 import { VenueComponent } from './pages/venue/venue.component';
 
 const routes: Routes = [
@@ -59,12 +58,6 @@ const routes: Routes = [
 		canActivate: [AuthGuard]
 	},
 	{
-		path: 'transportation-to-venue',
-		component: TransportationComponent,
-		canLoad: [AuthGuard],
-		canActivate: [AuthGuard]
-	},
-	{
 		path: 'guest-overview',
 		component: GuestOverviewComponent,
 		canLoad: [AuthGuard],
@@ -88,27 +81,6 @@ const routes: Routes = [
 		component: SignInComponent
 	}
 ];
-
-// const routes: Routes = [
-// 	{ path: '', component: HomeComponent },
-// 	{
-// 		path: 'admin',
-// 		canActivate: [AuthGuard],
-// 		component: AdminComponent,
-// 		children: [
-// 			{
-// 				path: 'pages',
-// 				component: PageOverviewComponent
-// 			},
-// 			{
-// 				path: 'pages/:id',
-// 				component: PageEditComponent
-// 			}
-// 		]
-// 	},
-// 	{ path: 'view/:id', component: PageViewComponent },
-// 	{ path: 'home', redirectTo: '', pathMatch: 'full' }
-// ];
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes)],

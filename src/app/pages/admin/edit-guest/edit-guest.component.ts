@@ -41,6 +41,7 @@ export class EditGuestComponent implements OnInit {
 					name: p.name,
 					isAttending: p.isAttending ?? false,
 					repliedAt: p.repliedAt ?? null,
+					requestSeatOnBus: p.requestSeatOnBus ?? null,
 					isNew: false
 				};
 			})
@@ -64,10 +65,18 @@ export class EditGuestComponent implements OnInit {
 		return false;
 	}
 
+	public hasRequestedSeat(guest: ISimpleGuestEdit): boolean {
+		const person = this.guestCollection.persons.find((g) => g.id === guest.id || g.name === guest.name);
+		if (person != null) {
+			return person.requestSeatOnBus != null && person.requestSeatOnBus === true;
+		}
+		return false;
+	}
+
 	public addGuest(): void {
 		const id = (this.guestCollection.persons.length + 1).toString();
 		const name = `Guest #${this.guestCollection.persons.filter((p) => p.isNew).length + 1}`;
-		const guest: ISimpleGuestEdit = { id: id, name: name, isNew: true, isAttending: false, repliedAt: null };
+		const guest: ISimpleGuestEdit = { id: id, name: name, isNew: true, isAttending: false, requestSeatOnBus: false, repliedAt: null };
 		this.guestCollection.persons.push(guest);
 	}
 
@@ -122,6 +131,13 @@ export class EditGuestComponent implements OnInit {
 			if (person.isNew || (person.isNew === false && person.repliedAt == null)) {
 				person.repliedAt = Timestamp.now();
 			}
+		}
+	}
+
+	public setRequestedSeat(guest: ISimpleGuestEdit, value: boolean): void {
+		const person = this.guestCollection.persons.find((g) => g.id === guest.id);
+		if (person != null) {
+			person.requestSeatOnBus = value;
 		}
 	}
 }

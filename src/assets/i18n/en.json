@@ -26,9 +26,9 @@
 		"title": "We are getting married",
 		"location": "June 3rd, 2023 - Oud-Turnhout, Belgium",
 		"intro": "We can&apos;t wait to celebrate this amazing day with you. <br /> In anticipation of the big day, we have created this website to keep you <br /> up to date on all the details of our wedding. ",
-		"button": "Click here to RSVP",
-		"deadline": "Kindly RSVP your attendance before the 1st of February 2023.",
-		"transport": "To make sure everyone is on time and arrives safely to the venue, <br /> we have arranged a touring bus departing and arriving in Turnhout centre <br /> (walking distance of the 5 hotels we adviced on the site). <br /><br /> We will let you know the exact pick up point nearer the time. <br /><br /> Please beware, there are a limited number of seats available. <br /> <b>Please respond before 31st of November 2022</b>",
+		"button": "Click here to RSVP / book your spot on the bus",
+		"deadline": "Kindly RSVP your attendance as soon as possible, or at latest before the 31st of Decmeber 2022.",
+		"transport": "To make sure everyone is on time and arrives safely to the venue, we have arranged a touring bus departing and arriving in Turnhout centre <br /> (walking distance of the 5 hotels we adviced on the site). <br /><br /> We will let you know the exact pick up point nearer the time. <br /><br /> <b>Please beware, there are a limited number of seats available.</b>",
 		"successMessage": "Thank you for letting us know, that you will be celebrating our special day with us.",
 		"form": {
 			"title": "RSVP",
@@ -36,6 +36,7 @@
 			"inputLabel": "Search for your name(s)",
 			"attending": "Attending",
 			"attendingForm": "attending",
+      "requestSeat": "Does <b>{{ name }}</b> want a seat on the bus?",
 			"yes": "Yes",
 			"no": "No",
 			"send": "Send"

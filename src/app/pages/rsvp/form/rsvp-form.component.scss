@@ -29,12 +29,21 @@
     color: $primary-text;
   }
 
-  .attending-row {
+  .attending-row,
+  .request_seat-row {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
     width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    .person-row {
+      display: flex;
+      width: 100%;
+    }
 
     .attending-status {
       display: flex;
@@ -51,17 +60,16 @@
       }
     }
 
-    .attending-form {
+    .attending-form,
+    .request_seat-form {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
-      margin: 0.5rem 0;
-      padding: 0.75rem;
-      border: 1px solid rgba(0, 0, 0, 0.15);
+      min-width: 100%;
 
-      .attending-buttons {
+      .attending-buttons,
+      .request_seat-buttons {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -142,11 +150,13 @@ button.red {
       }
     }
 
-    .attending-form {
+    .attending-form,
+    .request_seat-form {
       flex-direction: column !important;
       border: none !important;
 
-      .attending-buttons {
+      .attending-buttons,
+      .request_seat-buttons {
         margin-top: 1rem !important;
         flex-direction: column !important;
         row-gap: 1rem;

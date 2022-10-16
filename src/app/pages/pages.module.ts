@@ -1,4 +1,3 @@
-import { TransportOverviewComponent } from './admin/transport-overview/transport-overview.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -12,7 +11,6 @@ import { VenueComponent } from './venue/venue.component';
 import { AccomodationsComponent } from './accomodations/accomodations.component';
 import { DietaryComponent } from './dietary/dietary.component';
 import { PlacesToEatComponent } from './places-to-eat/places-to-eat.component';
-import { TransportationComponent } from './transportation/transportation.component';
 import { RsvpFormComponent } from './rsvp/form/rsvp-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GuestOverviewComponent } from './admin/guest-overview/guest-overview.component';
@@ -31,14 +29,12 @@ import { TranslateModule } from '@ngx-translate/core';
 		AccomodationsComponent,
 		DietaryComponent,
 		PlacesToEatComponent,
-		TransportationComponent,
 		RsvpFormComponent,
 		GuestOverviewComponent,
 		AddGuestComponent,
 		AdminComponent,
 		EditGuestComponent,
-		DietaryOverviewComponent,
-		TransportOverviewComponent
+		DietaryOverviewComponent
 	],
 	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, TranslateModule, BrowserAnimationsModule, MaterialModule],
 	exports: [
@@ -49,14 +45,12 @@ import { TranslateModule } from '@ngx-translate/core';
 		AccomodationsComponent,
 		DietaryComponent,
 		PlacesToEatComponent,
-		TransportationComponent,
 		RsvpFormComponent,
 		GuestOverviewComponent,
 		AddGuestComponent,
 		AdminComponent,
 		EditGuestComponent,
-		DietaryOverviewComponent,
-		TransportOverviewComponent
+		DietaryOverviewComponent
 	]
 })
 export class PagesModule {}

@@ -41,9 +41,11 @@
   text-align: center;
 }
 
-button.teal {
-  width: 250px;
-  height: 50px;
+#btnRSVP {
+  min-width: 250px;
+  min-height: 50px;
+  width: auto;
+  height: auto;
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
@@ -54,10 +56,5 @@ button.teal {
 
   .location {
     font-size: 1.6rem;
-  }
-
-  button.teal {
-    width: 275px !important;
-    height: 65px !important;
   }
 }

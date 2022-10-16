@@ -48,6 +48,10 @@ export class RsvpFormComponent implements OnInit {
 		person.isAttending = isAttending;
 	}
 
+	public setRequestedSeatOnBus(person: IGuest, value: boolean): void {
+		person.requestSeatOnBus = value;
+	}
+
 	public async sendForm(): Promise<void> {
 		localStorage.setItem('rsvp', moment().format('DD-MM-YYYY HH:mm'));
 

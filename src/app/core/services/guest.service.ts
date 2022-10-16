@@ -40,6 +40,7 @@ export class GuestService {
 			for (const person of guestCollection.persons) {
 				const personGuest = new Guest(person.id, person.name);
 				personGuest.isAttending = person.isAttending;
+				personGuest.requestSeatOnBus = person.requestSeatOnBus;
 				personGuest.repliedAt = person.repliedAt;
 
 				const index = guestCollection.persons.indexOf(person);
@@ -53,7 +54,7 @@ export class GuestService {
 		return this.guests;
 	}
 
-	public async add(guestCollection: ISimpleGuestCollection | IGuestCollection): Promise<IGuestCollection> {
+	public async add(guestCollection: ISimpleGuestEditCollection | IGuestCollection): Promise<IGuestCollection> {
 		const collection = { ...guestCollection };
 
 		let arr = new Array<any>();
