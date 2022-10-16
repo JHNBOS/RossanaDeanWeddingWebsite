@@ -42,10 +42,10 @@
 }
 
 #btnRSVP {
-  min-width: 250px;
-  min-height: 50px;
   width: auto;
   height: auto;
+  max-width: 95%;
+  white-space: normal;
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
