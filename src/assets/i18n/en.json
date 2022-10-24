@@ -12,7 +12,8 @@
 		"venue": "Venue",
 		"diet": "Dietary restrictions",
 		"dinner": "Places to eat",
-		"hotels": "Accomodations"
+		"hotels": "Accomodations",
+    "contact": "Contact us"
 	},
 	"home": {
 		"quote": "On this day, we will marry the one we laugh with, live for, dream with and love …",
@@ -36,7 +37,7 @@
 			"inputLabel": "Search for your name(s)",
 			"attending": "Attending",
 			"attendingForm": "attending",
-      "requestSeat": "Does <b>{{ name }}</b> want a seat on the bus?",
+			"requestSeat": "Does <b>{{ name }}</b> want a seat on the bus?",
 			"yes": "Yes",
 			"no": "No",
 			"send": "Send"
@@ -68,7 +69,7 @@
 				"peanut": "Nut and peanut allergy",
 				"other": "Other: "
 			},
-      "otherPlaceholder": "Describe dietary restriction(s)...",
+			"otherPlaceholder": "Describe dietary restriction(s)...",
 			"send": "Send"
 		}
 	},
@@ -111,8 +112,8 @@
 		}
 	},
 	"hotels": {
-    "title": "Accomodations",
-    "intro": "We can't wait to celebrate with you!<br /> To make sure you are well rested on your stay here in Belgium,<br />we have selected a few options for your stay in Turnhout.",
+		"title": "Accomodations",
+		"intro": "We can't wait to celebrate with you!<br /> To make sure you are well rested on your stay here in Belgium,<br />we have selected a few options for your stay in Turnhout.",
 		"turnova": {
 			"description": "Hotel Corsendonk Turnova is a four star hotel in the centre of Turnhout. It features a modern and stylish interior, with it&apos;s own wellness.",
 			"description2": "",
@@ -138,5 +139,19 @@
 			"description2": "",
 			"prices": "Prices from €330 for two nights"
 		}
+	},
+	"contact": {
+		"title": "Contact us",
+		"intro": "If you have further questions, Rossana or Dean will be more than happy to answer them anytime. <br /> Please fill out the form below to ask your question(s).",
+		"button": "Send",
+		"form": {
+			"name": "Full name",
+			"subject": "Subject",
+			"message": "Message"
+		},
+    "after": {
+      "title": "Thank you",
+      "intro": "We have received your question(s), we will try to answer them as soon as possible."
+    }
 	}
 }
