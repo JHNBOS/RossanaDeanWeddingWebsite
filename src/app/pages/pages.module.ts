@@ -20,7 +20,6 @@ import { EditGuestComponent } from './admin/edit-guest/edit-guest.component';
 import { DietaryOverviewComponent } from './admin/dietary-overview/dietary-overview.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { ThanksComponent } from './thanks/thanks.component';
 
 @NgModule({
 	declarations: [
@@ -37,8 +36,7 @@ import { ThanksComponent } from './thanks/thanks.component';
 		AdminComponent,
 		EditGuestComponent,
 		DietaryOverviewComponent,
-		ContactFormComponent,
-		ThanksComponent
+		ContactFormComponent
 	],
 	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, TranslateModule, BrowserAnimationsModule, MaterialModule],
 	exports: [
@@ -55,8 +53,7 @@ import { ThanksComponent } from './thanks/thanks.component';
 		AdminComponent,
 		EditGuestComponent,
 		DietaryOverviewComponent,
-		ContactFormComponent,
-		ThanksComponent
+		ContactFormComponent
 	]
 })
 export class PagesModule {}

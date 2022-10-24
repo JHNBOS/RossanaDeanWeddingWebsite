@@ -12,8 +12,9 @@
   <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
     <div class="d-flex flex-column align-items-center">
 
-      <form class="w-50" ngNoForm #contactForm action="https://mailthis.to/Meet The Blackmores Wedding" method="POST"
-        encType="multipart/form-data" (ngSubmit)="sendForm()">
+      <form class="w-sm-100 w-lg-50 d-flex flex-column align-items-center" ngNoForm #contactForm
+        action="https://mailthis.to/Meet The Blackmores Wedding" method="POST" encType="multipart/form-data"
+        (ngSubmit)="sendForm()">
 
         <mat-form-field class="w-100 pink" appearance="fill">
           <mat-label [translate]="'contact.form.name'"></mat-label>
