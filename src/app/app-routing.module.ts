@@ -1,4 +1,3 @@
-import { ThanksComponent } from './pages/thanks/thanks.component';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { EditGuestComponent } from './pages/admin/edit-guest/edit-guest.component';
 import { AdminComponent } from './pages/admin/admin.component';
@@ -62,12 +61,6 @@ const routes: Routes = [
 	{
 		path: 'contact',
 		component: ContactFormComponent,
-		canLoad: [AuthGuard],
-		canActivate: [AuthGuard]
-	},
-	{
-		path: 'thanks',
-		component: ThanksComponent,
 		canLoad: [AuthGuard],
 		canActivate: [AuthGuard]
 	},
