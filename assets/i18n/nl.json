@@ -12,7 +12,8 @@
 		"venue": "Locatie",
 		"diet": "Dieetwensen",
 		"dinner": "Uit eten",
-		"hotels": "Hotels"
+		"hotels": "Hotels",
+		"contact": "Contact"
 	},
 	"home": {
 		"quote": "On this day, we will marry the one we laugh with, live for, dream with and love …",
@@ -36,7 +37,7 @@
 			"inputLabel": "Zoek uw naam op",
 			"attending": "Aanwezigheid",
 			"attendingForm": "aanwezig",
-      "requestSeat": "Wilt <b>{{ name }}</b> mee met de bus?",
+			"requestSeat": "Wilt <b>{{ name }}</b> mee met de bus?",
 			"yes": "Ja",
 			"no": "Nee",
 			"send": "Versturen"
@@ -111,8 +112,8 @@
 		}
 	},
 	"hotels": {
-    "title": "Hotels",
-    "intro": "We kunnen niet wachten om het samen met jou te vieren! <br /> Om ervoor te zorgen dat je goed uitgerust bent tijdens je verblijf hier in België,<br /> hebben we een aantal opties voor je verblijf in Turnhout geselecteerd.",
+		"title": "Hotels",
+		"intro": "We kunnen niet wachten om het samen met jou te vieren! <br /> Om ervoor te zorgen dat je goed uitgerust bent tijdens je verblijf hier in België,<br /> hebben we een aantal opties voor je verblijf in Turnhout geselecteerd.",
 		"turnova": {
 			"description": "Hotel Corsendonk Turnova is een vier sterren hotel in het centrum van Turnhout. Het beschikt over een modern en stijlvol interieur, met zijn eigen wellnes.",
 			"description2": "",
@@ -137,6 +138,20 @@
 			"description": "Hotel Ter Driezen is een klein familiebedrijf in het centrum van Turnhout, met de charme van een oud herenhuis. Het hotel heeft traditioneel uitziende kamers met een terras, tuinen &amp; gratis ontbijt &amp; Wi-Fi.",
 			"description2": "",
 			"prices": "Prijzen vanaf €330 voor twee nachten"
+		}
+	},
+	"contact": {
+		"title": "Contactformulier",
+		"intro": "Mocht je nog vragen hebben, dan beantwoorden Rossana en Dean die graag voor je. Vul het formulier hieronder in, en we zullen je zo spoedig mogelijk antwoorden.",
+		"button": "Versturen",
+		"form": {
+			"name": "Naam",
+			"subject": "Onderwerp",
+			"message": "Bericht"
+		},
+		"after": {
+			"title": "Bedankt",
+			"intro": "We hebben je vraag ontvangen. We zullen zo spoedig mogelijk antwoorden."
 		}
 	}
 }
