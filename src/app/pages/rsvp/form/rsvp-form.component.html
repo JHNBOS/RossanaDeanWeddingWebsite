@@ -37,7 +37,7 @@
           <div class="attending-row" *ngFor="let person of selectedCollection!.persons">
             <div class="person-row">
               <div class="attending-form">
-                <span class="attending-text">Is <b>{{person.name}}</b> {{'rsvp.form.attendingForm' | translate}}?</span>
+                <span class="attending-text">{{isPortugese ? "Esta" : "Is"}} <b>{{person.name}}</b> {{'rsvp.form.attendingForm' | translate}}?</span>
                 <div class="attending-buttons">
                   <button type="button" class="btn-green" [class.active]="person.isAttending" mat-stroked-button
                     color="primary" (click)="setAttending(person, true)" title="{{ 'rsvp.form.yes' | translate }}">

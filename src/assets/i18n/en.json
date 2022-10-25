@@ -48,7 +48,7 @@
 		"location": "Engelstraat 6, 2360 Oud-Turnhout, Belgium",
 		"gifts": "Your loving presence at our wedding is a gift...we request no other.",
 		"dresscode": {
-			"title": "Dress code",
+			"title": "Dresscode",
 			"ladies": "Ladies - evening dress or cocktail dress",
 			"men": "Gentlemen - suits"
 		}
@@ -148,10 +148,6 @@
 			"name": "Full name",
 			"subject": "Subject",
 			"message": "Message"
-		},
-    "after": {
-      "title": "Thank you",
-      "intro": "We have received your question(s), we will try to answer them as soon as possible."
-    }
+		}
 	}
 }

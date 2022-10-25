@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { GuestService } from './../../../core/services/guest.service';
 import { IGuest, IGuestCollection } from './../../../core/models/guest.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -24,7 +25,9 @@ export class RsvpFormComponent implements OnInit {
 
 	@ViewChild(MatAutocompleteTrigger) autocomplete!: MatAutocompleteTrigger;
 
-	constructor(public router: Router, public service: GuestService) {}
+	constructor(public router: Router, public service: GuestService, public translateService: TranslateService) {}
+
+  public get isPortugese(): boolean { return this.translateService.currentLang === 'pt';}
 
 	async ngOnInit(): Promise<void> {
 		const collection = await this.service.list();

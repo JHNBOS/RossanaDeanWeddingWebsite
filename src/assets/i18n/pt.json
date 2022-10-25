@@ -1,19 +1,19 @@
 {
 	"signIn": {
-		"title": "Welcome",
-		"intro": "Please sign in using the password on your invite.",
+		"title": "Bem-vindo",
+		"intro": "Faça login usando a senha do seu convite.",
 		"password": "Password",
-		"passwordPlaceholder": "Enter your password",
-		"button": "Sign in"
+		"passwordPlaceholder": "Digite sua senha",
+		"button": "Entrar"
 	},
 	"navigation": {
 		"home": "Home",
 		"rsvp": "RSVP",
-		"venue": "Venue",
-		"diet": "Dietary restrictions",
-		"dinner": "Places to eat",
-		"hotels": "Accomodations",
-		"contact": "Contact us"
+		"venue": "Local",
+		"diet": "Restrições alimentares",
+		"dinner": "Locais para comer",
+		"hotels": "Acomodações",
+		"contact": "Contate-nos"
 	},
 	"home": {
 		"quote": "On this day, we will marry the one we laugh with, live for, dream with and love …",
@@ -25,57 +25,57 @@
 	},
 	"rsvp": {
 		"title": "We are getting married",
-		"location": "June 3rd, 2023 - Oud-Turnhout, Belgium",
-		"intro": "We can&apos;t wait to celebrate this amazing day with you. <br /> In anticipation of the big day, we have created this website to keep you <br /> up to date on all the details of our wedding. ",
-		"button": "Click here to RSVP / book your spot on the bus",
-		"deadline": "Kindly RSVP your attendance as soon as possible, or at latest before the 31st of December 2022.",
-		"transport": "To make sure everyone is on time and arrives safely to the venue, we have arranged a touring bus departing and arriving in Turnhout centre <br /> (walking distance of the 5 hotels we adviced on the site). <br /><br /> We will let you know the exact pick up point nearer the time. <br /><br /> <b>Please beware, there are a limited number of seats available.</b>",
-		"successMessage": "Thank you for letting us know, that you will be celebrating our special day with us.",
+		"location": "June 3rd, 2023 - Oud-Turnhout, Bélgica",
+		"intro": "Vamos nos casar Mal podemos esperar para comemorar este dia incrível com você. <br /> Antecipando o grande dia, criamos este site para mantê-lo atualizado sobre todos os detalhes do nosso casamento.",
+		"button": "Clique aqui para confirmar / reservar seu lugar no ônibus",
+		"deadline": "Por favor, confirme sua presença o mais rápido possível, <br /> ou o mais tardar antes de 31 de dezembro de 2022.",
+		"transport": "Para garantir que todos cheguem a tempo e cheguem com segurança ao local, organizamos uma turnê ônibus saindo e chegando no centro de Turnhout <br /> (a pé dos 5 hotéis que aconselhamos no site). <br /><br /> Informaremos o ponto exato de retirada mais próximo da hora. <br /><br /><b>Atenção, há um número limitado de lugares disponíveis.</b>",
+		"successMessage": "Obrigado por nos avisar, que você estará comemorando nosso dia especial conosco.",
 		"form": {
 			"title": "RSVP",
-			"intro": "We hope to see you on our wedding day!",
-			"inputLabel": "Search for your name(s)",
-			"attending": "Attending",
-			"attendingForm": "attending",
-			"requestSeat": "Does <b>{{ name }}</b> want a seat on the bus?",
-			"yes": "Yes",
-			"no": "No",
-			"send": "Send"
+			"intro": "Esperamos vê-lo no dia do nosso casamento!",
+			"inputLabel": "Procure o(s) seu(s) nome(s)",
+			"attending": "Formulário de presença",
+			"attendingForm": "presenca",
+			"requestSeat": "<b>{{ name }}</b> quer um lugar no ônibus?",
+			"yes": "Sim",
+			"no": "Não",
+			"send": "Enviar"
 		}
 	},
 	"venue": {
-		"title": "Wedding venue",
-		"location": "Engelstraat 6, 2360 Oud-Turnhout, Belgium",
-		"gifts": "Your loving presence at our wedding is a gift...we request no other.",
+		"title": "Localização do local do casamento",
+		"location": "Engelstraat 6, 2360 Oud-Turnhout, Bélgica",
+		"gifts": "Sua presença amorosa em nosso casamento é um presente... não pedimos outro.",
 		"dresscode": {
-			"title": "Dress code",
-			"ladies": "Ladies - evening dress or cocktail dress",
-			"men": "Gentlemen - suits"
+			"title": "Dresscode",
+			"ladies": "Senhoras - vestido de noite ou vestido de cocktail",
+			"men": "Senhores - tatos"
 		}
 	},
 	"dietary": {
-		"title": "Dietary restrictions",
-		"intro": "Please let us know if there are any dietary restriction(s) we should take into account.",
-		"successMessage": "Thank you very much for letting us know, <br /> we will try to accomodate your dietary restriction(s).",
+		"title": "Restrições alimentares",
+		"intro": "Por favor, informe-nos se houver alguma restrição alimentar que devamos ter em conta.",
+		"successMessage": "Muito obrigado por nos informar, <br /> tentaremos acomodar sua(s) restrição(ões) alimentar(s).",
 		"form": {
-			"name": "Full name",
+			"name": "Nome",
 			"options": {
-				"lactose": "Lactose intolerance",
-				"gluten": "Gluten intolerance/sensitivity",
-				"vegatarian": "Vegatarian",
-				"vegan": "Vegan",
-				"dairy": "Dairy-free",
-				"shellfish": "Shellfish allergy",
-				"peanut": "Nut and peanut allergy",
-				"other": "Other: "
+				"lactose": "Intolerância à lactose",
+				"gluten": "Intolerância/sensibilidade ao glúten",
+				"vegatarian": "Vegatariano",
+				"vegan": "Vegano",
+				"dairy": "Sem laticínios",
+				"shellfish": "Alergia a mariscos",
+				"peanut": "Alergia a nozes e amendoim",
+				"other": "Outros: "
 			},
-			"otherPlaceholder": "Describe dietary restriction(s)...",
-			"send": "Send"
+			"otherPlaceholder": "Restrição(ões) total(is)...",
+			"send": "Enviar"
 		}
 	},
 	"dinner": {
-		"title": "Places to eat",
-		"intro": "Since we know you&apos;ll be hungry after arriving in Turnhout on friday, <br /> we have selected a number of restaurants in Turnhout with all kinds of cuisines to choose from.",
+		"title": "Lugares para comer",
+		"intro": "Como sabemos que você vai ficar com fome depois de chegar em Turnhout na sexta-feira, selecionamos um número de restaurantes em Turnhout com todos os tipos de cozinhas para escolher.",
 		"places": {
 			"cachet": {
 				"time": "Open from 18:00 till 22:00",
@@ -112,46 +112,42 @@
 		}
 	},
 	"hotels": {
-		"title": "Accomodations",
-		"intro": "We can't wait to celebrate with you!<br /> To make sure you are well rested on your stay here in Belgium,<br />we have selected a few options for your stay in Turnhout.",
+		"title": "Acomodações",
+		"intro": "Mal podemos esperar para comemorar com você! Para garantir que você esteja bem descansado em sua estadia aqui na Bélgica, selecionamos algumas opções para sua estadia em Turnhout.",
 		"turnova": {
-			"description": "Hotel Corsendonk Turnova is a four star hotel in the centre of Turnhout. It features a modern and stylish interior, with it&apos;s own wellness.",
+			"description": "Hotel Corsendonk Turnova é um hotel de quatro estrelas no centro de Turnhout. Apresenta um interior moderno e elegante, com o seu próprio bem-estar.",
 			"description2": "",
-			"prices": "Prices from €230 for two nights"
+			"prices": "Preços desde €230 para duas noites"
 		},
 		"viane": {
-			"description": "Hotel Corsendonk Viane is a three star hotel in the centre of Turnhout. It features a stylish and contemporary design, and is easy accesible by public transport and car. Free parking included.",
+			"description": "O Hotel Corsendonk Viane é um hotel de três estrelas no centro de Turnhout. Apresenta um design elegante e contemporâneo e é facilmente acessível por transportes públicos e carro. Estacionamento gratuito incluído.",
 			"description2": "",
-			"prices": "Prices from €155 for two nights"
+			"prices": "Preços a partir de €155 por duas noites"
 		},
 		"western": {
-			"description": "City Hotel Best Western Plus is a four star hotel located in the bustling centre of Turnhout, near the Grote Markt. The hotel is situated near the station and the bus stop, and has its own casino, gym and restaurant.",
-			"description2": "The elegantly furnished hotel rooms come with wonderful beds and luxurious bathrooms with a toilet. The rooms furthermore come with WiFi, a TV and tea and coffee facilities.",
-			"prices": "Prices from €160 for two nights"
+			"description": "O Best Western Plus é um hotel de quatro estrelas localizado no movimentado centro de Turnhout, perto do Grote Markt. O hotel está situado perto da estação e da paragem de autocarro e tem o seu próprio casino, ginásio e restaurante.",
+			"description2": "Os quartos elegantemente decorados contam com camas maravilhosas e banheiros luxuosos com toalete. Além disso, os quartos contam com WiFi, TV e comodidades para fazer chá e café.",
+			"prices": "Preços desde €160 por duas noites"
 		},
 		"bonbon": {
-			"description": "Bed and breakfast Bon Bon &apos;Nuit&apos; is a chocolate-themed bed with rooms designed to look like Paris in the 1930&apos;s. <br/ ><br/ > In the morning, guests can enjoy a deluxe breakfast including fresh breads, freshly baked croissants and multiple types of hot chocolate, since downstairs they have their own chocolate shop.",
-			"description2": "The B&amp;B lies just around the corner of the train station in Turnhout centre.",
-			"prices": "Prices from €175 for two nights"
+			"description": "Bon Bon Nuit descrição Cama e café da manhã Bon Bon Nuit é uma cama com tema de chocolate com quartos projetados para se parecer com Paris em 1930. De manhã, os hóspedes podem desfrutar de um café da manhã de luxo, incluindo pães frescos, croissants assados e vários tipos de chocolate quente, já que no andar de baixo eles têm sua própria loja de chocolates.",
+			"description2": "O B&B fica ao virar da esquina da estação ferroviária no centro de Turnhout.",
+			"prices": "Preços a partir de € 175 por duas noites"
 		},
 		"driezen": {
-			"description": "Hotel Ter Driezen is a small family-run hotel in the centre of Turnhout with the charm of an old manor. The hotel has refined rooms with traditional decor, along with a terrace, gardens &amp; free breakfast &amp; Wi-Fi.",
+			"description": "Driezen Hotel Ter Driezen é um pequeno hotel de gerência familiar no centro de Turnhout com o charme de uma antiga mansão. O hotel tem quartos refinados com decoração tradicional, além de terraço, jardins e café da manhã e Wi-Fi gratuitos.",
 			"description2": "",
-			"prices": "Prices from €330 for two nights"
+			"prices": "Preços a partir de € 330 por duas noites"
 		}
 	},
 	"contact": {
-		"title": "Contact us",
-		"intro": "If you have further questions, Rossana or Dean will be more than happy to answer them anytime. <br /> Please fill out the form below to ask your question(s).",
-		"button": "Send",
+		"title": "Contate-nos",
+		"intro": "Se tiver mais perguntas, Rossana ou Dean terão todo o prazer em responder a qualquer momento. Por favor, preencha o formulário abaixo para tirar sua(s) dúvida(s).",
+		"button": "Enviar",
 		"form": {
-			"name": "Full name",
-			"subject": "Subject",
-			"message": "Message"
-		},
-		"after": {
-			"title": "Thank you",
-			"intro": "We have received your question(s), we will try to answer them as soon as possible."
+			"name": "Nome",
+			"subject": "Assunto",
+			"message": "Mensagem"
 		}
 	}
 }
