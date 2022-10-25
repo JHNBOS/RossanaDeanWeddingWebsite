@@ -37,30 +37,36 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/places-to-eat" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.dinner'">
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.dinner'" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/accomodations" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.hotels'"></a>
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.hotels'" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/contact" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.contact'"></a>
+              [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.contact'" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"></a>
           </li>
 
           <li class="nav-item mt-2">
-            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('en')">
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('en')"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span class="d-block fi fi-gb"></span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('nl')">
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('nl')"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span class="d-block fi fi-nl"></span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('pt')">
+            <a class="nav-link icon d-flex align-items-center" aria-current="page" (click)="translateWebsite('pt')"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span class="d-block fi fi-pt"></span>
             </a>
           </li>
