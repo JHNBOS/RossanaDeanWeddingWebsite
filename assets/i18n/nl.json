@@ -13,7 +13,8 @@
 		"diet": "Dieetwensen",
 		"dinner": "Uit eten",
 		"hotels": "Hotels",
-		"contact": "Contact"
+		"contact": "Contact",
+    "info": "Info"
 	},
 	"home": {
 		"quote": "On this day, we will marry the one we laugh with, live for, dream with and love …",
@@ -114,7 +115,8 @@
 	"hotels": {
 		"title": "Hotels",
 		"intro": "We kunnen niet wachten om het samen met jou te vieren! <br /> Om ervoor te zorgen dat je goed uitgerust bent tijdens je verblijf hier in België,<br /> hebben we een aantal opties voor je verblijf in Turnhout geselecteerd.",
-		"turnova": {
+		"departure": "Dit is het ophaal- en afzetpunt voor de bus.",
+    "turnova": {
 			"description": "Hotel Corsendonk Turnova is een vier sterren hotel in het centrum van Turnhout. Het beschikt over een modern en stijlvol interieur, met zijn eigen wellnes.",
 			"description2": "",
 			"prices": "Prijzen vanaf €230 voor twee nachten"
@@ -149,5 +151,13 @@
 			"subject": "Onderwerp",
 			"message": "Bericht"
 		}
-	}
+	},
+  "info": {
+    "title": "Informatie",
+    "intro": "Op deze pagina vind je extra informatie over de bruiloft",
+    "pickup": {
+      "title": "Ophaal- en afzetpunt",
+      "description": "Bij hotel Corsendonk Turnova arriveert een bus die de gasten ophaalt, en na afloop ook weer afzet."
+    }
+  }
 }
