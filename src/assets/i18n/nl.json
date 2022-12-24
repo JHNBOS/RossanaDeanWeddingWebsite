@@ -151,5 +151,13 @@
 			"subject": "Onderwerp",
 			"message": "Bericht"
 		}
-	}
+	},
+  "info": {
+    "title": "Informatie",
+    "intro": "Op deze pagina vind je extra informatie over de bruiloft",
+    "pickup": {
+      "title": "Ophaal- en afzetpunt",
+      "description": "Bij hotel Corsendonk Turnova arriveert een bus die de gasten ophaalt, en na afloop ook weer afzet."
+    }
+  }
 }

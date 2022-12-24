@@ -23,6 +23,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { GoogleMapsModule } from '@angular/google-maps'
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
@@ -39,6 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		PagesModule,
 		MaterialModule,
 		HttpClientModule,
+    GoogleMapsModule,
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
@@ -52,7 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		provideStorage(() => getStorage()),
 		AngularFireModule.initializeApp(environment.firebaseConfig)
 	],
-	exports: [MaterialModule],
+	exports: [MaterialModule, GoogleMapsModule],
 	providers: [
 		{
 			provide: LOCALE_ID,

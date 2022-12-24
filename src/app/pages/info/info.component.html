@@ -1,1 +1,34 @@
-<p>info works!</p>
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center">
+      <h2 class="title mt-3 mb-3" [translate]="'info.title'"></h2>
+
+      <p class="mt-2 info-intro" [innerHTML]="'info.intro' | translate"></p>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4 mb-3 my-md-3">
+  <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 mx-auto">
+    <div class="d-flex flex-column align-items-center">
+
+      <mat-card class="info-card mat-elevation-z3 w-sm-100 w-md-100 w-lg-75 w-xl-75 w-xxl-75">
+        <mat-card-header>
+          <mat-card-title [translate]="'info.pickup.title'"></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p [innerHTML]="'info.pickup.description' | translate"></p>
+
+          <google-map (mapInitialized)="onMapLoaded($event)" height="500px" width="100%" [zoom]="mapZoom"
+            [center]="mapCenter" [options]="mapOptions">
+            <map-marker [position]="marker.getPosition()!" [label]="marker.getLabel()!"
+              [title]="marker.getTitle()!"></map-marker>
+          </google-map>
+        </mat-card-content>
+        <mat-card-actions
+          class="d-flex flex-lg-row flex-sm-column flex-column justify-content-lg-between align-items-center">
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

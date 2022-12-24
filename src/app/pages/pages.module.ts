@@ -1,3 +1,4 @@
+import { GoogleMapsModule } from '@angular/google-maps';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -38,9 +39,19 @@ import { InfoComponent } from './info/info.component';
 		EditGuestComponent,
 		DietaryOverviewComponent,
 		ContactFormComponent,
-    InfoComponent
+		InfoComponent
 	],
-	imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, BrowserModule, TranslateModule, BrowserAnimationsModule, MaterialModule],
+	imports: [
+		CommonModule,
+		FormsModule,
+		ReactiveFormsModule,
+		RouterModule,
+		BrowserModule,
+		TranslateModule,
+		BrowserAnimationsModule,
+		GoogleMapsModule,
+		MaterialModule
+	],
 	exports: [
 		HomeComponent,
 		SignInComponent,
@@ -56,7 +67,7 @@ import { InfoComponent } from './info/info.component';
 		EditGuestComponent,
 		DietaryOverviewComponent,
 		ContactFormComponent,
-    InfoComponent
+		InfoComponent
 	]
 })
 export class PagesModule {}
