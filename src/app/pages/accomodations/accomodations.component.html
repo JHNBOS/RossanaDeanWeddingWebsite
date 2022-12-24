@@ -15,7 +15,9 @@
       <!-- CORSENDONK TURNOVA -->
       <mat-card class="hotel-card mat-elevation-z3">
         <mat-card-header>
-          <mat-card-title>Hotel Corsendonk Turnova</mat-card-title>
+          <mat-card-title class="d-flex align-items-center gap-2">
+            Hotel Corsendonk Turnova <mat-icon class="bus">departure_board</mat-icon>
+          </mat-card-title>
           <mat-card-subtitle>
             <div class="d-flex align-items-center rating">
               <mat-icon class="star">star</mat-icon>
@@ -28,6 +30,8 @@
         <img mat-card-image src="assets/img/turnova.jpg" alt="Classic Room Corsendonk Turnova"
           title="Classic Room Corsendonk Turnova">
         <mat-card-content>
+          <p class="departure mb-3" [translate]="'hotels.departure'"></p>
+
           <p [innerHTML]="'hotels.turnova.description' | translate"></p>
 
           <small class="mt-2" [translate]="'hotels.turnova.prices'"></small>

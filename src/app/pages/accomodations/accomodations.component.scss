@@ -24,6 +24,17 @@
   }
 }
 
+.bus {
+  color: $secondary-color;
+}
+
+.departure {
+  color: $secondary-color;
+  font-size: 1rem !important;
+  font-family: "Avant-Garde Medium", sans-serif;
+  font-weight: 600;
+}
+
 .rating {
   margin-top: 1rem;
 

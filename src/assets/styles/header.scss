@@ -307,3 +307,56 @@
     }
   }
 }
+
+#info {
+  font-size: 22px;
+}
+
+#notification {
+  -webkit-animation: color_change 2s infinite;
+  -moz-animation: color_change 2s infinite;
+  -ms-animation: color_change 2s infinite;
+  -o-animation: color_change 2s infinite;
+  animation: color_change 2s infinite;
+}
+
+@-webkit-keyframes color_change {
+  0% {
+    color: $primary-text;
+  }
+  50% {
+    color: $secondary-color;
+  }
+}
+@-moz-keyframes color_change {
+  0% {
+    color: $primary-text;
+  }
+  50% {
+    color: $secondary-color;
+  }
+}
+@-ms-keyframes color_change {
+  0% {
+    color: $primary-text;
+  }
+  50% {
+    color: $secondary-color;
+  }
+}
+@-o-keyframes color_change {
+  0% {
+    color: $primary-text;
+  }
+  50% {
+    color: $secondary-color;
+  }
+}
+@keyframes color_change {
+  0% {
+    color: $primary-text;
+  }
+  50% {
+    color: $secondary-color;
+  }
+}

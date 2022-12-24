@@ -1,3 +1,4 @@
+import { InfoComponent } from './pages/info/info.component';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { EditGuestComponent } from './pages/admin/edit-guest/edit-guest.component';
 import { AdminComponent } from './pages/admin/admin.component';
@@ -19,6 +20,12 @@ const routes: Routes = [
 	{
 		path: '',
 		component: HomeComponent,
+		canLoad: [AuthGuard],
+		canActivate: [AuthGuard]
+	},
+  {
+		path: 'info',
+		component: InfoComponent,
 		canLoad: [AuthGuard],
 		canActivate: [AuthGuard]
 	},

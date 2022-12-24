@@ -12,6 +12,15 @@
         <!-- Mobile menu -->
         <ul class="navbar-nav d-xs-flex d-xl-none align-items-center">
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/info" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav" *ngIf="hasClickedOnInfo">
+              <mat-icon id="info" class="d-block">info</mat-icon>
+            </a>
+            <a class="nav-link" aria-current="page" (click)="onInfoClicked()" *ngIf="hasClickedOnInfo == false">
+              <mat-icon id="notification" class="d-block">notifications</mat-icon>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active"
               [routerLinkActiveOptions]="{exact:true}" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               [translate]="'navigation.home'">
@@ -74,6 +83,15 @@
 
         <!-- Desktop menu -->
         <ul class="navbar-nav d-none d-xl-flex align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/info" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:true}" *ngIf="hasClickedOnInfo">
+              <mat-icon id="info" class="d-block">info</mat-icon>
+            </a>
+            <a class="nav-link" aria-current="page" (click)="onInfoClicked()" *ngIf="hasClickedOnInfo == false">
+              <mat-icon id="notification" class="d-block">notifications</mat-icon>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active"
               [routerLinkActiveOptions]="{exact:true}" [translate]="'navigation.home'"></a>

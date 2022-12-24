@@ -1,35 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-@Component( {
+@Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
-	styleUrls: [ './header.component.scss' ]
-} )
+	styleUrls: ['./header.component.scss']
+})
 export class HeaderComponent implements OnInit {
 	public isRsvpForm = false;
+	public hasClickedOnInfo = false;
 	public clickCount = 0;
 
-	constructor( public router: Router, public translate: TranslateService ) {}
+	constructor(public router: Router, public translate: TranslateService) {}
 
-	ngOnInit(): void
-  {
-		this.isRsvpForm = this.router.url.includes( 'rsvp' );
+	ngOnInit(): void {
+		this.isRsvpForm = this.router.url.includes('rsvp');
+		const hasClickedItem = localStorage.getItem('clicked_info');
+		this.hasClickedOnInfo = hasClickedItem == null ? false : (JSON.parse(hasClickedItem) as boolean);
 	}
 
-	public enterAdminMenu(): void
-  {
+	public enterAdminMenu(): void {
 		this.clickCount++;
 
-		if ( this.clickCount < 5 ) return;
+		if (this.clickCount < 5) return;
 
 		this.clickCount = 0;
-		this.router.navigate( [ 'admin' ] );
+		this.router.navigate(['admin']);
 	}
 
-	public translateWebsite( langCode: string ): void
-  {
-		this.translate.use( langCode );
-		localStorage.setItem( 'lang', langCode );
+	public translateWebsite(langCode: string): void {
+		this.translate.use(langCode);
+		localStorage.setItem('lang', langCode);
+	}
+
+	public onInfoClicked(): void {
+		localStorage.setItem('clicked_info', JSON.stringify(true));
+		this.router.navigate(['/info']).then(() => {
+			window.location.reload();
+		});
 	}
 }

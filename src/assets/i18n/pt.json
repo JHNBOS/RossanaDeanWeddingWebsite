@@ -114,7 +114,8 @@
 	"hotels": {
 		"title": "Acomodações",
 		"intro": "Mal podemos esperar para comemorar com você! Para garantir que você esteja bem descansado em sua estadia aqui na Bélgica, selecionamos algumas opções para sua estadia em Turnhout.",
-		"turnova": {
+    "departure": "Este é o ponto de embarque e desembarque do ônibus.",
+    "turnova": {
 			"description": "Hotel Corsendonk Turnova é um hotel de quatro estrelas no centro de Turnhout. Apresenta um interior moderno e elegante, com o seu próprio bem-estar.",
 			"description2": "",
 			"prices": "Preços desde €230 para duas noites"
