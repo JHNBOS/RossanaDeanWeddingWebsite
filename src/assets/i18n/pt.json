@@ -78,44 +78,44 @@
 		"intro": "Como sabemos que você vai ficar com fome depois de chegar em Turnhout na sexta-feira, selecionamos um número de restaurantes em Turnhout com todos os tipos de cozinhas para escolher.",
 		"places": {
 			"cachet": {
-				"time": "Open from 18:00 till 22:00",
-				"cuisine": "Italian, French"
+				"time": "Aberto das 18:00 às 22:00",
+				"cuisine": "Italiano, Francês"
 			},
 			"argentino": {
-				"time": "Open from 18:00 till 00:00",
-				"cuisine": "Argentinian grill"
+				"time": "Aberto das 18:00 às 00:00",
+				"cuisine": "Grelha Argentina"
 			},
 			"becherelle": {
-				"time": "Open from 12:00 till 00:00",
-				"cuisine": "French, Belgian"
+				"time": "Aberto das 12:00 às 00:00",
+				"cuisine": "Francês, Belga"
 			},
 			"amu": {
-				"time": "Open from 11:30 till 00:00",
-				"cuisine": "Belgian, Fish"
+				"time": "Aberto das 11:30 às 00:00",
+				"cuisine": "Belga, peixe"
 			},
 			"puur": {
-				"time": "Open from 12:00 till 00:00",
-				"cuisine": "Mediterranean"
+				"time": "Aberto das 12:00 às 00:00",
+				"cuisine": "Mediterrâneo"
 			},
 			"marangon": {
-				"time": "Open from 19:00 till 21:30",
-				"cuisine": "Italian (Vegetarian friendly)"
+				"time": "Aberto das 19:00 às 21:30",
+				"cuisine": "Italian (para vegetarianos)"
 			},
 			"efeze": {
-				"time": "Open from 11:00 till 00:00",
-				"cuisine": "Mediterranean"
+				"time": "Aberto das 11:00 às 00:00",
+				"cuisine": "Mediterrâneo"
 			},
 			"keizershof": {
-				"time": "Open from 17:00 till 21:00",
-				"cuisine": "Belgian (Vegetarian friendly)"
+				"time": "Aberto das 17:00 às 21:00",
+				"cuisine": "Belga (para vegetarianos)"
 			}
 		}
 	},
 	"hotels": {
 		"title": "Acomodações",
 		"intro": "Mal podemos esperar para comemorar com você! Para garantir que você esteja bem descansado em sua estadia aqui na Bélgica, selecionamos algumas opções para sua estadia em Turnhout.",
-    "departure": "Este é o ponto de embarque e desembarque do ônibus.",
-    "turnova": {
+		"departure": "Este é o ponto de embarque e desembarque do ônibus.",
+		"turnova": {
 			"description": "Hotel Corsendonk Turnova é um hotel de quatro estrelas no centro de Turnhout. Apresenta um interior moderno e elegante, com o seu próprio bem-estar.",
 			"description2": "",
 			"prices": "Preços desde €230 para duas noites"
@@ -149,6 +149,18 @@
 			"name": "Nome",
 			"subject": "Assunto",
 			"message": "Mensagem"
+		}
+	},
+	"info": {
+		"title": "Informação",
+		"intro": "Nesta página iremos mantê-lo atualizado com as últimas informações para o casamento.",
+		"pickup-blog": {
+			"title": "Ponto de embarque e desembarque",
+			"description": "Um ônibus chega ao hotel Corsendonk Turnova (ponto A) para pegar os convidados e levá-los ao local do casamento Alta Ripa (ponto B), e depois deixá-los novamente.",
+			"locations": {
+				"pickup": "Horário: a ser divulgado",
+				"venue": "Horário: a ser divulgado"
+			}
 		}
 	}
 }

@@ -13,16 +13,24 @@
     <div class="d-flex flex-column align-items-center">
 
       <mat-card class="info-card mat-elevation-z3 w-sm-100 w-md-100 w-lg-75 w-xl-75 w-xxl-75">
-        <mat-card-header>
-          <mat-card-title [translate]="'info.pickup.title'"></mat-card-title>
+        <mat-card-header class="d-flex flex-row align-items-center">
+          <mat-card-title class="mb-0" [translate]="'info.pickup-blog.title'"></mat-card-title>
+          <mat-icon class="">departure_board</mat-icon>
         </mat-card-header>
         <mat-card-content>
-          <p [innerHTML]="'info.pickup.description' | translate"></p>
+          <p [innerHTML]="'info.pickup-blog.description' | translate"></p>
 
-          <google-map (mapInitialized)="onMapLoaded($event)" height="500px" width="100%" [zoom]="mapZoom"
-            [center]="mapCenter" [options]="mapOptions">
-            <map-marker [position]="marker.getPosition()!" [label]="marker.getLabel()!"
-              [title]="marker.getTitle()!"></map-marker>
+          <google-map height="500px" width="100%" [zoom]="mapZoom"
+            [center]="centerPosition" [options]="mapOptions">
+
+            <map-marker #hMarker="mapMarker" [position]="hotelMarker.getPosition()!" [label]="hotelMarker.getLabel()!"
+              [title]="hotelMarker.getTitle()!" (mapClick)="openInfoWindow(hMarker)">
+            </map-marker>
+            <map-marker #vMarker="mapMarker" [position]="venueMarker.getPosition()!" [label]="venueMarker.getLabel()!"
+              [title]="venueMarker.getTitle()!" (mapClick)="openInfoWindow(vMarker)">
+            </map-marker>
+            <map-info-window [innerHTML]="infoContent"></map-info-window>
+
           </google-map>
         </mat-card-content>
         <mat-card-actions

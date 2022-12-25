@@ -150,5 +150,17 @@
 			"subject": "Subject",
 			"message": "Message"
 		}
+	},
+	"info": {
+		"title": "Information",
+		"intro": "On this page we will keep you up-to-date with the latest information for the wedding.",
+		"pickup-blog": {
+			"title": "Pick-up and drop-off point",
+			"description": "A bus arrives at hotel Corsendonk Turnova (point A) to pick up the guests and take them to the wedding location Alta Ripa (point B), and drop them off again afterwards.",
+			"locations": {
+				"pickup": "Time: to be announced",
+				"venue": "Time: to be announced"
+			}
+		}
 	}
 }
