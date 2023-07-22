@@ -30,6 +30,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http);
 }
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 // registerLocaleData(localeEn, 'en');
 
 @NgModule({
@@ -45,7 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
-				useFactory: HttpLoaderFactory,
+				useFactory: createTranslateLoader,
 				deps: [HttpClient]
 			}
 		}),

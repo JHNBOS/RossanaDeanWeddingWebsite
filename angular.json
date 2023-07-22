@@ -26,6 +26,7 @@
 						"outputPath": "dist/rossana-dean-wedding-site/docs",
 						"index": "src/index.html",
 						"main": "src/main.ts",
+						"baseHref": "/RossanaDeanWeddingWebsite/",
 						"polyfills": "src/polyfills.ts",
 						"tsConfig": "tsconfig.app.json",
 						"inlineStyleLanguage": "scss",

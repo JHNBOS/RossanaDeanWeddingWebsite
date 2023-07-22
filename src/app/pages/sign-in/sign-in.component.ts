@@ -27,6 +27,6 @@ export class SignInComponent {
 		this.password = '';
 		this.error = 'The password you have entered is incorrect.';
 		if ( this.translate.currentLang === 'nl' ) this.error = 'Het door u ingevoerde wachtwoord is onjuist.';
-		if ( this.translate.currentLang === 'nl' ) this.error = 'A senha que você digitou está incorreta.';
+		if ( this.translate.currentLang === 'pt' ) this.error = 'A senha que você digitou está incorreta.';
 	}
 }
